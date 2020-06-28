@@ -1,0 +1,23 @@
+name: Artificial_Intelligence_and_Machine_Learning
+channels:
+- defaults
+dependencies:         # everything under this, installed by conda
+- numpy==1.17.0
+- scipy==1.4.1
+- scikit-learn==0.22.0
+- pandas==0.23.4
+- matplotlib==3.0.2
+- statsmodels==0.11.0
+- tensorflow==1.12.0
+- keras==2.2.4
+- jupyter==1.0.0
+- beautifulsoup4
+- requests==2.21.0
+- lxml
+- nltk==3.4
+- pydotplus==2.0.2
+- graphviz
+- gensim
+- nbconvert
+- plotly==3.10.0
+- seaborn==0.10.0
