@@ -17,7 +17,6 @@ print(input_test)
 
 # using simple Linear Regression model to train
 model = LinearRegression()
-print(model)
 model.fit(input_train, output_train)
 
 # model predicting the Test set results
