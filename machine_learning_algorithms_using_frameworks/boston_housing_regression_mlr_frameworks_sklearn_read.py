@@ -20,7 +20,7 @@ inputx = boston.data
 outputy = boston.target
 
 input_train, input_test, output_train, output_test = train_test_split(inputx, outputy, test_size = 1/3, random_state = 0)
-print(input_test)
+#print(input_test)
 
 # using simple Linear Regression model to train
 model = LinearRegression()
@@ -29,3 +29,5 @@ model.fit(input_train, output_train)
 # model predicting the Test set results
 predicted_output = model.predict(input_test)
 print(predicted_output)
+
+

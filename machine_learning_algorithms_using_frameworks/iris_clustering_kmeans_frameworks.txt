@@ -14,7 +14,7 @@ array = df.values
 inputx = array[:,0:4]
 inputx = df.iloc[:, [0,1,2,3]].values
 
-kmeans3 = KMeans(n_clusters=3,verbose=1)
+kmeans3 = KMeans(n_clusters=3)
 print(kmeans3)
 y_kmeans3 = kmeans3.fit_predict(inputx)
 print(y_kmeans3)
