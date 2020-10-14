@@ -1,0 +1,162 @@
+main item: 0
+prefix: 
+0
+transaction:: {whole milk}:269
+
+--------------------- end ---------------------
+main item: 1
+prefix: 
+1
+transaction:: {rolls/buns}:222
+main item: 0
+prefix: 
+1 0
+transaction:: {rolls/buns,whole milk}:68
+
+--------------------- end ---------------------
+main item: 2
+prefix: 
+2
+transaction:: {other vegetables}:186
+main item: 0
+prefix: 
+2 0
+transaction:: {other vegetables,whole milk}:72
+
+--------------------- end ---------------------
+main item: 3
+prefix: 
+3
+transaction:: {soda}:159
+
+--------------------- end ---------------------
+main item: 4
+prefix: 
+4
+transaction:: {bottled water}:132
+
+--------------------- end ---------------------
+main item: 5
+prefix: 
+5
+transaction:: {yogurt}:127
+main item: 0
+prefix: 
+5 0
+transaction:: {yogurt,whole milk}:56
+
+--------------------- end ---------------------
+main item: 6
+prefix: 
+6
+transaction:: {root vegetables}:110
+
+--------------------- end ---------------------
+main item: 7
+prefix: 
+7
+transaction:: {tropical fruit}:97
+
+--------------------- end ---------------------
+main item: 8
+prefix: 
+8
+transaction:: {citrus fruit}:95
+
+--------------------- end ---------------------
+main item: 9
+prefix: 
+9
+transaction:: {newspapers}:89
+
+--------------------- end ---------------------
+main item: 10
+prefix: 
+10
+transaction:: {pastry}:78
+
+--------------------- end ---------------------
+main item: 11
+prefix: 
+11
+transaction:: {sausage}:78
+
+--------------------- end ---------------------
+main item: 12
+prefix: 
+12
+transaction:: {shopping bags}:78
+
+--------------------- end ---------------------
+main item: 13
+prefix: 
+13
+transaction:: {coffee}:76
+
+--------------------- end ---------------------
+main item: 14
+prefix: 
+14
+transaction:: {bottled beer}:76
+
+--------------------- end ---------------------
+main item: 15
+prefix: 
+15
+transaction:: {canned beer}:76
+
+--------------------- end ---------------------
+main item: 16
+prefix: 
+16
+transaction:: {curd}:75
+
+--------------------- end ---------------------
+main item: 17
+prefix: 
+17
+transaction:: {whipped/sour cream}:74
+
+--------------------- end ---------------------
+main item: 18
+prefix: 
+18
+transaction:: {frankfurter}:73
+
+--------------------- end ---------------------
+main item: 19
+prefix: 
+19
+transaction:: {breadbutterjam}:69
+
+--------------------- end ---------------------
+main item: 20
+prefix: 
+20
+transaction:: {fruit/vegetable juice}:67
+
+--------------------- end ---------------------
+main item: 21
+prefix: 
+21
+transaction:: {margarine}:56
+
+--------------------- end ---------------------
+main item: 22
+prefix: 
+22
+transaction:: {pork}:53
+
+--------------------- end ---------------------
+main item: 23
+prefix: 
+23
+transaction:: {domestic eggs}:53
+
+--------------------- end ---------------------
+main item: 24
+prefix: 
+24
+transaction:: {brown bread}:50
+
+--------------------- end ---------------------

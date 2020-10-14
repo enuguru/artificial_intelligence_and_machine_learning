@@ -1,0 +1,4 @@
+
+python apriori_marketbasketanalysis.py
+
+python bruteforce_marketbasketanalysis.py

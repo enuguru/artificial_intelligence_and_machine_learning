@@ -1,0 +1,678 @@
+main item: 0
+prefix: 
+0
+transaction:: {whole milk}:269
+
+--------------------- end ---------------------
+main item: 1
+prefix: 
+1
+transaction:: {rolls/buns}:222
+main item: 0
+prefix: 
+1 0
+transaction:: {rolls/buns,whole milk}:68
+
+--------------------- end ---------------------
+main item: 2
+prefix: 
+2
+transaction:: {other vegetables}:186
+main item: 0
+prefix: 
+2 0
+transaction:: {other vegetables,whole milk}:72
+
+--------------------- end ---------------------
+main item: 1
+prefix: 
+2 1
+transaction:: {other vegetables,rolls/buns}:43
+main item: 0
+prefix: 
+2 1 0
+transaction:: {other vegetables,rolls/buns,whole milk}:21
+
+--------------------- end ---------------------
+main item: 3
+prefix: 
+3
+transaction:: {soda}:159
+main item: 1
+prefix: 
+3 1
+transaction:: {soda,rolls/buns}:49
+
+--------------------- end ---------------------
+main item: 0
+prefix: 
+3 0
+transaction:: {soda,whole milk}:38
+
+--------------------- end ---------------------
+main item: 2
+prefix: 
+3 2
+transaction:: {soda,other vegetables}:32
+
+--------------------- end ---------------------
+main item: 4
+prefix: 
+4
+transaction:: {bottled water}:132
+main item: 0
+prefix: 
+4 0
+transaction:: {bottled water,whole milk}:40
+
+--------------------- end ---------------------
+main item: 1
+prefix: 
+4 1
+transaction:: {bottled water,rolls/buns}:36
+
+--------------------- end ---------------------
+main item: 2
+prefix: 
+4 2
+transaction:: {bottled water,other vegetables}:35
+
+--------------------- end ---------------------
+main item: 3
+prefix: 
+4 3
+transaction:: {bottled water,soda}:29
+
+--------------------- end ---------------------
+main item: 5
+prefix: 
+5
+transaction:: {yogurt}:127
+main item: 0
+prefix: 
+5 0
+transaction:: {yogurt,whole milk}:56
+
+--------------------- end ---------------------
+main item: 2
+prefix: 
+5 2
+transaction:: {yogurt,other vegetables}:35
+
+--------------------- end ---------------------
+main item: 1
+prefix: 
+5 1
+transaction:: {yogurt,rolls/buns}:34
+
+--------------------- end ---------------------
+main item: 4
+prefix: 
+5 4
+transaction:: {yogurt,bottled water}:30
+
+--------------------- end ---------------------
+main item: 3
+prefix: 
+5 3
+transaction:: {yogurt,soda}:23
+
+--------------------- end ---------------------
+main item: 6
+prefix: 
+6
+transaction:: {root vegetables}:110
+main item: 0
+prefix: 
+6 0
+transaction:: {root vegetables,whole milk}:49
+
+--------------------- end ---------------------
+main item: 2
+prefix: 
+6 2
+transaction:: {root vegetables,other vegetables}:43
+main item: 0
+prefix: 
+6 2 0
+transaction:: {root vegetables,other vegetables,whole milk}:20
+
+--------------------- end ---------------------
+main item: 1
+prefix: 
+6 1
+transaction:: {root vegetables,rolls/buns}:28
+
+--------------------- end ---------------------
+main item: 5
+prefix: 
+6 5
+transaction:: {root vegetables,yogurt}:26
+
+--------------------- end ---------------------
+main item: 7
+prefix: 
+7
+transaction:: {tropical fruit}:97
+main item: 0
+prefix: 
+7 0
+transaction:: {tropical fruit,whole milk}:37
+
+--------------------- end ---------------------
+main item: 2
+prefix: 
+7 2
+transaction:: {tropical fruit,other vegetables}:32
+
+--------------------- end ---------------------
+main item: 6
+prefix: 
+7 6
+transaction:: {tropical fruit,root vegetables}:26
+
+--------------------- end ---------------------
+main item: 5
+prefix: 
+7 5
+transaction:: {tropical fruit,yogurt}:25
+
+--------------------- end ---------------------
+main item: 1
+prefix: 
+7 1
+transaction:: {tropical fruit,rolls/buns}:25
+
+--------------------- end ---------------------
+main item: 8
+prefix: 
+8
+transaction:: {citrus fruit}:95
+main item: 0
+prefix: 
+8 0
+transaction:: {citrus fruit,whole milk}:36
+
+--------------------- end ---------------------
+main item: 1
+prefix: 
+8 1
+transaction:: {citrus fruit,rolls/buns}:30
+
+--------------------- end ---------------------
+main item: 2
+prefix: 
+8 2
+transaction:: {citrus fruit,other vegetables}:27
+
+--------------------- end ---------------------
+main item: 5
+prefix: 
+8 5
+transaction:: {citrus fruit,yogurt}:21
+
+--------------------- end ---------------------
+main item: 9
+prefix: 
+9
+transaction:: {newspapers}:89
+main item: 0
+prefix: 
+9 0
+transaction:: {newspapers,whole milk}:31
+
+--------------------- end ---------------------
+main item: 1
+prefix: 
+9 1
+transaction:: {newspapers,rolls/buns}:28
+
+--------------------- end ---------------------
+main item: 10
+prefix: 
+10
+transaction:: {pastry}:78
+main item: 0
+prefix: 
+10 0
+transaction:: {pastry,whole milk}:28
+
+--------------------- end ---------------------
+main item: 1
+prefix: 
+10 1
+transaction:: {pastry,rolls/buns}:21
+
+--------------------- end ---------------------
+main item: 11
+prefix: 
+11
+transaction:: {sausage}:78
+main item: 1
+prefix: 
+11 1
+transaction:: {sausage,rolls/buns}:36
+
+--------------------- end ---------------------
+main item: 0
+prefix: 
+11 0
+transaction:: {sausage,whole milk}:26
+
+--------------------- end ---------------------
+main item: 3
+prefix: 
+11 3
+transaction:: {sausage,soda}:20
+
+--------------------- end ---------------------
+main item: 12
+prefix: 
+12
+transaction:: {shopping bags}:78
+main item: 3
+prefix: 
+12 3
+transaction:: {shopping bags,soda}:24
+
+--------------------- end ---------------------
+main item: 0
+prefix: 
+12 0
+transaction:: {shopping bags,whole milk}:21
+
+--------------------- end ---------------------
+main item: 13
+prefix: 
+13
+transaction:: {coffee}:76
+main item: 0
+prefix: 
+13 0
+transaction:: {coffee,whole milk}:29
+
+--------------------- end ---------------------
+main item: 14
+prefix: 
+14
+transaction:: {bottled beer}:76
+main item: 0
+prefix: 
+14 0
+transaction:: {bottled beer,whole milk}:24
+
+--------------------- end ---------------------
+main item: 15
+prefix: 
+15
+transaction:: {canned beer}:76
+
+--------------------- end ---------------------
+main item: 16
+prefix: 
+16
+transaction:: {curd}:75
+main item: 0
+prefix: 
+16 0
+transaction:: {curd,whole milk}:33
+
+--------------------- end ---------------------
+main item: 5
+prefix: 
+16 5
+transaction:: {curd,yogurt}:26
+
+--------------------- end ---------------------
+main item: 1
+prefix: 
+16 1
+transaction:: {curd,rolls/buns}:21
+
+--------------------- end ---------------------
+main item: 17
+prefix: 
+17
+transaction:: {whipped/sour cream}:74
+main item: 0
+prefix: 
+17 0
+transaction:: {whipped/sour cream,whole milk}:38
+
+--------------------- end ---------------------
+main item: 2
+prefix: 
+17 2
+transaction:: {whipped/sour cream,other vegetables}:29
+
+--------------------- end ---------------------
+main item: 18
+prefix: 
+18
+transaction:: {frankfurter}:73
+main item: 1
+prefix: 
+18 1
+transaction:: {frankfurter,rolls/buns}:34
+
+--------------------- end ---------------------
+main item: 0
+prefix: 
+18 0
+transaction:: {frankfurter,whole milk}:22
+
+--------------------- end ---------------------
+main item: 19
+prefix: 
+19
+transaction:: {beef}:69
+main item: 0
+prefix: 
+19 0
+transaction:: {beef,whole milk}:27
+
+--------------------- end ---------------------
+main item: 1
+prefix: 
+19 1
+transaction:: {beef,rolls/buns}:26
+
+--------------------- end ---------------------
+main item: 6
+prefix: 
+19 6
+transaction:: {beef,root vegetables}:20
+
+--------------------- end ---------------------
+main item: 20
+prefix: 
+20
+transaction:: {fruit/vegetable juice}:67
+main item: 0
+prefix: 
+20 0
+transaction:: {fruit/vegetable juice,whole milk}:29
+
+--------------------- end ---------------------
+main item: 2
+prefix: 
+20 2
+transaction:: {fruit/vegetable juice,other vegetables}:21
+
+--------------------- end ---------------------
+main item: 21
+prefix: 
+21
+transaction:: {margarine}:56
+main item: 0
+prefix: 
+21 0
+transaction:: {margarine,whole milk}:27
+
+--------------------- end ---------------------
+main item: 2
+prefix: 
+21 2
+transaction:: {margarine,other vegetables}:20
+
+--------------------- end ---------------------
+main item: 1
+prefix: 
+21 1
+transaction:: {margarine,rolls/buns}:20
+
+--------------------- end ---------------------
+main item: 22
+prefix: 
+22
+transaction:: {pork}:53
+main item: 0
+prefix: 
+22 0
+transaction:: {pork,whole milk}:23
+
+--------------------- end ---------------------
+main item: 2
+prefix: 
+22 2
+transaction:: {pork,other vegetables}:20
+
+--------------------- end ---------------------
+main item: 23
+prefix: 
+23
+transaction:: {domestic eggs}:53
+main item: 0
+prefix: 
+23 0
+transaction:: {domestic eggs,whole milk}:28
+
+--------------------- end ---------------------
+main item: 24
+prefix: 
+24
+transaction:: {brown bread}:50
+main item: 0
+prefix: 
+24 0
+transaction:: {brown bread,whole milk}:21
+
+--------------------- end ---------------------
+main item: 25
+prefix: 
+25
+transaction:: {berries}:47
+main item: 0
+prefix: 
+25 0
+transaction:: {berries,whole milk}:22
+
+--------------------- end ---------------------
+main item: 26
+prefix: 
+26
+transaction:: {butter}:46
+main item: 0
+prefix: 
+26 0
+transaction:: {butter,whole milk}:26
+
+--------------------- end ---------------------
+main item: 27
+prefix: 
+27
+transaction:: {frozen vegetables}:46
+main item: 0
+prefix: 
+27 0
+transaction:: {frozen vegetables,whole milk}:23
+
+--------------------- end ---------------------
+main item: 28
+prefix: 
+28
+transaction:: {hygiene articles}:45
+
+--------------------- end ---------------------
+main item: 29
+prefix: 
+29
+transaction:: {napkins}:44
+main item: 0
+prefix: 
+29 0
+transaction:: {napkins,whole milk}:20
+
+--------------------- end ---------------------
+main item: 30
+prefix: 
+30
+transaction:: {pip fruit}:41
+
+--------------------- end ---------------------
+main item: 31
+prefix: 
+31
+transaction:: {sugar}:41
+main item: 0
+prefix: 
+31 0
+transaction:: {sugar,whole milk}:20
+
+--------------------- end ---------------------
+main item: 32
+prefix: 
+32
+transaction:: {cream cheese }:40
+
+--------------------- end ---------------------
+main item: 33
+prefix: 
+33
+transaction:: {hamburger meat}:37
+
+--------------------- end ---------------------
+main item: 34
+prefix: 
+34
+transaction:: {salty snack}:35
+
+--------------------- end ---------------------
+main item: 35
+prefix: 
+35
+transaction:: {white bread}:33
+
+--------------------- end ---------------------
+main item: 36
+prefix: 
+36
+transaction:: {chocolate}:33
+
+--------------------- end ---------------------
+main item: 37
+prefix: 
+37
+transaction:: {packaged fruit/vegetables}:33
+
+--------------------- end ---------------------
+main item: 38
+prefix: 
+38
+transaction:: {beverages}:33
+
+--------------------- end ---------------------
+main item: 39
+prefix: 
+39
+transaction:: {onions}:33
+
+--------------------- end ---------------------
+main item: 40
+prefix: 
+40
+transaction:: {chicken}:32
+
+--------------------- end ---------------------
+main item: 41
+prefix: 
+41
+transaction:: {dessert}:32
+
+--------------------- end ---------------------
+main item: 42
+prefix: 
+42
+transaction:: {oil}:30
+
+--------------------- end ---------------------
+main item: 43
+prefix: 
+43
+transaction:: {detergent}:28
+
+--------------------- end ---------------------
+main item: 44
+prefix: 
+44
+transaction:: {sliced cheese}:28
+
+--------------------- end ---------------------
+main item: 45
+prefix: 
+45
+transaction:: {butter milk}:27
+
+--------------------- end ---------------------
+main item: 46
+prefix: 
+46
+transaction:: {long life bakery product}:26
+
+--------------------- end ---------------------
+main item: 47
+prefix: 
+47
+transaction:: {UHT-milk}:26
+
+--------------------- end ---------------------
+main item: 48
+prefix: 
+48
+transaction:: {misc. beverages}:26
+
+--------------------- end ---------------------
+main item: 49
+prefix: 
+49
+transaction:: {specialty bar}:25
+
+--------------------- end ---------------------
+main item: 50
+prefix: 
+50
+transaction:: {candy}:25
+
+--------------------- end ---------------------
+main item: 51
+prefix: 
+51
+transaction:: {hard cheese}:24
+
+--------------------- end ---------------------
+main item: 52
+prefix: 
+52
+transaction:: {grapes}:23
+
+--------------------- end ---------------------
+main item: 53
+prefix: 
+53
+transaction:: {ice cream}:23
+
+--------------------- end ---------------------
+main item: 54
+prefix: 
+54
+transaction:: {waffles}:22
+
+--------------------- end ---------------------
+main item: 55
+prefix: 
+55
+transaction:: {ham}:21
+
+--------------------- end ---------------------
+main item: 56
+prefix: 
+56
+transaction:: {red/blush wine}:20
+
+--------------------- end ---------------------
+main item: 57
+prefix: 
+57
+transaction:: {meat}:20
+
+--------------------- end ---------------------

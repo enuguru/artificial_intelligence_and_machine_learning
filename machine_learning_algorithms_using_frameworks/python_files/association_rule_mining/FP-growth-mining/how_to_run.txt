@@ -1,0 +1,1 @@
+gcc fpTree_final.c -lm

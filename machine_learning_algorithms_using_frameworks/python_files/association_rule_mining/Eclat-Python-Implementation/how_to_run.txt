@@ -1,0 +1,1 @@
+python3 eclat.py input.txt 3 0.4 items.txt rules.txt
