@@ -1,5 +1,1723 @@
-Rule: ['c'] ==> ['5'] : 5 : 0.8333 
-Rule: ['d'] ==> ['5'] : 4 : 1.0 
-Rule: ['d'] ==> ['c'] : 3 : 0.75 
-Rule: ['d', 'c'] ==> ['5'] : 3 : 1.0 
-Rule: ['g'] ==> ['c'] : 3 : 1.0 
+Rule: ['(appetizer),hygiene'] ==> ['beer,liquor'] : 3 : 1.0 
+Rule: ['(appetizer),long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['(appetizer),long'] ==> ['life'] : 3 : 1.0 
+Rule: ['(appetizer),long', 'life'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['(appetizer),shopping'] ==> ['bags\n'] : 5 : 1.0 
+Rule: ['(appetizer),shopping'] ==> ['beer,liquor'] : 3 : 0.6 
+Rule: ['(appetizer),shopping', 'bags\n'] ==> ['beer,liquor'] : 3 : 0.6 
+Rule: ['(seeds)\n', 'fruit,other'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['(seeds)\n', 'fruit,root'] ==> ['vegetables,other'] : 4 : 1.0 
+Rule: ['(seeds)\n', 'life'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['(seeds)\n', 'life'] ==> ['product,flower'] : 4 : 1.0 
+Rule: ['(seeds)\n', 'life', 'product,flower'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['(seeds)\n', 'other'] ==> ['vegetables,whole'] : 6 : 0.5 
+Rule: ['(seeds)\n', 'product,flower'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['(seeds)\n', 'root'] ==> ['vegetables,other'] : 3 : 0.75 
+Rule: ['(seeds)\n', 'vegetables,other'] ==> ['vegetables,whole'] : 4 : 0.4444 
+Rule: ['(seeds),shopping'] ==> ['bags\n'] : 11 : 1.0 
+Rule: ['alcohol,hygiene'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['articles\n', 'cheese,frozen'] ==> ['vegetables,other'] : 4 : 0.5 
+Rule: ['articles\n', 'cheese,frozen'] ==> ['vegetables,whole'] : 6 : 0.75 
+Rule: ['articles\n', 'cheese,frozen', 'vegetables,other'] ==> ['vegetables,whole'] : 4 : 1.0 
+Rule: ['articles\n', 'chocolate,hygiene'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['articles\n', 'fruit,pip'] ==> ['fruit,whole'] : 4 : 0.4 
+Rule: ['articles\n', 'fruit,root'] ==> ['vegetables,other'] : 8 : 0.5333 
+Rule: ['articles\n', 'fruit,root'] ==> ['vegetables,whole'] : 8 : 0.5333 
+Rule: ['articles\n', 'fruit,root', 'cheese,frozen'] ==> ['vegetables,other'] : 3 : 0.75 
+Rule: ['articles\n', 'fruit,root', 'cheese,frozen'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['articles\n', 'fruit,root', 'vegetables,other'] ==> ['vegetables,whole'] : 6 : 0.75 
+Rule: ['articles\n', 'life'] ==> ['bakery'] : 8 : 1.0 
+Rule: ['articles\n', 'milk,whipped/sour'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['articles\n', 'other'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['articles\n', 'vegetables,other'] ==> ['vegetables,whole'] : 9 : 0.6429 
+Rule: ['articles,house'] ==> ['keeping'] : 5 : 1.0 
+Rule: ['articles,napkins,house'] ==> ['keeping'] : 5 : 1.0 
+Rule: ['articles,napkins,house'] ==> ['products\n'] : 5 : 1.0 
+Rule: ['articles,napkins,house'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['articles,napkins,house', 'keeping'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['articles,napkins,house', 'products\n'] ==> ['keeping'] : 5 : 1.0 
+Rule: ['articles,napkins,house', 'products\n'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['articles,napkins,house', 'products\n', 'keeping'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['articles,napkins,shopping'] ==> ['bags\n'] : 7 : 1.0 
+Rule: ['articles,potted'] ==> ['fruit,pip'] : 3 : 0.5 
+Rule: ['articles,shopping'] ==> ['bags\n'] : 34 : 1.0 
+Rule: ['articles,shopping', 'beer,hygiene'] ==> ['bags\n'] : 5 : 1.0 
+Rule: ['articles,shopping', 'life'] ==> ['bags\n'] : 3 : 1.0 
+Rule: ['articles,shopping', 'life'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['articles,shopping', 'life', 'bags\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['bags\n', 'bakery'] ==> ['product,shopping'] : 23 : 0.434 
+Rule: ['bags\n', 'bakery', 'vegetables,other'] ==> ['product,shopping'] : 4 : 0.8 
+Rule: ['bags\n', 'berries,root'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['bags\n', 'bread,long', 'bakery', 'life'] ==> ['product,shopping'] : 3 : 0.75 
+Rule: ['bags\n', 'cheese,frozen', 'vegetables,other'] ==> ['vegetables,whole'] : 4 : 0.6667 
+Rule: ['bags\n', 'fruit,root', 'fruit,pip'] ==> ['vegetables,whole'] : 9 : 0.5625 
+Rule: ['bags\n', 'hamburger', 'meat,citrus'] ==> ['fruit,whole'] : 3 : 1.0 
+Rule: ['bags\n', 'juice,long'] ==> ['bakery'] : 6 : 1.0 
+Rule: ['bags\n', 'juice,long'] ==> ['product,shopping'] : 4 : 0.6667 
+Rule: ['bags\n', 'juice,long'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['bags\n', 'juice,long', 'bakery'] ==> ['product,shopping'] : 4 : 0.6667 
+Rule: ['bags\n', 'juice,long', 'bakery'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['bags\n', 'life', 'juice,long'] ==> ['product,shopping'] : 4 : 0.6667 
+Rule: ['bags\n', 'life', 'whole'] ==> ['product,shopping'] : 3 : 0.6 
+Rule: ['bags\n', 'meat,citrus'] ==> ['fruit,whole'] : 3 : 0.4286 
+Rule: ['bags\n', 'milk,cream'] ==> ['fruit,whole'] : 4 : 0.4 
+Rule: ['bags\n', 'milk,whipped/sour'] ==> ['vegetables,whole'] : 9 : 0.6429 
+Rule: ['bags\n', 'milk,white'] ==> ['vegetables,whole'] : 4 : 0.6667 
+Rule: ['bags\n', 'product,napkins,shopping'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['bags\n', 'products,newspapers,shopping'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['bags\n', 'root', 'bakery', 'life'] ==> ['product,shopping'] : 3 : 1.0 
+Rule: ['bags\n', 'sausage,pip'] ==> ['fruit,whole'] : 3 : 0.4286 
+Rule: ['bags\n', 'vegetables,herbs,other'] ==> ['vegetables,whole'] : 5 : 0.4545 
+Rule: ['bags\n', 'vegetables,onions,other'] ==> ['fruit,root'] : 4 : 0.5714 
+Rule: ['bags\n', 'vegetables,onions,other'] ==> ['vegetables,whole'] : 5 : 0.7143 
+Rule: ['bags\n', 'vegetables,other'] ==> ['vegetables,whole'] : 19 : 0.4043 
+Rule: ['bags\n', 'whole', 'bakery'] ==> ['product,shopping'] : 3 : 0.6 
+Rule: ['bags\n', 'wine,long'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['bakery', 'fruit,root', 'juice,long'] ==> ['vegetables,other'] : 4 : 0.8 
+Rule: ['bakery', 'juice,long', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['bakery', 'product,chocolate\n'] ==> ['vegetables,whole'] : 6 : 0.4615 
+Rule: ['bakery', 'product,house'] ==> ['keeping'] : 3 : 1.0 
+Rule: ['bar\n', 'product,cake'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['bar,chocolate'] ==> ['bakery'] : 3 : 0.4286 
+Rule: ['bar,chocolate'] ==> ['vegetables,whole'] : 3 : 0.4286 
+Rule: ['bar,dish'] ==> ['vegetables,whole'] : 3 : 0.4286 
+Rule: ['bar,napkins\n', 'life'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['bar,shopping'] ==> ['bags\n'] : 30 : 1.0 
+Rule: ['bar,shopping', 'citrus'] ==> ['bags\n'] : 3 : 1.0 
+Rule: ['bar,specialty'] ==> ['bags\n'] : 5 : 0.4167 
+Rule: ['bar,specialty', 'bar,shopping'] ==> ['bags\n'] : 3 : 1.0 
+Rule: ['bathroom'] ==> ['cleaner\n'] : 3 : 1.0 
+Rule: ['beef,pip'] ==> ['vegetables,whole'] : 4 : 0.5 
+Rule: ['beef,tropical'] ==> ['fruit,root'] : 10 : 0.4762 
+Rule: ['beef,tropical', 'fruit,root'] ==> ['vegetables,other'] : 4 : 0.4 
+Rule: ['beef,tropical', 'fruit,root'] ==> ['vegetables,whole'] : 5 : 0.5 
+Rule: ['beer\n', 'vegetables,herbs,other'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['beer\n', 'vegetables,other'] ==> ['vegetables,whole'] : 6 : 0.5 
+Rule: ['beer,cake'] ==> ['bar\n'] : 5 : 0.5556 
+Rule: ['beer,canned', 'beer,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['beer,canned', 'life'] ==> ['beer,long'] : 3 : 1.0 
+Rule: ['beer,canned', 'life', 'beer,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['beer,dental'] ==> ['care\n'] : 3 : 1.0 
+Rule: ['beer,detergent\n'] ==> ['vegetables,whole'] : 5 : 0.7143 
+Rule: ['beer,female'] ==> ['sanitary'] : 3 : 1.0 
+Rule: ['beer,house'] ==> ['keeping'] : 6 : 1.0 
+Rule: ['beer,house'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['beer,house', 'keeping'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['beer,hygiene'] ==> ['articles\n'] : 12 : 0.5217 
+Rule: ['beer,liquor,red/blush'] ==> ['wine\n'] : 14 : 0.7 
+Rule: ['beer,liquor,red/blush', 'bottled'] ==> ['wine\n'] : 5 : 0.7143 
+Rule: ['beer,liquor,red/blush', 'wine,shopping'] ==> ['bags\n'] : 3 : 1.0 
+Rule: ['beer,long'] ==> ['bakery'] : 24 : 1.0 
+Rule: ['beer,long', 'bags\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['beer,long', 'citrus'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['beer,male'] ==> ['cosmetics\n'] : 4 : 0.5714 
+Rule: ['beer,newspapers,shopping'] ==> ['bags\n'] : 4 : 1.0 
+Rule: ['beer,nut'] ==> ['snack\n'] : 3 : 0.6 
+Rule: ['beer,potted'] ==> ['plants\n'] : 7 : 1.0 
+Rule: ['beer,red/blush'] ==> ['wine\n'] : 28 : 0.549 
+Rule: ['beer,salty', 'citrus'] ==> ['bags\n'] : 3 : 0.4286 
+Rule: ['beer,salty', 'citrus'] ==> ['snack\n'] : 3 : 0.4286 
+Rule: ['beer,salty', 'fruit,other'] ==> ['snack\n'] : 4 : 1.0 
+Rule: ['beer,salty', 'life'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['beer,salty', 'life'] ==> ['snack,long'] : 4 : 0.8 
+Rule: ['beer,salty', 'life', 'snack,long'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['beer,salty', 'snack,long'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['beer,salty', 'snack,shopping'] ==> ['bags\n'] : 5 : 1.0 
+Rule: ['beer,shopping'] ==> ['bags\n'] : 68 : 1.0 
+Rule: ['beer,shopping', 'bottled'] ==> ['bags\n'] : 7 : 1.0 
+Rule: ['beer,shopping', 'sausage,other'] ==> ['bags\n'] : 4 : 1.0 
+Rule: ['beer,shopping', 'vegetables,bottled'] ==> ['bags\n'] : 3 : 1.0 
+Rule: ['beer,shopping', 'water,canned'] ==> ['bags\n'] : 3 : 1.0 
+Rule: ['beer,shopping', 'water,soda,canned'] ==> ['bags\n'] : 5 : 1.0 
+Rule: ['beer,specialty', 'bar\n'] ==> ['canned'] : 6 : 0.4615 
+Rule: ['berries,root'] ==> ['vegetables,whole'] : 7 : 0.4375 
+Rule: ['beverages,fruit/vegetable', 'citrus'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['beverages,long'] ==> ['bakery'] : 12 : 1.0 
+Rule: ['beverages,shopping'] ==> ['bags\n'] : 10 : 1.0 
+Rule: ['beverages,specialty'] ==> ['bar\n'] : 4 : 0.4444 
+Rule: ['bottled'] ==> ['beer\n'] : 143 : 0.4109 
+Rule: ['bottled', 'beer,canned'] ==> ['beer\n'] : 3 : 1.0 
+Rule: ['bottled', 'life'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['bottled', 'life'] ==> ['product\n'] : 3 : 0.6 
+Rule: ['bottled', 'life', 'product\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['bottled', 'product\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['bottled', 'water,bottled'] ==> ['beer\n'] : 8 : 0.7273 
+Rule: ['bottled', 'water,canned'] ==> ['beer\n'] : 6 : 0.5 
+Rule: ['bottled', 'water,fruit/vegetable'] ==> ['juice\n'] : 3 : 0.5 
+Rule: ['bottled', 'water,specialty'] ==> ['chocolate\n'] : 3 : 1.0 
+Rule: ['bottled', 'water,white'] ==> ['wine\n'] : 4 : 0.6667 
+Rule: ['bread\n', 'fruit,other'] ==> ['vegetables,whipped/sour'] : 3 : 0.6 
+Rule: ['bread\n', 'fruit,tropical'] ==> ['fruit,pip'] : 3 : 0.6 
+Rule: ['bread\n', 'fruit,tropical'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['bread\n', 'milk,brown'] ==> ['whole'] : 7 : 0.4667 
+Rule: ['bread\n', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['bread,bottled', 'citrus'] ==> ['fruit,whole'] : 3 : 0.75 
+Rule: ['bread,brown', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['bread,canned', 'fruit,root'] ==> ['vegetables,other'] : 4 : 0.5714 
+Rule: ['bread,canned', 'life'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['bread,canned', 'tropical'] ==> ['fruit,root'] : 3 : 0.4286 
+Rule: ['bread,canned', 'tropical'] ==> ['vegetables,whole'] : 3 : 0.4286 
+Rule: ['bread,cat', 'other'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['bread,chewing'] ==> ['gum\n'] : 4 : 0.5 
+Rule: ['bread,chewing', 'milk,white'] ==> ['gum\n'] : 3 : 1.0 
+Rule: ['bread,fruit/vegetable'] ==> ['juice\n'] : 13 : 0.4062 
+Rule: ['bread,fruit/vegetable', 'fruit,other'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['bread,fruit/vegetable', 'juice,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['bread,fruit/vegetable', 'life'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['bread,fruit/vegetable', 'life'] ==> ['juice,long'] : 3 : 0.75 
+Rule: ['bread,fruit/vegetable', 'life', 'juice,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['bread,fruit/vegetable', 'milk,white'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['bread,meat'] ==> ['cheese,brown'] : 3 : 0.4286 
+Rule: ['bread,pastry,semi-finished'] ==> ['fruit,whole'] : 4 : 0.4444 
+Rule: ['bread,pastry,shopping'] ==> ['bags\n'] : 4 : 1.0 
+Rule: ['bread,sparkling'] ==> ['wine\n'] : 3 : 1.0 
+Rule: ['bread,sweet'] ==> ['bags\n'] : 5 : 0.5556 
+Rule: ['bread,sweet'] ==> ['vegetables,whole'] : 4 : 0.4444 
+Rule: ['brown', 'bread,bottled'] ==> ['beer\n'] : 3 : 0.5 
+Rule: ['bulbs,shopping'] ==> ['bags\n'] : 4 : 1.0 
+Rule: ['canned'] ==> ['beer\n'] : 261 : 0.808 
+Rule: ['care,bottled'] ==> ['pet'] : 7 : 0.4667 
+Rule: ['care,bottled', 'beer\n'] ==> ['pet'] : 3 : 0.6 
+Rule: ['care,coffee,bottled'] ==> ['beer\n'] : 3 : 0.6 
+Rule: ['care,hygiene'] ==> ['vegetables,whole'] : 7 : 0.5 
+Rule: ['cheese,canned'] ==> ['beer\n'] : 8 : 0.5333 
+Rule: ['cheese,chewing'] ==> ['gum\n'] : 4 : 1.0 
+Rule: ['cheese,cream', 'cheese,domestic'] ==> ['fruit,root'] : 4 : 0.4 
+Rule: ['cheese,cream', 'cheese,domestic'] ==> ['vegetables,whole'] : 7 : 0.7 
+Rule: ['cheese,cream', 'cheese,domestic', 'fruit,root'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['cheese,cream', 'cheese,frozen'] ==> ['vegetables,other'] : 6 : 0.4286 
+Rule: ['cheese,cream', 'cheese,frozen', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['cheese,cream', 'cheese,hard'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['cheese,cream', 'cream,soft'] ==> ['cheese,frozen'] : 5 : 0.7143 
+Rule: ['cheese,cream', 'cream,soft'] ==> ['fruit,root'] : 3 : 0.4286 
+Rule: ['cheese,cream', 'cream,soft'] ==> ['vegetables,whole'] : 5 : 0.7143 
+Rule: ['cheese,cream', 'cream,soft', 'cheese,frozen'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['cheese,cream', 'cream,soft', 'fruit,root'] ==> ['cheese,frozen'] : 3 : 1.0 
+Rule: ['cheese,cream', 'fruit,root'] ==> ['cheese,frozen'] : 7 : 0.5833 
+Rule: ['cheese,cream', 'fruit,root'] ==> ['fruit,tropical'] : 5 : 0.4167 
+Rule: ['cheese,cream', 'fruit,root'] ==> ['vegetables,other'] : 8 : 0.6667 
+Rule: ['cheese,cream', 'fruit,root'] ==> ['vegetables,whole'] : 7 : 0.5833 
+Rule: ['cheese,cream', 'fruit,root', 'cheese,frozen'] ==> ['fruit,pip'] : 3 : 0.4286 
+Rule: ['cheese,cream', 'fruit,root', 'cheese,frozen'] ==> ['meals,frozen'] : 3 : 0.4286 
+Rule: ['cheese,cream', 'fruit,root', 'cheese,frozen'] ==> ['vegetables,other'] : 5 : 0.7143 
+Rule: ['cheese,cream', 'fruit,root', 'cheese,frozen'] ==> ['vegetables,whole'] : 3 : 0.4286 
+Rule: ['cheese,cream', 'fruit,root', 'fruit,tropical'] ==> ['vegetables,other'] : 3 : 0.6 
+Rule: ['cheese,cream', 'fruit,root', 'fruit,tropical'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['cheese,cream', 'fruit,root', 'vegetables,other'] ==> ['vegetables,whole'] : 5 : 0.625 
+Rule: ['cheese,cream', 'fruit,tropical'] ==> ['fruit,pip'] : 3 : 0.4286 
+Rule: ['cheese,cream', 'fruit,tropical'] ==> ['vegetables,other'] : 3 : 0.4286 
+Rule: ['cheese,cream', 'fruit,tropical'] ==> ['vegetables,whole'] : 4 : 0.5714 
+Rule: ['cheese,cream', 'life'] ==> ['bakery'] : 6 : 1.0 
+Rule: ['cheese,cream', 'life'] ==> ['cheese,frozen'] : 3 : 0.5 
+Rule: ['cheese,cream', 'life', 'cheese,frozen'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['cheese,cream', 'vegetables,other'] ==> ['vegetables,whole'] : 7 : 0.7 
+Rule: ['cheese,curd'] ==> ['vegetables,whole'] : 7 : 0.4375 
+Rule: ['cheese,domestic', 'citrus'] ==> ['fruit,pip'] : 4 : 0.4 
+Rule: ['cheese,domestic', 'citrus'] ==> ['vegetables,whole'] : 6 : 0.6 
+Rule: ['cheese,domestic', 'citrus', 'fruit,pip'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['cheese,domestic', 'citrus', 'vegetables,other'] ==> ['fruit,root'] : 3 : 1.0 
+Rule: ['cheese,domestic', 'citrus', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['cheese,domestic', 'cream,hard'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['cheese,domestic', 'eggs,brown'] ==> ['vegetables,whole'] : 5 : 0.5556 
+Rule: ['cheese,domestic', 'eggs,brown', 'fruit,pip'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['cheese,domestic', 'eggs,brown', 'fruit,root'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['cheese,domestic', 'eggs,rolls/buns,brown'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['cheese,domestic', 'fruit,onions,other'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['cheese,domestic', 'fruit,other'] ==> ['vegetables,whole'] : 7 : 0.5385 
+Rule: ['cheese,domestic', 'fruit,pip'] ==> ['vegetables,whole'] : 5 : 0.5 
+Rule: ['cheese,domestic', 'fruit,root'] ==> ['vegetables,other'] : 9 : 0.6923 
+Rule: ['cheese,domestic', 'fruit,root'] ==> ['vegetables,whole'] : 10 : 0.7692 
+Rule: ['cheese,domestic', 'fruit,root', 'fruit,pip'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['cheese,domestic', 'fruit,root', 'vegetables,other'] ==> ['vegetables,whole'] : 7 : 0.7778 
+Rule: ['cheese,domestic', 'life'] ==> ['bakery'] : 9 : 1.0 
+Rule: ['cheese,domestic', 'milk,butter,yogurt,soft'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['cheese,domestic', 'milk,cream'] ==> ['fruit,whole'] : 4 : 0.5 
+Rule: ['cheese,domestic', 'milk,whipped/sour'] ==> ['vegetables,whole'] : 6 : 0.6667 
+Rule: ['cheese,domestic', 'products\n'] ==> ['keeping'] : 3 : 1.0 
+Rule: ['cheese,domestic', 'root'] ==> ['vegetables,whole'] : 4 : 1.0 
+Rule: ['cheese,domestic', 'vegetables,herbs,other'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['cheese,domestic', 'vegetables,onions,other'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['cheese,domestic', 'vegetables,other'] ==> ['vegetables,whole'] : 11 : 0.7333 
+Rule: ['cheese,frozen', 'bakery'] ==> ['vegetables,whole'] : 8 : 0.4211 
+Rule: ['cheese,frozen', 'cream,cream'] ==> ['vegetables,whole'] : 5 : 0.7143 
+Rule: ['cheese,frozen', 'fruit,grapes,root'] ==> ['vegetables,other'] : 3 : 1.0 
+Rule: ['cheese,frozen', 'fruit,grapes,root'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['cheese,frozen', 'fruit,grapes,root', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['cheese,frozen', 'fruit,pip'] ==> ['vegetables,whole'] : 15 : 0.625 
+Rule: ['cheese,frozen', 'juice,long'] ==> ['bakery'] : 6 : 1.0 
+Rule: ['cheese,frozen', 'milk,butter,curd,yogurt,whipped/sour'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['cheese,frozen', 'milk,cream'] ==> ['fruit,whole'] : 4 : 0.5 
+Rule: ['cheese,frozen', 'milk,whipped/sour'] ==> ['vegetables,other'] : 4 : 0.5 
+Rule: ['cheese,frozen', 'milk,whipped/sour'] ==> ['vegetables,whole'] : 8 : 1.0 
+Rule: ['cheese,frozen', 'milk,whipped/sour', 'vegetables,other'] ==> ['vegetables,whole'] : 4 : 1.0 
+Rule: ['cheese,frozen', 'milk,yogurt,sliced'] ==> ['fruit,pip'] : 3 : 0.6 
+Rule: ['cheese,frozen', 'milk,yogurt,sliced'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['cheese,frozen', 'vegetables,frozen', 'fruit,pip'] ==> ['fruit,root'] : 4 : 1.0 
+Rule: ['cheese,frozen', 'vegetables,frozen', 'fruit,pip'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['cheese,frozen', 'vegetables,frozen', 'vegetables,other'] ==> ['fruit,root'] : 5 : 0.8333 
+Rule: ['cheese,frozen', 'vegetables,frozen', 'vegetables,other'] ==> ['vegetables,whole'] : 4 : 0.6667 
+Rule: ['cheese,frozen', 'vegetables,onions,other'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['cheese,frozen', 'vegetables,other'] ==> ['vegetables,whole'] : 22 : 0.7333 
+Rule: ['cheese,fruit/vegetable'] ==> ['juice\n'] : 7 : 0.5385 
+Rule: ['cheese,hard'] ==> ['vegetables,whole'] : 14 : 0.4242 
+Rule: ['cheese,hard', 'cheese,domestic'] ==> ['vegetables,onions,other'] : 3 : 0.6 
+Rule: ['cheese,hard', 'cheese,domestic'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['cheese,hard', 'cheese,specialty'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['cheese,hard', 'fruit,root'] ==> ['cheese,frozen'] : 3 : 0.5 
+Rule: ['cheese,hard', 'fruit,root'] ==> ['vegetables,other'] : 3 : 0.5 
+Rule: ['cheese,hard', 'fruit,root'] ==> ['vegetables,whole'] : 5 : 0.8333 
+Rule: ['cheese,hard', 'life'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['cheese,hard', 'vegetables,onions,other'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['cheese,hard', 'vegetables,other'] ==> ['vegetables,whole'] : 4 : 0.6667 
+Rule: ['cheese,long'] ==> ['bakery'] : 7 : 1.0 
+Rule: ['cheese,long'] ==> ['life'] : 7 : 1.0 
+Rule: ['cheese,long', 'life'] ==> ['bakery'] : 7 : 1.0 
+Rule: ['cheese,misc.'] ==> ['beverages\n'] : 3 : 0.6 
+Rule: ['cheese,pastry,shopping'] ==> ['bags\n'] : 3 : 1.0 
+Rule: ['cheese,roll'] ==> ['vegetables,other'] : 3 : 0.6 
+Rule: ['cheese,rolls/buns,fruit/vegetable'] ==> ['juice\n'] : 3 : 0.6 
+Rule: ['cheese,salty'] ==> ['milk,cream'] : 3 : 0.5 
+Rule: ['cheese,salty'] ==> ['snack\n'] : 3 : 0.5 
+Rule: ['cheese,soda,bottled'] ==> ['beer\n'] : 3 : 0.6 
+Rule: ['cheese,specialty', 'cheese,frozen'] ==> ['vegetables,other'] : 4 : 0.8 
+Rule: ['cheese,specialty', 'fruit,root'] ==> ['vegetables,other'] : 3 : 0.5 
+Rule: ['cheese,specialty', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['cheese,white', 'bar\n'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['cheese,white', 'fruit,other'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['cheese,white', 'fruit,root'] ==> ['vegetables,whole'] : 4 : 0.6667 
+Rule: ['cheese,white', 'life'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['cheese,white', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['chicken,beef,root'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['chicken,berries,root'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['chicken,other'] ==> ['vegetables,whole'] : 13 : 0.4194 
+Rule: ['chicken,pork,other'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['chicken,root'] ==> ['vegetables,whole'] : 11 : 0.4074 
+Rule: ['chicken,root', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 0.4286 
+Rule: ['chicken,tropical', 'fruit,other'] ==> ['fruit,pip'] : 5 : 0.5556 
+Rule: ['chicken,tropical', 'fruit,root'] ==> ['fruit,pip'] : 3 : 0.5 
+Rule: ['chicken,tropical', 'fruit,root'] ==> ['vegetables,other'] : 4 : 0.6667 
+Rule: ['chicken,tropical', 'fruit,root'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['chicken,tropical', 'life'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['chocolate,candy,shopping'] ==> ['bags\n'] : 5 : 1.0 
+Rule: ['chocolate,female'] ==> ['products\n'] : 4 : 1.0 
+Rule: ['chocolate,female'] ==> ['sanitary'] : 4 : 1.0 
+Rule: ['chocolate,female', 'products\n'] ==> ['sanitary'] : 4 : 1.0 
+Rule: ['chocolate,napkins\n'] ==> ['vegetables,whole'] : 3 : 0.4286 
+Rule: ['chocolate,shopping'] ==> ['bags\n'] : 19 : 1.0 
+Rule: ['citrus', 'cheese,frozen'] ==> ['fruit,root'] : 4 : 0.5 
+Rule: ['citrus', 'cheese,frozen'] ==> ['vegetables,whole'] : 4 : 0.5 
+Rule: ['citrus', 'cream,cream'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['citrus', 'milk,cream'] ==> ['fruit,pip'] : 3 : 0.75 
+Rule: ['citrus', 'milk,domestic'] ==> ['fruit,whole'] : 5 : 0.7143 
+Rule: ['citrus', 'milk,whipped/sour'] ==> ['fruit,whole'] : 4 : 0.4444 
+Rule: ['citrus', 'milk,whipped/sour'] ==> ['vegetables,whole'] : 4 : 0.4444 
+Rule: ['citrus', 'vegetables,onions,other'] ==> ['fruit,root'] : 3 : 1.0 
+Rule: ['citrus', 'vegetables,other'] ==> ['vegetables,whole'] : 14 : 0.5 
+Rule: ['citrus', 'vegetables,packaged'] ==> ['fruit,root'] : 3 : 0.6 
+Rule: ['citrus', 'wine,long'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['cleaner,female'] ==> ['products\n'] : 3 : 0.6 
+Rule: ['cleaner,female'] ==> ['sanitary'] : 5 : 1.0 
+Rule: ['cleaner,female', 'products\n'] ==> ['sanitary'] : 3 : 1.0 
+Rule: ['cleaner,shopping'] ==> ['bags\n'] : 8 : 1.0 
+Rule: ['coffee,long'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['coffee,long'] ==> ['life'] : 4 : 1.0 
+Rule: ['coffee,long'] ==> ['product\n'] : 3 : 0.75 
+Rule: ['coffee,long', 'life'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['coffee,long', 'product\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['coffee,soda,canned'] ==> ['beer\n'] : 3 : 0.75 
+Rule: ['cooking'] ==> ['chocolate\n'] : 4 : 0.8 
+Rule: ['cosmetics,shopping'] ==> ['bags\n'] : 5 : 1.0 
+Rule: ['cream\n', 'other'] ==> ['vegetables,whipped/sour'] : 3 : 0.5 
+Rule: ['cream\n', 'vegetables,ice'] ==> ['other'] : 3 : 0.6 
+Rule: ['cream,baking'] ==> ['powder\n'] : 3 : 0.6 
+Rule: ['cream,beverages,white'] ==> ['fruit,pip'] : 3 : 0.75 
+Rule: ['cream,beverages,white'] ==> ['vegetables,whipped/sour'] : 4 : 1.0 
+Rule: ['cream,beverages,white', 'fruit,pip'] ==> ['vegetables,whipped/sour'] : 3 : 1.0 
+Rule: ['cream,brown', 'milk,whipped/sour'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['cream,cream'] ==> ['vegetables,whole'] : 18 : 0.4091 
+Rule: ['cream,cream', 'fruit,pip'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['cream,cream', 'vegetables,other'] ==> ['vegetables,whole'] : 4 : 0.6667 
+Rule: ['cream,domestic', 'fruit,pip'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['cream,domestic', 'milk,whipped/sour'] ==> ['vegetables,whole'] : 7 : 0.6364 
+Rule: ['cream,domestic', 'other'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['cream,domestic', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['cream,frozen', 'citrus'] ==> ['fruit,tropical'] : 3 : 0.6 
+Rule: ['cream,frozen', 'fruit,root'] ==> ['vegetables,other'] : 4 : 0.5714 
+Rule: ['cream,frozen', 'fruit,root'] ==> ['vegetables,whole'] : 3 : 0.4286 
+Rule: ['cream,frozen', 'life'] ==> ['bakery'] : 9 : 1.0 
+Rule: ['cream,frozen', 'life', 'product,specialty'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['cream,frozen', 'life', 'snack,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['cream,frozen', 'milk,whipped/sour'] ==> ['vegetables,whole'] : 5 : 0.5556 
+Rule: ['cream,frozen', 'product,specialty'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['cream,frozen', 'root'] ==> ['bags\n'] : 3 : 0.6 
+Rule: ['cream,frozen', 'snack,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['cream,hard'] ==> ['vegetables,whole'] : 12 : 0.4 
+Rule: ['cream,hard', 'cheese,frozen'] ==> ['vegetables,whole'] : 4 : 0.5 
+Rule: ['cream,hard', 'milk,whipped/sour'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['cream,hard', 'vegetables,other'] ==> ['fruit,root'] : 4 : 0.6667 
+Rule: ['cream,hard', 'vegetables,other'] ==> ['vegetables,whole'] : 4 : 0.6667 
+Rule: ['cream,long'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['cream,misc.'] ==> ['bags\n'] : 3 : 0.6 
+Rule: ['cream,rolls/buns,soda,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['cream,rolls/buns,soda,long'] ==> ['life'] : 3 : 1.0 
+Rule: ['cream,rolls/buns,soda,long', 'life'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['cream,shopping'] ==> ['bags\n'] : 6 : 1.0 
+Rule: ['cream,sliced', 'bags\n'] ==> ['vegetables,other'] : 3 : 1.0 
+Rule: ['cream,sliced', 'bakery'] ==> ['milk,butter,yogurt,whipped/sour'] : 3 : 0.5 
+Rule: ['cream,sliced', 'bakery'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['cream,sliced', 'cheese,domestic'] ==> ['milk,whipped/sour'] : 3 : 0.5 
+Rule: ['cream,sliced', 'cheese,domestic'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['cream,sliced', 'cheese,frozen'] ==> ['bakery'] : 4 : 0.5 
+Rule: ['cream,sliced', 'cheese,hard'] ==> ['milk,butter,yogurt,whipped/sour'] : 3 : 0.75 
+Rule: ['cream,sliced', 'cheese,hard'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['cream,sliced', 'fruit,root'] ==> ['bakery'] : 3 : 0.6 
+Rule: ['cream,sliced', 'fruit,root'] ==> ['milk,butter,yogurt,whipped/sour'] : 3 : 0.6 
+Rule: ['cream,sliced', 'fruit,root'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['cream,sliced', 'fruit,root', 'bakery'] ==> ['milk,butter,yogurt,whipped/sour'] : 3 : 1.0 
+Rule: ['cream,sliced', 'fruit,root', 'bakery', 'life'] ==> ['milk,butter,yogurt,whipped/sour'] : 3 : 1.0 
+Rule: ['cream,sliced', 'life'] ==> ['bakery'] : 6 : 1.0 
+Rule: ['cream,sliced', 'life'] ==> ['cheese,frozen'] : 4 : 0.6667 
+Rule: ['cream,sliced', 'life'] ==> ['fruit,root'] : 3 : 0.5 
+Rule: ['cream,sliced', 'life'] ==> ['milk,butter,yogurt,whipped/sour'] : 3 : 0.5 
+Rule: ['cream,sliced', 'life'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['cream,sliced', 'life', 'bakery'] ==> ['milk,butter,yogurt,whipped/sour'] : 3 : 0.5 
+Rule: ['cream,sliced', 'life', 'bakery'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['cream,sliced', 'life', 'cheese,frozen'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['cream,sliced', 'life', 'fruit,root'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['cream,sliced', 'life', 'fruit,root'] ==> ['milk,butter,yogurt,whipped/sour'] : 3 : 1.0 
+Rule: ['cream,sliced', 'milk,whipped/sour'] ==> ['vegetables,whole'] : 4 : 0.4444 
+Rule: ['cream,sliced', 'vegetables,other'] ==> ['vegetables,whole'] : 4 : 0.6667 
+Rule: ['cream,soft'] ==> ['cheese,frozen'] : 12 : 0.4615 
+Rule: ['cream,soft'] ==> ['vegetables,whole'] : 13 : 0.5 
+Rule: ['cream,soft', 'cheese,domestic'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['cream,soft', 'cheese,frozen'] ==> ['fruit,pip'] : 5 : 0.4167 
+Rule: ['cream,soft', 'cheese,frozen'] ==> ['vegetables,whole'] : 6 : 0.5 
+Rule: ['cream,soft', 'cheese,frozen', 'fruit,pip'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['cream,soft', 'cheese,hard'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['cream,soft', 'cheese,sliced'] ==> ['vegetables,whole'] : 5 : 0.7143 
+Rule: ['cream,soft', 'fruit,other'] ==> ['cheese,frozen'] : 3 : 0.75 
+Rule: ['cream,soft', 'fruit,other'] ==> ['fruit,pip'] : 3 : 0.75 
+Rule: ['cream,soft', 'fruit,other', 'cheese,frozen'] ==> ['fruit,pip'] : 3 : 1.0 
+Rule: ['cream,soft', 'fruit,pip'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['cream,soft', 'fruit,root'] ==> ['cheese,frozen'] : 4 : 0.6667 
+Rule: ['cream,soft', 'fruit,root'] ==> ['vegetables,other'] : 3 : 0.5 
+Rule: ['cream,soft', 'fruit,root'] ==> ['vegetables,whole'] : 5 : 0.8333 
+Rule: ['cream,soft', 'fruit,root', 'cheese,frozen'] ==> ['vegetables,other'] : 3 : 0.75 
+Rule: ['cream,soft', 'fruit,root', 'cheese,frozen'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['cream,soft', 'life'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['cream,soft', 'milk,whipped/sour'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['cream,soft', 'vegetables,onions,other'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['cream,soft', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['dessert,brown'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['dessert,canned'] ==> ['beer\n'] : 3 : 1.0 
+Rule: ['dessert,frozen'] ==> ['potato'] : 3 : 0.4286 
+Rule: ['dish'] ==> ['cleaner\n'] : 4 : 0.5714 
+Rule: ['eggs,brown', 'fruit,pip'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['eggs,brown', 'fruit,root'] ==> ['vegetables,whole'] : 8 : 0.8 
+Rule: ['eggs,brown', 'fruit,root', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['eggs,brown', 'juice\n'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['eggs,brown', 'products\n'] ==> ['keeping'] : 3 : 1.0 
+Rule: ['eggs,brown', 'vegetables,other'] ==> ['vegetables,whole'] : 6 : 1.0 
+Rule: ['eggs,rolls/buns,brown', 'bags\n'] ==> ['milk,domestic'] : 3 : 0.6 
+Rule: ['eggs,rolls/buns,brown', 'bags\n'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['eggs,rolls/buns,pastry,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['eggs,shopping'] ==> ['bags\n'] : 4 : 1.0 
+Rule: ['eggs,white', 'cheese,cream'] ==> ['fruit,root'] : 3 : 1.0 
+Rule: ['eggs,white', 'cheese,cream'] ==> ['vegetables,other'] : 3 : 1.0 
+Rule: ['eggs,white', 'cheese,cream', 'fruit,root'] ==> ['vegetables,other'] : 3 : 1.0 
+Rule: ['eggs,white', 'cheese,frozen'] ==> ['meals,frozen'] : 3 : 0.5 
+Rule: ['eggs,white', 'cheese,frozen'] ==> ['vegetables,other'] : 3 : 0.5 
+Rule: ['eggs,white', 'cheese,frozen'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['eggs,white', 'cream,domestic'] ==> ['bags\n'] : 3 : 0.75 
+Rule: ['eggs,white', 'fruit,pip'] ==> ['vegetables,whole'] : 5 : 0.7143 
+Rule: ['eggs,white', 'fruit,root'] ==> ['cheese,frozen'] : 4 : 0.4 
+Rule: ['eggs,white', 'fruit,root'] ==> ['fruit,pip'] : 5 : 0.5 
+Rule: ['eggs,white', 'fruit,root'] ==> ['vegetables,other'] : 6 : 0.6 
+Rule: ['eggs,white', 'fruit,root'] ==> ['vegetables,whole'] : 7 : 0.7 
+Rule: ['eggs,white', 'fruit,root', 'cheese,frozen'] ==> ['meals,frozen'] : 3 : 0.75 
+Rule: ['eggs,white', 'fruit,root', 'cheese,frozen'] ==> ['vegetables,other'] : 3 : 0.75 
+Rule: ['eggs,white', 'fruit,root', 'cheese,frozen'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['eggs,white', 'fruit,root', 'fruit,pip'] ==> ['vegetables,whole'] : 5 : 1.0 
+Rule: ['eggs,white', 'fruit,root', 'vegetables,other'] ==> ['vegetables,whole'] : 4 : 0.6667 
+Rule: ['eggs,white', 'life'] ==> ['bakery'] : 6 : 1.0 
+Rule: ['eggs,white', 'vegetables,other'] ==> ['fruit,pip'] : 3 : 0.4286 
+Rule: ['eggs,white', 'vegetables,other'] ==> ['vegetables,whole'] : 4 : 0.5714 
+Rule: ['eggs,white', 'vegetables,other', 'fruit,pip'] ==> ['fruit,root'] : 3 : 1.0 
+Rule: ['eggs,white', 'vegetables,other', 'fruit,pip'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['eggs,white', 'water,fruit/vegetable'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['female'] ==> ['sanitary'] : 3 : 1.0 
+Rule: ['film/bags\n', 'fruit,root'] ==> ['vegetables,other'] : 3 : 0.75 
+Rule: ['film/bags\n', 'life'] ==> ['bakery'] : 8 : 1.0 
+Rule: ['fish,brown'] ==> ['vegetables,whole'] : 3 : 0.4286 
+Rule: ['fish,domestic'] ==> ['vegetables,whole'] : 7 : 0.5385 
+Rule: ['fish,domestic', 'cheese,frozen'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['fish,domestic', 'fruit,pip'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['fish,domestic', 'vegetables,whole'] ==> ['milk,curd,frozen'] : 4 : 0.5714 
+Rule: ['fish,long'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['flower'] ==> ['soil/fertilizer\n'] : 7 : 0.875 
+Rule: ['food', 'cheese,frozen'] ==> ['vegetables,other'] : 6 : 0.8571 
+Rule: ['food', 'cheese,frozen'] ==> ['vegetables,whole'] : 4 : 0.5714 
+Rule: ['food', 'cheese,frozen', 'vegetables,other'] ==> ['vegetables,whole'] : 4 : 0.6667 
+Rule: ['food', 'fruit,other'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['food', 'fruit,root'] ==> ['cheese,frozen'] : 4 : 0.4444 
+Rule: ['food', 'fruit,root'] ==> ['vegetables,other'] : 5 : 0.5556 
+Rule: ['food', 'fruit,root'] ==> ['vegetables,whole'] : 4 : 0.4444 
+Rule: ['food', 'fruit,root', 'cheese,frozen'] ==> ['vegetables,other'] : 4 : 1.0 
+Rule: ['food', 'fruit,root', 'cheese,frozen'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['food', 'fruit,root', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['food', 'hamburger', 'meat,citrus'] ==> ['products,canned'] : 3 : 1.0 
+Rule: ['food', 'meat,citrus'] ==> ['products,canned'] : 3 : 0.5 
+Rule: ['food', 'meat,tropical'] ==> ['hamburger'] : 3 : 0.6 
+Rule: ['food', 'rolls/buns,Instant'] ==> ['products\n'] : 3 : 1.0 
+Rule: ['food', 'vegetables,other'] ==> ['vegetables,whole'] : 5 : 0.5 
+Rule: ['food,bottled', 'bakery'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['food,bottled', 'vegetables,other'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['food,canned'] ==> ['beer\n'] : 7 : 0.7 
+Rule: ['food,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['food,long'] ==> ['life'] : 3 : 1.0 
+Rule: ['food,long', 'life'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['food,pet', 'care,bottled'] ==> ['fruit,pip'] : 3 : 1.0 
+Rule: ['food,pet', 'fruit,root'] ==> ['fruit,pip'] : 3 : 1.0 
+Rule: ['food,salty'] ==> ['bags\n'] : 5 : 0.5556 
+Rule: ['food,salty'] ==> ['cheese,frozen'] : 4 : 0.4444 
+Rule: ['food,salty'] ==> ['vegetables,whole'] : 4 : 0.4444 
+Rule: ['food,shopping'] ==> ['bags\n'] : 10 : 1.0 
+Rule: ['food,shopping'] ==> ['fruit,root'] : 4 : 0.4 
+Rule: ['food,shopping', 'fruit,root'] ==> ['bags\n'] : 4 : 1.0 
+Rule: ['food,shopping', 'fruit,root'] ==> ['fruit,pip'] : 3 : 0.75 
+Rule: ['food,shopping', 'fruit,root', 'bags\n'] ==> ['fruit,pip'] : 3 : 0.75 
+Rule: ['food,soda,misc.'] ==> ['beverages\n'] : 3 : 0.75 
+Rule: ['food,white'] ==> ['bags\n'] : 3 : 0.75 
+Rule: ['food,white'] ==> ['wine,shopping'] : 3 : 0.75 
+Rule: ['food,white', 'bags\n'] ==> ['wine,shopping'] : 3 : 1.0 
+Rule: ['frankfurter,beef,other'] ==> ['vegetables,whole'] : 3 : 0.4286 
+Rule: ['frankfurter,chicken,pork,citrus'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['frankfurter,citrus', 'fruit,other'] ==> ['vegetables,whole'] : 4 : 0.6667 
+Rule: ['frankfurter,frozen'] ==> ['potato'] : 3 : 0.5 
+Rule: ['frankfurter,ham,tropical'] ==> ['cheese,frozen'] : 3 : 0.6 
+Rule: ['frankfurter,ham,tropical'] ==> ['fruit,pip'] : 3 : 0.6 
+Rule: ['frankfurter,ham,tropical'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['frankfurter,tropical', 'fruit,other'] ==> ['vegetables,whole'] : 4 : 0.4444 
+Rule: ['frankfurter,tropical', 'fruit,root'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['frankfurter,tropical', 'life'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['frozen', 'life'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['frozen', 'products\n'] ==> ['potato'] : 5 : 1.0 
+Rule: ['fruit,berries,other'] ==> ['vegetables,whole'] : 14 : 0.6087 
+Rule: ['fruit,berries,other', 'fruit,pip'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['fruit,berries,other', 'snack\n'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['fruit,berries,root'] ==> ['vegetables,other'] : 14 : 0.5 
+Rule: ['fruit,berries,root'] ==> ['vegetables,whole'] : 14 : 0.5 
+Rule: ['fruit,berries,root', 'bags\n'] ==> ['vegetables,other'] : 6 : 0.8571 
+Rule: ['fruit,berries,root', 'bags\n'] ==> ['vegetables,whole'] : 3 : 0.4286 
+Rule: ['fruit,berries,root', 'bags\n', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['fruit,berries,root', 'cheese,frozen'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['fruit,berries,root', 'fruit,tropical'] ==> ['vegetables,other'] : 4 : 0.6667 
+Rule: ['fruit,berries,root', 'fruit,tropical'] ==> ['vegetables,whole'] : 4 : 0.6667 
+Rule: ['fruit,berries,root', 'fruit,tropical', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['fruit,berries,root', 'tropical'] ==> ['bags\n'] : 4 : 0.5 
+Rule: ['fruit,berries,root', 'tropical'] ==> ['vegetables,other'] : 5 : 0.625 
+Rule: ['fruit,berries,root', 'tropical', 'bags\n'] ==> ['vegetables,other'] : 4 : 1.0 
+Rule: ['fruit,berries,root', 'vegetables,other'] ==> ['vegetables,whole'] : 9 : 0.6429 
+Rule: ['fruit,coffee\n'] ==> ['citrus'] : 3 : 0.4286 
+Rule: ['fruit,fruit/vegetable'] ==> ['juice\n'] : 4 : 0.6667 
+Rule: ['fruit,grapes,berries,other'] ==> ['vegetables,whole'] : 4 : 0.6667 
+Rule: ['fruit,grapes,other'] ==> ['vegetables,whole'] : 10 : 0.5 
+Rule: ['fruit,grapes,root'] ==> ['vegetables,other'] : 10 : 0.5 
+Rule: ['fruit,grapes,root'] ==> ['vegetables,whole'] : 12 : 0.6 
+Rule: ['fruit,grapes,root', 'fruit,pip'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['fruit,grapes,root', 'vegetables,other'] ==> ['vegetables,whole'] : 7 : 0.7 
+Rule: ['fruit,grapes,whole'] ==> ['citrus'] : 4 : 0.4 
+Rule: ['fruit,herbs,other'] ==> ['vegetables,whole'] : 8 : 0.5333 
+Rule: ['fruit,herbs,other', 'bags\n'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['fruit,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['fruit,long'] ==> ['life'] : 3 : 1.0 
+Rule: ['fruit,long', 'life'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['fruit,misc.'] ==> ['beverages\n'] : 3 : 0.5 
+Rule: ['fruit,nuts/prunes,root'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['fruit,onions,other'] ==> ['vegetables,whole'] : 16 : 0.5 
+Rule: ['fruit,onions,other', 'bakery'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['fruit,onions,other', 'fruit,pip'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['fruit,other', 'bakery'] ==> ['vegetables,whole'] : 12 : 0.6 
+Rule: ['fruit,other', 'bar\n'] ==> ['vegetables,whole'] : 4 : 0.6667 
+Rule: ['fruit,other', 'beverages,fruit/vegetable'] ==> ['citrus'] : 3 : 0.75 
+Rule: ['fruit,other', 'beverages,fruit/vegetable'] ==> ['fruit,tropical'] : 3 : 0.75 
+Rule: ['fruit,other', 'beverages,fruit/vegetable', 'fruit,tropical'] ==> ['citrus'] : 3 : 1.0 
+Rule: ['fruit,other', 'cheese,curd'] ==> ['vegetables,whole'] : 4 : 0.6667 
+Rule: ['fruit,other', 'cheese,frozen'] ==> ['vegetables,whole'] : 9 : 0.5294 
+Rule: ['fruit,other', 'cheese,frozen', 'fruit,pip'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['fruit,other', 'cheese,spread'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['fruit,other', 'citrus', 'bakery'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['fruit,other', 'cream,beverages,white'] ==> ['fruit,pip'] : 3 : 0.75 
+Rule: ['fruit,other', 'cream,beverages,white'] ==> ['vegetables,whipped/sour'] : 4 : 1.0 
+Rule: ['fruit,other', 'cream,beverages,white', 'fruit,pip'] ==> ['vegetables,whipped/sour'] : 3 : 1.0 
+Rule: ['fruit,other', 'cream,cream'] ==> ['vegetables,whole'] : 6 : 1.0 
+Rule: ['fruit,other', 'cream,domestic'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['fruit,other', 'cream,hard'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['fruit,other', 'frankfurter,pip'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['fruit,other', 'gum\n'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['fruit,other', 'hamburger'] ==> ['meat,citrus'] : 4 : 0.4 
+Rule: ['fruit,other', 'hamburger'] ==> ['vegetables,whole'] : 6 : 0.6 
+Rule: ['fruit,other', 'juice,long'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['fruit,other', 'keeping'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['fruit,other', 'life', 'product\n'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['fruit,other', 'life', 'snack,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['fruit,other', 'life', 'snack,long'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['fruit,other', 'milk,domestic'] ==> ['vegetables,whole'] : 4 : 1.0 
+Rule: ['fruit,other', 'milk,whipped/sour'] ==> ['vegetables,whole'] : 9 : 0.9 
+Rule: ['fruit,other', 'milk,yogurt,cream'] ==> ['vegetables,whole'] : 4 : 1.0 
+Rule: ['fruit,other', 'pork,citrus'] ==> ['vegetables,whole'] : 3 : 0.4286 
+Rule: ['fruit,other', 'potato'] ==> ['bakery'] : 3 : 0.5 
+Rule: ['fruit,other', 'potato'] ==> ['vegetables,whole'] : 4 : 0.6667 
+Rule: ['fruit,other', 'powder\n'] ==> ['vegetables,whole'] : 4 : 1.0 
+Rule: ['fruit,other', 'powder,long'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['fruit,other', 'powder,long'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['fruit,other', 'powder,long', 'bakery'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['fruit,other', 'product\n'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['fruit,other', 'products\n'] ==> ['vegetables,whole'] : 7 : 0.5385 
+Rule: ['fruit,other', 'products\n', 'fruit,pip'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['fruit,other', 'products\n', 'keeping'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['fruit,other', 'snack,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['fruit,other', 'snack,long'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['fruit,other', 'snack,long', 'bakery'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['fruit,pickled'] ==> ['citrus'] : 3 : 0.5 
+Rule: ['fruit,pip', 'cheese,frozen', 'bakery'] ==> ['fruit,root'] : 3 : 0.6 
+Rule: ['fruit,pip', 'cheese,frozen', 'bakery'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['fruit,pip', 'fruit,grapes,other'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['fruit,pip', 'fruit,root', 'bakery', 'life'] ==> ['cheese,frozen'] : 3 : 0.6 
+Rule: ['fruit,pip', 'keeping'] ==> ['vegetables,whole'] : 4 : 0.6667 
+Rule: ['fruit,pip', 'products\n'] ==> ['keeping'] : 6 : 0.6667 
+Rule: ['fruit,pip', 'products\n', 'keeping'] ==> ['vegetables,whole'] : 4 : 0.6667 
+Rule: ['fruit,root'] ==> ['vegetables,other'] : 142 : 0.4057 
+Rule: ['fruit,root'] ==> ['vegetables,whole'] : 168 : 0.48 
+Rule: ['fruit,root', 'bakery'] ==> ['vegetables,whole'] : 9 : 0.45 
+Rule: ['fruit,root', 'bakery', 'life', 'cheese,frozen'] ==> ['milk,butter,yogurt,whipped/sour'] : 3 : 0.6 
+Rule: ['fruit,root', 'beef,citrus'] ==> ['vegetables,other'] : 7 : 0.4118 
+Rule: ['fruit,root', 'beer\n'] ==> ['vegetables,whole'] : 8 : 0.6154 
+Rule: ['fruit,root', 'beer\n', 'fruit,pip'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['fruit,root', 'beer\n', 'vegetables,herbs,other'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['fruit,root', 'cheese,frozen'] ==> ['fruit,pip'] : 11 : 0.4583 
+Rule: ['fruit,root', 'cheese,frozen'] ==> ['vegetables,other'] : 15 : 0.625 
+Rule: ['fruit,root', 'cheese,frozen'] ==> ['vegetables,whole'] : 18 : 0.75 
+Rule: ['fruit,root', 'cheese,frozen', 'bakery'] ==> ['milk,butter,yogurt,whipped/sour'] : 3 : 0.6 
+Rule: ['fruit,root', 'cheese,frozen', 'bakery'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['fruit,root', 'cheese,frozen', 'fruit,pip'] ==> ['vegetables,whole'] : 9 : 0.8182 
+Rule: ['fruit,root', 'cheese,frozen', 'vegetables,frozen'] ==> ['vegetables,whole'] : 4 : 0.6667 
+Rule: ['fruit,root', 'cheese,frozen', 'vegetables,other'] ==> ['vegetables,whole'] : 10 : 0.6667 
+Rule: ['fruit,root', 'cheese,rolls/buns,brown'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['fruit,root', 'chicken,citrus'] ==> ['vegetables,other'] : 5 : 0.625 
+Rule: ['fruit,root', 'chicken,hamburger'] ==> ['vegetables,other'] : 3 : 1.0 
+Rule: ['fruit,root', 'citrus'] ==> ['vegetables,other'] : 24 : 0.4138 
+Rule: ['fruit,root', 'citrus'] ==> ['vegetables,whole'] : 25 : 0.431 
+Rule: ['fruit,root', 'citrus', 'fruit,pip'] ==> ['vegetables,whole'] : 6 : 0.4615 
+Rule: ['fruit,root', 'citrus', 'vegetables,other'] ==> ['vegetables,whole'] : 12 : 0.5 
+Rule: ['fruit,root', 'cream,cream'] ==> ['vegetables,other'] : 5 : 0.8333 
+Rule: ['fruit,root', 'cream,cream'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['fruit,root', 'cream,cream', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['fruit,root', 'food,bottled'] ==> ['vegetables,other'] : 4 : 0.5714 
+Rule: ['fruit,root', 'food,bottled'] ==> ['vegetables,whole'] : 5 : 0.7143 
+Rule: ['fruit,root', 'food,bottled', 'vegetables,other'] ==> ['vegetables,whole'] : 4 : 1.0 
+Rule: ['fruit,root', 'frankfurter,pip'] ==> ['vegetables,other'] : 3 : 0.75 
+Rule: ['fruit,root', 'fruit,pip'] ==> ['vegetables,whole'] : 35 : 0.5556 
+Rule: ['fruit,root', 'gum\n'] ==> ['citrus'] : 3 : 0.6 
+Rule: ['fruit,root', 'gum\n'] ==> ['vegetables,other'] : 3 : 0.6 
+Rule: ['fruit,root', 'gum\n'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['fruit,root', 'hamburger'] ==> ['vegetables,other'] : 5 : 0.625 
+Rule: ['fruit,root', 'hamburger', 'vegetables,other'] ==> ['meat,pip'] : 3 : 0.6 
+Rule: ['fruit,root', 'juice\n'] ==> ['vegetables,whole'] : 6 : 0.5455 
+Rule: ['fruit,root', 'juice,long'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['fruit,root', 'juice,long'] ==> ['vegetables,other'] : 4 : 0.8 
+Rule: ['fruit,root', 'juice,long'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['fruit,root', 'juice,long', 'bakery'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['fruit,root', 'keeping'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['fruit,root', 'marshmallow\n'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['fruit,root', 'meat,citrus'] ==> ['vegetables,other'] : 6 : 0.4615 
+Rule: ['fruit,root', 'meat,citrus'] ==> ['vegetables,whole'] : 7 : 0.5385 
+Rule: ['fruit,root', 'milk,butter,curd,yogurt,whipped/sour'] ==> ['vegetables,other'] : 3 : 1.0 
+Rule: ['fruit,root', 'milk,butter,curd,yogurt,whipped/sour'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['fruit,root', 'milk,butter,curd,yogurt,whipped/sour', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['fruit,root', 'milk,domestic'] ==> ['vegetables,other'] : 3 : 0.6 
+Rule: ['fruit,root', 'milk,domestic'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['fruit,root', 'milk,domestic', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['fruit,root', 'milk,processed'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['fruit,root', 'milk,whipped/sour'] ==> ['vegetables,other'] : 5 : 0.5 
+Rule: ['fruit,root', 'milk,whipped/sour'] ==> ['vegetables,whole'] : 9 : 0.9 
+Rule: ['fruit,root', 'milk,whipped/sour', 'vegetables,other'] ==> ['vegetables,whole'] : 5 : 1.0 
+Rule: ['fruit,root', 'milk,white'] ==> ['vegetables,whole'] : 4 : 1.0 
+Rule: ['fruit,root', 'potato'] ==> ['vegetables,whole'] : 5 : 0.625 
+Rule: ['fruit,root', 'powder,canned'] ==> ['vegetables,other'] : 3 : 1.0 
+Rule: ['fruit,root', 'products\n'] ==> ['keeping'] : 5 : 0.4545 
+Rule: ['fruit,root', 'products\n'] ==> ['vegetables,other'] : 5 : 0.4545 
+Rule: ['fruit,root', 'products\n'] ==> ['vegetables,whole'] : 6 : 0.5455 
+Rule: ['fruit,root', 'products\n', 'keeping'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['fruit,root', 'sausage,pip'] ==> ['vegetables,whole'] : 5 : 0.5 
+Rule: ['fruit,root', 'snack\n'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['fruit,root', 'vegetables,curd,butter'] ==> ['vegetables,other'] : 3 : 1.0 
+Rule: ['fruit,root', 'vegetables,frozen'] ==> ['vegetables,other'] : 9 : 0.45 
+Rule: ['fruit,root', 'vegetables,frozen', 'fruit,pip'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['fruit,root', 'vegetables,frozen', 'potato'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['fruit,root', 'vegetables,frozen', 'vegetables,other'] ==> ['vegetables,whole'] : 4 : 0.4444 
+Rule: ['fruit,root', 'vegetables,herbs,other'] ==> ['fruit,pip'] : 6 : 0.4286 
+Rule: ['fruit,root', 'vegetables,herbs,other'] ==> ['vegetables,whole'] : 8 : 0.5714 
+Rule: ['fruit,root', 'vegetables,herbs,other', 'fruit,pip'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['fruit,root', 'vegetables,onions,herbs,other'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['fruit,root', 'vegetables,onions,other'] ==> ['vegetables,whole'] : 12 : 0.5455 
+Rule: ['fruit,root', 'vegetables,onions,other', 'fruit,pip'] ==> ['vegetables,whole'] : 4 : 1.0 
+Rule: ['fruit,root', 'vegetables,other'] ==> ['vegetables,whole'] : 72 : 0.507 
+Rule: ['fruit,semi-finished'] ==> ['citrus'] : 3 : 0.5 
+Rule: ['fruit,specialty'] ==> ['citrus'] : 4 : 0.5 
+Rule: ['fruit,tropical'] ==> ['citrus'] : 114 : 0.5816 
+Rule: ['fruit,tropical', 'articles\n'] ==> ['citrus'] : 3 : 0.4286 
+Rule: ['fruit,tropical', 'articles\n'] ==> ['fruit,other'] : 3 : 0.4286 
+Rule: ['fruit,tropical', 'articles\n'] ==> ['fruit,pip'] : 4 : 0.5714 
+Rule: ['fruit,tropical', 'bags\n'] ==> ['citrus'] : 14 : 0.6087 
+Rule: ['fruit,tropical', 'bags\n', 'fruit,other'] ==> ['citrus'] : 3 : 0.75 
+Rule: ['fruit,tropical', 'beverages,fruit/vegetable'] ==> ['citrus'] : 6 : 0.75 
+Rule: ['fruit,tropical', 'beverages,fruit/vegetable'] ==> ['vegetables,whole'] : 4 : 0.5 
+Rule: ['fruit,tropical', 'beverages,fruit/vegetable', 'citrus'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['fruit,tropical', 'cheese,domestic'] ==> ['fruit,root'] : 3 : 0.6 
+Rule: ['fruit,tropical', 'cheese,domestic'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['fruit,tropical', 'cheese,domestic', 'fruit,root'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['fruit,tropical', 'cheese,frozen'] ==> ['fruit,pip'] : 3 : 0.4286 
+Rule: ['fruit,tropical', 'cheese,frozen'] ==> ['vegetables,other'] : 3 : 0.4286 
+Rule: ['fruit,tropical', 'cheese,frozen'] ==> ['vegetables,whole'] : 5 : 0.7143 
+Rule: ['fruit,tropical', 'cheese,frozen', 'fruit,pip'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['fruit,tropical', 'cheese,hard'] ==> ['fruit,root'] : 3 : 0.75 
+Rule: ['fruit,tropical', 'cheese,hard'] ==> ['vegetables,whole'] : 4 : 1.0 
+Rule: ['fruit,tropical', 'cheese,hard', 'fruit,root'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['fruit,tropical', 'chicken,citrus'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['fruit,tropical', 'citrus', 'fruit,pip', 'bakery'] ==> ['life'] : 4 : 1.0 
+Rule: ['fruit,tropical', 'citrus', 'vegetables,other'] ==> ['fruit,root'] : 10 : 0.7143 
+Rule: ['fruit,tropical', 'citrus', 'vegetables,other'] ==> ['vegetables,whole'] : 8 : 0.5714 
+Rule: ['fruit,tropical', 'frankfurter,citrus'] ==> ['vegetables,whole'] : 3 : 0.4286 
+Rule: ['fruit,tropical', 'fruit,grapes,root'] ==> ['fruit,pip'] : 3 : 0.5 
+Rule: ['fruit,tropical', 'fruit,grapes,root'] ==> ['vegetables,other'] : 3 : 0.5 
+Rule: ['fruit,tropical', 'fruit,grapes,root'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['fruit,tropical', 'fruit,other'] ==> ['citrus'] : 17 : 0.5667 
+Rule: ['fruit,tropical', 'fruit,other'] ==> ['vegetables,whole'] : 12 : 0.4 
+Rule: ['fruit,tropical', 'fruit,pip', 'vegetables,other'] ==> ['fruit,root'] : 4 : 0.4444 
+Rule: ['fruit,tropical', 'fruit,pip', 'vegetables,other'] ==> ['vegetables,whole'] : 5 : 0.5556 
+Rule: ['fruit,tropical', 'fruit,root'] ==> ['citrus'] : 17 : 0.4146 
+Rule: ['fruit,tropical', 'fruit,root'] ==> ['vegetables,other'] : 24 : 0.5854 
+Rule: ['fruit,tropical', 'fruit,root'] ==> ['vegetables,whole'] : 25 : 0.6098 
+Rule: ['fruit,tropical', 'fruit,root', 'cheese,frozen'] ==> ['fruit,pip'] : 3 : 0.5 
+Rule: ['fruit,tropical', 'fruit,root', 'cheese,frozen'] ==> ['vegetables,other'] : 3 : 0.5 
+Rule: ['fruit,tropical', 'fruit,root', 'cheese,frozen'] ==> ['vegetables,whole'] : 5 : 0.8333 
+Rule: ['fruit,tropical', 'fruit,root', 'citrus'] ==> ['vegetables,whole'] : 8 : 0.4706 
+Rule: ['fruit,tropical', 'fruit,root', 'fruit,pip'] ==> ['vegetables,whole'] : 7 : 0.6364 
+Rule: ['fruit,tropical', 'fruit,root', 'juice\n'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['fruit,tropical', 'fruit,root', 'vegetables,herbs,other'] ==> ['vegetables,whole'] : 4 : 1.0 
+Rule: ['fruit,tropical', 'fruit,root', 'vegetables,other'] ==> ['vegetables,whole'] : 15 : 0.625 
+Rule: ['fruit,tropical', 'hamburger'] ==> ['meat,citrus'] : 4 : 1.0 
+Rule: ['fruit,tropical', 'juice\n'] ==> ['vegetables,whole'] : 8 : 0.6667 
+Rule: ['fruit,tropical', 'juice,hygiene'] ==> ['citrus'] : 3 : 0.75 
+Rule: ['fruit,tropical', 'juice,hygiene'] ==> ['fruit,pip'] : 4 : 1.0 
+Rule: ['fruit,tropical', 'juice,hygiene', 'citrus'] ==> ['fruit,pip'] : 3 : 1.0 
+Rule: ['fruit,tropical', 'juice,napkins\n'] ==> ['beverages,fruit/vegetable'] : 3 : 0.75 
+Rule: ['fruit,tropical', 'juice,napkins\n'] ==> ['citrus'] : 3 : 0.75 
+Rule: ['fruit,tropical', 'juice,napkins\n', 'beverages,fruit/vegetable'] ==> ['citrus'] : 3 : 1.0 
+Rule: ['fruit,tropical', 'life'] ==> ['bakery'] : 11 : 1.0 
+Rule: ['fruit,tropical', 'life'] ==> ['citrus'] : 6 : 0.5455 
+Rule: ['fruit,tropical', 'life'] ==> ['fruit,pip'] : 6 : 0.5455 
+Rule: ['fruit,tropical', 'life', 'citrus'] ==> ['bakery'] : 6 : 1.0 
+Rule: ['fruit,tropical', 'life', 'citrus'] ==> ['fruit,pip'] : 4 : 0.6667 
+Rule: ['fruit,tropical', 'life', 'fruit,pip'] ==> ['bakery'] : 6 : 1.0 
+Rule: ['fruit,tropical', 'life', 'product\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['fruit,tropical', 'life', 'product\n'] ==> ['fruit,pip'] : 3 : 1.0 
+Rule: ['fruit,tropical', 'life', 'vegetables,other'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['fruit,tropical', 'milk\n'] ==> ['citrus'] : 3 : 0.75 
+Rule: ['fruit,tropical', 'milk,frozen'] ==> ['citrus'] : 3 : 0.5 
+Rule: ['fruit,tropical', 'milk,frozen'] ==> ['fruit,whole'] : 3 : 0.5 
+Rule: ['fruit,tropical', 'milk,whipped/sour'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['fruit,tropical', 'product\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['fruit,tropical', 'product\n'] ==> ['fruit,pip'] : 3 : 1.0 
+Rule: ['fruit,tropical', 'product\n', 'bakery'] ==> ['fruit,pip'] : 3 : 1.0 
+Rule: ['fruit,tropical', 'products\n'] ==> ['keeping'] : 3 : 0.5 
+Rule: ['fruit,tropical', 'products\n'] ==> ['sanitary'] : 3 : 0.5 
+Rule: ['fruit,tropical', 'vegetables,herbs,other'] ==> ['vegetables,whole'] : 5 : 1.0 
+Rule: ['fruit,tropical', 'vegetables,other'] ==> ['vegetables,whole'] : 22 : 0.6471 
+Rule: ['fruit,tropical', 'vegetables,other', 'fruit,grapes,root'] ==> ['fruit,pip'] : 3 : 1.0 
+Rule: ['fruit,tropical', 'water,fruit/vegetable'] ==> ['citrus'] : 3 : 0.75 
+Rule: ['fruit,tropical', 'water,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['fruit,tropical', 'water,long'] ==> ['life'] : 3 : 1.0 
+Rule: ['fruit,tropical', 'water,long', 'life'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['fruit,white'] ==> ['bags\n'] : 4 : 0.4444 
+Rule: ['fruit,white'] ==> ['citrus'] : 4 : 0.4444 
+Rule: ['fruit,white', 'citrus'] ==> ['bags\n'] : 3 : 0.75 
+Rule: ['fruit,whole', 'keeping'] ==> ['sausage,tropical'] : 3 : 0.6 
+Rule: ['fruit,whole', 'products\n', 'keeping'] ==> ['sausage,tropical'] : 3 : 0.75 
+Rule: ['fruit,yogurt\n'] ==> ['pip'] : 3 : 0.4286 
+Rule: ['fruit/vegetable'] ==> ['juice\n'] : 22 : 0.5641 
+Rule: ['fruit/vegetables,whole'] ==> ['vegetables,packaged'] : 18 : 0.4615 
+Rule: ['fruit/vegetables,whole', 'fruit,other'] ==> ['vegetables,packaged'] : 5 : 1.0 
+Rule: ['fruit/vegetables,whole', 'fruit,root'] ==> ['vegetables,packaged'] : 4 : 0.8 
+Rule: ['fruit/vegetables,whole', 'life'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['grapes,root'] ==> ['vegetables,other'] : 4 : 0.4 
+Rule: ['gum,chocolate'] ==> ['marshmallow\n'] : 3 : 0.75 
+Rule: ['gum,shopping'] ==> ['bags\n'] : 20 : 1.0 
+Rule: ['gum,shopping', 'citrus'] ==> ['bags\n'] : 3 : 1.0 
+Rule: ['gum,shopping', 'wine,chewing'] ==> ['bags\n'] : 4 : 1.0 
+Rule: ['ham,other'] ==> ['vegetables,whole'] : 6 : 0.4 
+Rule: ['ham,tropical', 'fruit,other'] ==> ['fruit,pip'] : 3 : 0.6 
+Rule: ['ham,tropical', 'fruit,other'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['hamburger', 'meat,tropical'] ==> ['bags\n'] : 6 : 0.5 
+Rule: ['hamburger', 'vegetables,other'] ==> ['vegetables,whole'] : 7 : 0.4667 
+Rule: ['hamburger', 'wine\n'] ==> ['meat,whole'] : 3 : 0.4286 
+Rule: ['house'] ==> ['keeping'] : 5 : 1.0 
+Rule: ['hygiene'] ==> ['articles\n'] : 12 : 0.75 
+Rule: ['juice\n', 'fruit,pip'] ==> ['vegetables,whole'] : 4 : 0.4444 
+Rule: ['juice\n', 'other'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['juice\n', 'vegetables,other'] ==> ['vegetables,whole'] : 6 : 0.6667 
+Rule: ['juice,bottled', 'cheese,frozen'] ==> ['beer\n'] : 3 : 0.4286 
+Rule: ['juice,bottled', 'cheese,frozen'] ==> ['vegetables,other'] : 4 : 0.5714 
+Rule: ['juice,bottled', 'cheese,frozen'] ==> ['vegetables,whole'] : 5 : 0.7143 
+Rule: ['juice,bottled', 'cheese,frozen', 'vegetables,other'] ==> ['vegetables,whole'] : 4 : 1.0 
+Rule: ['juice,bottled', 'fruit,other'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['juice,bottled', 'fruit,root'] ==> ['vegetables,other'] : 3 : 1.0 
+Rule: ['juice,bottled', 'milk,white'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['juice,bottled', 'other'] ==> ['vegetables,whole'] : 4 : 1.0 
+Rule: ['juice,bottled', 'vegetables,other'] ==> ['vegetables,whole'] : 5 : 0.7143 
+Rule: ['juice,bottled', 'water,fruit/vegetable'] ==> ['beer\n'] : 8 : 0.6154 
+Rule: ['juice,canned', 'beer,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['juice,canned', 'life'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['juice,chewing'] ==> ['gum\n'] : 6 : 0.5 
+Rule: ['juice,chocolate,shopping'] ==> ['bags\n'] : 5 : 1.0 
+Rule: ['juice,hygiene'] ==> ['articles\n'] : 11 : 0.6471 
+Rule: ['juice,hygiene', 'citrus'] ==> ['fruit,pip'] : 3 : 0.75 
+Rule: ['juice,long'] ==> ['bakery'] : 42 : 1.0 
+Rule: ['juice,long', 'other'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['juice,long', 'product,newspapers\n'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['juice,long', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['juice,napkins\n', 'beverages,fruit/vegetable'] ==> ['citrus'] : 3 : 0.75 
+Rule: ['juice,newspapers,shopping'] ==> ['bags\n'] : 3 : 1.0 
+Rule: ['juice,red/blush'] ==> ['bags\n'] : 5 : 0.4167 
+Rule: ['juice,seasonal'] ==> ['products\n'] : 4 : 1.0 
+Rule: ['juice,specialty'] ==> ['chocolate\n'] : 6 : 0.4286 
+Rule: ['juice,white'] ==> ['wine\n'] : 5 : 0.4545 
+Rule: ['life'] ==> ['bakery'] : 368 : 1.0 
+Rule: ['life', 'bags\n'] ==> ['bakery'] : 53 : 1.0 
+Rule: ['life', 'bags\n'] ==> ['product,shopping'] : 23 : 0.434 
+Rule: ['life', 'bags\n', 'bakery'] ==> ['product,shopping'] : 23 : 0.434 
+Rule: ['life', 'bags\n', 'juice,long'] ==> ['bakery'] : 6 : 1.0 
+Rule: ['life', 'bags\n', 'juice,long'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['life', 'bags\n', 'other'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['life', 'bags\n', 'product,napkins,shopping'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'bags\n', 'vegetables,frozen'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'bags\n', 'vegetables,other'] ==> ['product,shopping'] : 4 : 0.8 
+Rule: ['life', 'bags\n', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['life', 'bags\n', 'whole'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['life', 'bags\n', 'wine,long'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['life', 'bakery', 'bags\n', 'juice,long'] ==> ['product,shopping'] : 4 : 0.6667 
+Rule: ['life', 'bakery', 'bags\n', 'whole'] ==> ['product,shopping'] : 3 : 0.6 
+Rule: ['life', 'bakery', 'product,chocolate\n'] ==> ['vegetables,whole'] : 6 : 0.4615 
+Rule: ['life', 'bakery', 'product,house'] ==> ['keeping'] : 3 : 1.0 
+Rule: ['life', 'bar\n'] ==> ['bakery'] : 10 : 1.0 
+Rule: ['life', 'bar\n', 'product,cake'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'bar,chocolate'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'beer,canned'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'beer,long'] ==> ['bakery'] : 24 : 1.0 
+Rule: ['life', 'beer,long', 'bags\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'beer,long', 'citrus'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'beverages,long'] ==> ['bakery'] : 12 : 1.0 
+Rule: ['life', 'bread,bottled'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['life', 'bread,brown'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['life', 'cheese,domestic', 'bags\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'cheese,frozen'] ==> ['bakery'] : 19 : 1.0 
+Rule: ['life', 'cheese,frozen'] ==> ['vegetables,whole'] : 8 : 0.4211 
+Rule: ['life', 'cheese,frozen', 'bakery'] ==> ['vegetables,whole'] : 8 : 0.4211 
+Rule: ['life', 'cheese,frozen', 'fruit,pip'] ==> ['fruit,root'] : 3 : 0.6 
+Rule: ['life', 'cheese,frozen', 'fruit,pip'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['life', 'cheese,frozen', 'juice,long'] ==> ['bakery'] : 6 : 1.0 
+Rule: ['life', 'cheese,frozen', 'potato'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'cheese,frozen', 'vegetables,frozen'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'cheese,sliced'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'chicken,hamburger'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'chocolate\n'] ==> ['bakery'] : 9 : 1.0 
+Rule: ['life', 'chocolate,specialty'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['life', 'citrus'] ==> ['bakery'] : 23 : 1.0 
+Rule: ['life', 'citrus', 'fruit,onions,other'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'citrus', 'wine,long'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['life', 'coffee,long'] ==> ['product\n'] : 3 : 0.75 
+Rule: ['life', 'coffee,long', 'product\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'cream,brown'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'cream,cream'] ==> ['bakery'] : 6 : 1.0 
+Rule: ['life', 'cream,domestic'] ==> ['bags\n'] : 3 : 0.75 
+Rule: ['life', 'cream,domestic'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['life', 'cream,domestic', 'bags\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'cream,hard'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['life', 'cream,long'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['life', 'cream,white'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['life', 'eggs,rolls/buns,pastry,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'fish,long'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['life', 'food,bottled'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['life', 'food,bottled'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['life', 'food,bottled', 'bakery'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['life', 'fruit,onions,other'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['life', 'fruit,onions,other'] ==> ['citrus'] : 3 : 0.75 
+Rule: ['life', 'fruit,onions,other'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['life', 'fruit,onions,other', 'bakery'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['life', 'fruit,other'] ==> ['bakery'] : 20 : 1.0 
+Rule: ['life', 'fruit,other'] ==> ['vegetables,whole'] : 12 : 0.6 
+Rule: ['life', 'fruit,other', 'bags\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'fruit,other', 'bakery'] ==> ['vegetables,whole'] : 12 : 0.6 
+Rule: ['life', 'fruit,other', 'citrus'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['life', 'fruit,other', 'citrus'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['life', 'fruit,other', 'juice,long'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['life', 'fruit,other', 'potato'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'fruit,other', 'powder,long'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['life', 'fruit,other', 'powder,long'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['life', 'fruit,pip', 'cheese,frozen'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['life', 'fruit,root'] ==> ['bakery'] : 20 : 1.0 
+Rule: ['life', 'fruit,root'] ==> ['vegetables,other'] : 12 : 0.6 
+Rule: ['life', 'fruit,root'] ==> ['vegetables,whole'] : 9 : 0.45 
+Rule: ['life', 'fruit,root', 'bakery'] ==> ['vegetables,whole'] : 9 : 0.45 
+Rule: ['life', 'fruit,root', 'cheese,frozen'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['life', 'fruit,root', 'cheese,frozen'] ==> ['milk,butter,yogurt,whipped/sour'] : 3 : 0.6 
+Rule: ['life', 'fruit,root', 'citrus'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['life', 'fruit,root', 'juice,long'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['life', 'fruit,root', 'juice,long'] ==> ['vegetables,other'] : 4 : 0.8 
+Rule: ['life', 'fruit,root', 'juice,long'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['life', 'fruit,root', 'products\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'juice,canned'] ==> ['beer,long'] : 3 : 0.6 
+Rule: ['life', 'juice,canned', 'beer,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'juice,long'] ==> ['bakery'] : 42 : 1.0 
+Rule: ['life', 'juice,long', 'other'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'juice,long', 'product,newspapers\n'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['life', 'juice,long', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['life', 'marshmallow\n'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['life', 'meat,citrus'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['life', 'meat,root'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'meat,tropical'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'meat,whole'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'milk,brown'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'milk,cream'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'milk,dessert,butter'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'milk,domestic'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'milk,frozen', 'bags\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'milk,whipped/sour'] ==> ['bakery'] : 9 : 1.0 
+Rule: ['life', 'milk,white'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'milk,yogurt,cream'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'other'] ==> ['bakery'] : 17 : 1.0 
+Rule: ['life', 'other'] ==> ['vegetables,whole'] : 11 : 0.6471 
+Rule: ['life', 'other', 'bakery'] ==> ['vegetables,whole'] : 11 : 0.6471 
+Rule: ['life', 'pastry,long'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['life', 'potato'] ==> ['bakery'] : 8 : 1.0 
+Rule: ['life', 'powder,long'] ==> ['bakery'] : 9 : 1.0 
+Rule: ['life', 'product\n'] ==> ['bakery'] : 130 : 1.0 
+Rule: ['life', 'product\n', 'beer,long'] ==> ['bakery'] : 9 : 1.0 
+Rule: ['life', 'product\n', 'beverages,long'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['life', 'product\n', 'cheese,frozen'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'product\n', 'citrus'] ==> ['bakery'] : 6 : 1.0 
+Rule: ['life', 'product\n', 'juice,long'] ==> ['bakery'] : 12 : 1.0 
+Rule: ['life', 'product\n', 'other'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['life', 'product\n', 'other'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['life', 'product\n', 'powder,long'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['life', 'product\n', 'snack,long'] ==> ['bakery'] : 6 : 1.0 
+Rule: ['life', 'product\n', 'snack,long'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['life', 'product\n', 'soda,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'product\n', 'whole'] ==> ['bakery'] : 8 : 1.0 
+Rule: ['life', 'product\n', 'wine,long'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['life', 'product,cake'] ==> ['bakery'] : 7 : 1.0 
+Rule: ['life', 'product,candles\n'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['life', 'product,candy\n'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['life', 'product,chewing'] ==> ['bakery'] : 7 : 1.0 
+Rule: ['life', 'product,chocolate'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'product,chocolate\n'] ==> ['vegetables,whole'] : 6 : 0.4615 
+Rule: ['life', 'product,dish'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'product,flower'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['life', 'product,house'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'product,house'] ==> ['keeping'] : 3 : 1.0 
+Rule: ['life', 'product,napkins,shopping'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'product,newspapers\n'] ==> ['bakery'] : 12 : 1.0 
+Rule: ['life', 'product,seasonal'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'product,specialty'] ==> ['bakery'] : 25 : 1.0 
+Rule: ['life', 'product,specialty', 'bar\n'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['life', 'product,specialty', 'cheese,frozen'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'product,specialty', 'chocolate\n'] ==> ['bakery'] : 7 : 1.0 
+Rule: ['life', 'product,specialty', 'chocolate,specialty'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'product,specialty', 'juice,long'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['life', 'product,specialty', 'vegetables,frozen'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'product,waffles,chocolate\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'product,waffles,chocolate,specialty'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['life', 'products\n'] ==> ['bakery'] : 10 : 1.0 
+Rule: ['life', 'products\n'] ==> ['keeping'] : 7 : 0.7 
+Rule: ['life', 'root', 'bags\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'root', 'product\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'sausage,hamburger'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'snack,long'] ==> ['bakery'] : 33 : 1.0 
+Rule: ['life', 'snack,long', 'bags\n'] ==> ['bakery'] : 7 : 1.0 
+Rule: ['life', 'snack,long', 'potato'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'snack,long', 'product,chewing'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'snack,long', 'product,specialty'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['life', 'snack,long', 'vegetables,other'] ==> ['juice,salty'] : 3 : 0.75 
+Rule: ['life', 'snack,long', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['life', 'snack,long', 'whole'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'soda,long'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['life', 'vegetables,bottled'] ==> ['product\n'] : 4 : 0.6667 
+Rule: ['life', 'vegetables,bottled', 'product\n'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['life', 'vegetables,cream'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'vegetables,frozen'] ==> ['bakery'] : 13 : 1.0 
+Rule: ['life', 'vegetables,frozen', 'juice,long'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['life', 'vegetables,herbs,other'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'vegetables,herbs,other'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['life', 'vegetables,herbs,other', 'bakery'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['life', 'vegetables,long'] ==> ['product\n'] : 5 : 0.5556 
+Rule: ['life', 'vegetables,long', 'product\n'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['life', 'vegetables,other'] ==> ['vegetables,whole'] : 11 : 0.4074 
+Rule: ['life', 'vegetables,other', 'bakery', 'bags\n'] ==> ['product,shopping'] : 4 : 0.8 
+Rule: ['life', 'vegetables,whole', 'bags\n'] ==> ['product,shopping'] : 5 : 0.5 
+Rule: ['life', 'whole'] ==> ['bakery'] : 24 : 1.0 
+Rule: ['life', 'whole', 'beverages,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['life', 'whole', 'juice,long'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['life', 'wine,long'] ==> ['bakery'] : 16 : 1.0 
+Rule: ['liquor'] ==> ['(appetizer)\n'] : 5 : 1.0 
+Rule: ['loaf,root'] ==> ['liver'] : 7 : 0.875 
+Rule: ['loaf,root'] ==> ['vegetables,other'] : 4 : 0.5 
+Rule: ['loaf,root', 'vegetables,other'] ==> ['liver'] : 4 : 1.0 
+Rule: ['loaf,tropical'] ==> ['liver'] : 3 : 1.0 
+Rule: ['male'] ==> ['cosmetics\n'] : 4 : 0.8 
+Rule: ['marshmallow,shopping'] ==> ['bags\n'] : 4 : 1.0 
+Rule: ['meals,canned'] ==> ['beer,red/blush'] : 3 : 0.5 
+Rule: ['meals,canned'] ==> ['frozen'] : 4 : 0.6667 
+Rule: ['meals,canned'] ==> ['snack\n'] : 3 : 0.5 
+Rule: ['meals,domestic', 'milk,frozen'] ==> ['eggs,white'] : 3 : 0.5 
+Rule: ['meals,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['meals,long'] ==> ['life'] : 3 : 1.0 
+Rule: ['meals,long', 'life'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['meals,soda\n'] ==> ['frozen'] : 5 : 0.625 
+Rule: ['meals,soda,shopping'] ==> ['bags\n'] : 3 : 1.0 
+Rule: ['meals,white', 'fruit,pip'] ==> ['fruit,whole'] : 3 : 1.0 
+Rule: ['meat,berries,other'] ==> ['hamburger'] : 3 : 1.0 
+Rule: ['meat,chicken,root'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['meat,other', 'bags\n'] ==> ['vegetables,whole'] : 3 : 0.4286 
+Rule: ['meat,other', 'bar\n'] ==> ['hamburger'] : 3 : 0.75 
+Rule: ['meat,other', 'milk,whipped/sour'] ==> ['vegetables,whole'] : 4 : 1.0 
+Rule: ['meat,root'] ==> ['hamburger'] : 18 : 0.439 
+Rule: ['meat,root'] ==> ['vegetables,other'] : 17 : 0.4146 
+Rule: ['meat,root'] ==> ['vegetables,whole'] : 24 : 0.5854 
+Rule: ['meat,root', 'cheese,frozen'] ==> ['vegetables,other'] : 3 : 1.0 
+Rule: ['meat,root', 'hamburger'] ==> ['vegetables,other'] : 9 : 0.5 
+Rule: ['meat,root', 'hamburger'] ==> ['vegetables,whole'] : 11 : 0.6111 
+Rule: ['meat,root', 'hamburger', 'vegetables,other'] ==> ['vegetables,whole'] : 5 : 0.5556 
+Rule: ['meat,root', 'vegetables,other'] ==> ['vegetables,whole'] : 8 : 0.4706 
+Rule: ['meat,tropical', 'vegetables,other'] ==> ['fruit,root'] : 3 : 1.0 
+Rule: ['milk\n'] ==> ['whole'] : 125 : 0.5531 
+Rule: ['milk\n', 'citrus'] ==> ['fruit,whole'] : 4 : 0.5 
+Rule: ['milk\n', 'fruit,other'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk\n', 'fruit,pip'] ==> ['fruit,whole'] : 3 : 0.75 
+Rule: ['milk\n', 'fruit,root'] ==> ['vegetables,other'] : 4 : 0.8 
+Rule: ['milk\n', 'fruit,root'] ==> ['vegetables,whole'] : 5 : 1.0 
+Rule: ['milk\n', 'fruit,root', 'vegetables,other'] ==> ['vegetables,whole'] : 4 : 1.0 
+Rule: ['milk\n', 'other'] ==> ['vegetables,whole'] : 6 : 0.8571 
+Rule: ['milk\n', 'root'] ==> ['vegetables,whole'] : 5 : 0.8333 
+Rule: ['milk\n', 'vegetables,other'] ==> ['vegetables,whole'] : 6 : 1.0 
+Rule: ['milk,UHT-milk,frozen'] ==> ['vegetables,whole'] : 4 : 0.6667 
+Rule: ['milk,baking'] ==> ['whole'] : 3 : 0.4286 
+Rule: ['milk,bottled'] ==> ['whole'] : 28 : 0.4746 
+Rule: ['milk,bottled', 'fruit,root'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk,bottled', 'other'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['milk,bottled', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk,bottled', 'water,bottled'] ==> ['beer\n'] : 5 : 0.7143 
+Rule: ['milk,bottled', 'water,bottled'] ==> ['whole'] : 4 : 0.5714 
+Rule: ['milk,bottled', 'water,bottled', 'whole'] ==> ['beer\n'] : 3 : 0.75 
+Rule: ['milk,brown', 'other'] ==> ['vegetables,whole'] : 6 : 1.0 
+Rule: ['milk,brown', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk,butter'] ==> ['vegetables,whole'] : 36 : 0.4737 
+Rule: ['milk,butter', 'bags\n'] ==> ['fruit,whole'] : 5 : 0.4545 
+Rule: ['milk,butter', 'cheese,frozen'] ==> ['vegetables,whole'] : 5 : 0.8333 
+Rule: ['milk,butter', 'citrus'] ==> ['fruit,whole'] : 6 : 0.6 
+Rule: ['milk,butter', 'citrus', 'fruit,tropical'] ==> ['fruit,whole'] : 3 : 1.0 
+Rule: ['milk,butter', 'fruit,other'] ==> ['milk,whipped/sour'] : 3 : 0.4286 
+Rule: ['milk,butter', 'fruit,other'] ==> ['vegetables,whole'] : 7 : 1.0 
+Rule: ['milk,butter', 'fruit,other', 'milk,whipped/sour'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk,butter', 'fruit,pip'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['milk,butter', 'fruit,root'] ==> ['vegetables,whole'] : 7 : 0.7778 
+Rule: ['milk,butter', 'fruit,root', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk,butter', 'fruit,tropical'] ==> ['fruit,whole'] : 4 : 0.6667 
+Rule: ['milk,butter', 'life'] ==> ['bags\n'] : 3 : 0.5 
+Rule: ['milk,butter', 'life'] ==> ['bakery'] : 6 : 1.0 
+Rule: ['milk,butter', 'life'] ==> ['whole'] : 3 : 0.5 
+Rule: ['milk,butter', 'life', 'bags\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['milk,butter', 'life', 'whole'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['milk,butter', 'milk\n'] ==> ['fruit,whole'] : 3 : 0.5 
+Rule: ['milk,butter', 'milk,whipped/sour'] ==> ['vegetables,whole'] : 8 : 0.6667 
+Rule: ['milk,butter', 'milk,yogurt,cream'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['milk,butter', 'other'] ==> ['vegetables,whole'] : 4 : 1.0 
+Rule: ['milk,butter', 'root'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['milk,butter', 'tropical'] ==> ['fruit,whole'] : 4 : 0.6667 
+Rule: ['milk,butter', 'vegetables,other'] ==> ['vegetables,whole'] : 8 : 1.0 
+Rule: ['milk,butter,cream'] ==> ['fruit,whole'] : 3 : 0.5 
+Rule: ['milk,butter,curd,whipped/sour'] ==> ['vegetables,whole'] : 4 : 0.6667 
+Rule: ['milk,butter,curd,yogurt,whipped/sour'] ==> ['vegetables,other'] : 3 : 0.4286 
+Rule: ['milk,butter,curd,yogurt,whipped/sour'] ==> ['vegetables,whole'] : 4 : 0.5714 
+Rule: ['milk,butter,curd,yogurt,whipped/sour', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk,butter,domestic'] ==> ['vegetables,whole'] : 6 : 0.4286 
+Rule: ['milk,butter,frozen'] ==> ['vegetables,whole'] : 6 : 0.5455 
+Rule: ['milk,butter,processed'] ==> ['vegetables,whole'] : 4 : 0.6667 
+Rule: ['milk,butter,whipped/sour'] ==> ['vegetables,whole'] : 23 : 0.7188 
+Rule: ['milk,butter,whipped/sour', 'bakery'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk,butter,whipped/sour', 'cheese,domestic'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk,butter,whipped/sour', 'citrus'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['milk,butter,whipped/sour', 'cream,hard'] ==> ['vegetables,whole'] : 4 : 1.0 
+Rule: ['milk,butter,whipped/sour', 'cream,soft'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk,butter,whipped/sour', 'fruit,other'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['milk,butter,whipped/sour', 'fruit,pip'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk,butter,whipped/sour', 'fruit,root'] ==> ['vegetables,whole'] : 6 : 1.0 
+Rule: ['milk,butter,whipped/sour', 'life'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['milk,butter,whipped/sour', 'life'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk,butter,whipped/sour', 'life', 'bakery'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk,butter,whipped/sour', 'vegetables,other'] ==> ['vegetables,whole'] : 5 : 1.0 
+Rule: ['milk,butter,yogurt,cream'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['milk,butter,yogurt,soft'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['milk,cat'] ==> ['whole'] : 3 : 0.75 
+Rule: ['milk,cereals\n'] ==> ['whole'] : 3 : 0.75 
+Rule: ['milk,condensed'] ==> ['vegetables,whole'] : 6 : 0.4286 
+Rule: ['milk,cream', 'fruit,pip'] ==> ['fruit,whole'] : 5 : 0.7143 
+Rule: ['milk,cream', 'vegetables,other'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['milk,curd\n'] ==> ['vegetables,whole'] : 4 : 0.6667 
+Rule: ['milk,curd,butter'] ==> ['vegetables,whole'] : 4 : 0.4 
+Rule: ['milk,curd,cream'] ==> ['vegetables,whole'] : 4 : 0.5714 
+Rule: ['milk,curd,cream'] ==> ['whole'] : 3 : 0.4286 
+Rule: ['milk,curd,dessert,butter'] ==> ['bakery'] : 3 : 0.75 
+Rule: ['milk,curd,dessert,butter'] ==> ['life'] : 3 : 0.75 
+Rule: ['milk,curd,dessert,butter', 'life'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['milk,curd,domestic'] ==> ['fruit,root'] : 3 : 0.4286 
+Rule: ['milk,curd,domestic'] ==> ['vegetables,whole'] : 6 : 0.8571 
+Rule: ['milk,curd,ice'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['milk,curd,whipped/sour'] ==> ['vegetables,whole'] : 11 : 0.5789 
+Rule: ['milk,curd,whipped/sour', 'other'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk,dessert\n'] ==> ['whole'] : 5 : 0.7143 
+Rule: ['milk,dessert,butter'] ==> ['vegetables,whole'] : 6 : 0.4615 
+Rule: ['milk,dessert,frozen'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['milk,dessert,sliced'] ==> ['vegetables,whole'] : 4 : 1.0 
+Rule: ['milk,dessert,whipped/sour'] ==> ['vegetables,whole'] : 4 : 0.5714 
+Rule: ['milk,dessert,yogurt,frozen'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk,dessert,yogurt,whipped/sour'] ==> ['vegetables,whole'] : 4 : 0.6667 
+Rule: ['milk,domestic', 'other'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk,domestic', 'vegetables,other'] ==> ['vegetables,whole'] : 8 : 1.0 
+Rule: ['milk,flour\n'] ==> ['citrus'] : 3 : 0.75 
+Rule: ['milk,frozen'] ==> ['vegetables,whole'] : 60 : 0.4138 
+Rule: ['milk,frozen', 'bakery'] ==> ['vegetables,whole'] : 4 : 0.4444 
+Rule: ['milk,frozen', 'beer\n'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['milk,frozen', 'care,hygiene'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk,frozen', 'citrus'] ==> ['fruit,pip'] : 3 : 0.4286 
+Rule: ['milk,frozen', 'citrus'] ==> ['vegetables,whole'] : 3 : 0.4286 
+Rule: ['milk,frozen', 'fruit,other'] ==> ['vegetables,whole'] : 11 : 0.7857 
+Rule: ['milk,frozen', 'fruit,root'] ==> ['vegetables,whole'] : 7 : 0.6364 
+Rule: ['milk,frozen', 'hamburger'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['milk,frozen', 'juice,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['milk,frozen', 'life'] ==> ['bakery'] : 9 : 1.0 
+Rule: ['milk,frozen', 'life'] ==> ['vegetables,whole'] : 4 : 0.4444 
+Rule: ['milk,frozen', 'life', 'bakery'] ==> ['vegetables,whole'] : 4 : 0.4444 
+Rule: ['milk,frozen', 'life', 'juice,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['milk,frozen', 'life', 'other'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['milk,frozen', 'life', 'other'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk,frozen', 'other'] ==> ['vegetables,whole'] : 11 : 0.7333 
+Rule: ['milk,frozen', 'other', 'bakery'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk,frozen', 'potato'] ==> ['other'] : 4 : 0.4444 
+Rule: ['milk,frozen', 'potato'] ==> ['vegetables,whole'] : 7 : 0.7778 
+Rule: ['milk,frozen', 'potato', 'other'] ==> ['vegetables,whole'] : 4 : 1.0 
+Rule: ['milk,frozen', 'products\n'] ==> ['potato'] : 3 : 0.6 
+Rule: ['milk,frozen', 'products\n'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['milk,frozen', 'products\n', 'potato'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk,frozen', 'root'] ==> ['vegetables,whole'] : 7 : 0.875 
+Rule: ['milk,frozen', 'vegetables,butter'] ==> ['other'] : 4 : 0.5714 
+Rule: ['milk,frozen', 'vegetables,frozen'] ==> ['vegetables,whole'] : 3 : 0.4286 
+Rule: ['milk,frozen', 'vegetables,onions,other'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk,frozen', 'vegetables,other'] ==> ['vegetables,whole'] : 8 : 1.0 
+Rule: ['milk,frozen', 'wine\n'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['milk,fruit/vegetable'] ==> ['juice\n'] : 4 : 0.4 
+Rule: ['milk,fruit/vegetable'] ==> ['vegetables,whole'] : 4 : 0.4 
+Rule: ['milk,fruit/vegetable'] ==> ['whole'] : 5 : 0.5 
+Rule: ['milk,fruit/vegetable', 'whole'] ==> ['juice\n'] : 3 : 0.6 
+Rule: ['milk,hard', 'root'] ==> ['vegetables,whole'] : 5 : 1.0 
+Rule: ['milk,hard', 'tropical'] ==> ['fruit,whole'] : 3 : 0.6 
+Rule: ['milk,long'] ==> ['bakery'] : 6 : 1.0 
+Rule: ['milk,long'] ==> ['life'] : 6 : 1.0 
+Rule: ['milk,long'] ==> ['product\n'] : 3 : 0.5 
+Rule: ['milk,long'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['milk,long', 'bakery'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['milk,long', 'life'] ==> ['bakery'] : 6 : 1.0 
+Rule: ['milk,long', 'life'] ==> ['product\n'] : 3 : 0.5 
+Rule: ['milk,long', 'life'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['milk,long', 'life', 'bakery'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['milk,long', 'life', 'product\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['milk,long', 'product\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['milk,margarine\n'] ==> ['vegetables,whole'] : 6 : 0.4615 
+Rule: ['milk,margarine,bottled'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['milk,newspapers\n'] ==> ['whole'] : 8 : 0.6667 
+Rule: ['milk,pastry\n'] ==> ['whole'] : 12 : 0.5217 
+Rule: ['milk,pet'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['milk,pickled'] ==> ['vegetables,whole'] : 4 : 0.4 
+Rule: ['milk,processed', 'vegetables,other'] ==> ['vegetables,whole'] : 4 : 1.0 
+Rule: ['milk,rolls/buns,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['milk,rolls/buns,long'] ==> ['life'] : 3 : 1.0 
+Rule: ['milk,rolls/buns,long', 'life'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['milk,rolls/buns,newspapers\n'] ==> ['whole'] : 3 : 0.75 
+Rule: ['milk,rolls/buns,pastry\n'] ==> ['whole'] : 3 : 0.75 
+Rule: ['milk,rolls/buns,shopping'] ==> ['bags\n'] : 3 : 1.0 
+Rule: ['milk,sliced', 'cheese,frozen'] ==> ['vegetables,whole'] : 5 : 0.7143 
+Rule: ['milk,sliced', 'root'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk,sliced', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['milk,soups,bottled'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk,specialty'] ==> ['whole'] : 8 : 0.4 
+Rule: ['milk,specialty', 'bar\n'] ==> ['whole'] : 4 : 0.8 
+Rule: ['milk,specialty', 'other'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk,spread'] ==> ['vegetables,whole'] : 6 : 0.4286 
+Rule: ['milk,whipped/sour'] ==> ['vegetables,whole'] : 70 : 0.4762 
+Rule: ['milk,whipped/sour', 'cream,cream'] ==> ['vegetables,whole'] : 5 : 0.7143 
+Rule: ['milk,whipped/sour', 'cream,specialty'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['milk,whipped/sour', 'fruit,pip'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['milk,whipped/sour', 'keeping'] ==> ['vegetables,whole'] : 6 : 0.6667 
+Rule: ['milk,whipped/sour', 'other'] ==> ['vegetables,whole'] : 5 : 1.0 
+Rule: ['milk,whipped/sour', 'pork,root'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk,whipped/sour', 'powder\n'] ==> ['vegetables,whole'] : 3 : 0.4286 
+Rule: ['milk,whipped/sour', 'snack\n'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['milk,whipped/sour', 'vegetables,onions,other'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['milk,whipped/sour', 'vegetables,other'] ==> ['vegetables,whole'] : 11 : 1.0 
+Rule: ['milk,white', 'other'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['milk,yogurt,bottled'] ==> ['beer\n'] : 4 : 0.4 
+Rule: ['milk,yogurt,bottled'] ==> ['vegetables,whole'] : 4 : 0.4 
+Rule: ['milk,yogurt,bottled'] ==> ['water\n'] : 4 : 0.4 
+Rule: ['milk,yogurt,bottled'] ==> ['whole'] : 5 : 0.5 
+Rule: ['milk,yogurt,brown'] ==> ['vegetables,whole'] : 6 : 0.4615 
+Rule: ['milk,yogurt,cream'] ==> ['vegetables,whole'] : 13 : 0.5909 
+Rule: ['milk,yogurt,cream', 'milk,dessert,butter'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk,yogurt,cream', 'vegetables,other'] ==> ['vegetables,whole'] : 4 : 1.0 
+Rule: ['milk,yogurt,hard'] ==> ['vegetables,whole'] : 6 : 0.4286 
+Rule: ['milk,yogurt,hard', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk,yogurt,ice'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['milk,yogurt,rolls/buns\n'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['milk,yogurt,rolls/buns,bottled'] ==> ['fruit,whole'] : 3 : 0.4286 
+Rule: ['milk,yogurt,sliced', 'fruit,pip'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['milk,yogurt,sliced', 'vegetables,other'] ==> ['vegetables,whole'] : 4 : 1.0 
+Rule: ['milk,yogurt,specialty'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['milk,yogurt,spread'] ==> ['cheese,brown'] : 3 : 0.4286 
+Rule: ['milk,yogurt,whipped/sour'] ==> ['vegetables,whole'] : 39 : 0.5909 
+Rule: ['milk,yogurt,whipped/sour', 'articles\n'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['milk,yogurt,whipped/sour', 'bags\n'] ==> ['vegetables,other'] : 3 : 0.5 
+Rule: ['milk,yogurt,whipped/sour', 'bags\n'] ==> ['vegetables,whole'] : 5 : 0.8333 
+Rule: ['milk,yogurt,whipped/sour', 'bags\n', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk,yogurt,whipped/sour', 'bakery'] ==> ['vegetables,whole'] : 7 : 0.875 
+Rule: ['milk,yogurt,whipped/sour', 'cheese,frozen'] ==> ['vegetables,whole'] : 4 : 0.6667 
+Rule: ['milk,yogurt,whipped/sour', 'citrus'] ==> ['fruit,whole'] : 3 : 0.75 
+Rule: ['milk,yogurt,whipped/sour', 'cream,cream'] ==> ['vegetables,whole'] : 4 : 0.4444 
+Rule: ['milk,yogurt,whipped/sour', 'cream,domestic'] ==> ['vegetables,whole'] : 4 : 1.0 
+Rule: ['milk,yogurt,whipped/sour', 'fruit,other'] ==> ['vegetables,whole'] : 6 : 0.6 
+Rule: ['milk,yogurt,whipped/sour', 'fruit,pip'] ==> ['vegetables,whole'] : 5 : 0.7143 
+Rule: ['milk,yogurt,whipped/sour', 'fruit,root'] ==> ['vegetables,other'] : 6 : 0.5455 
+Rule: ['milk,yogurt,whipped/sour', 'fruit,root'] ==> ['vegetables,whole'] : 11 : 1.0 
+Rule: ['milk,yogurt,whipped/sour', 'fruit,root', 'fruit,pip'] ==> ['vegetables,whole'] : 4 : 1.0 
+Rule: ['milk,yogurt,whipped/sour', 'fruit,root', 'vegetables,other'] ==> ['vegetables,whole'] : 6 : 1.0 
+Rule: ['milk,yogurt,whipped/sour', 'fruit,tropical'] ==> ['vegetables,whole'] : 4 : 0.5714 
+Rule: ['milk,yogurt,whipped/sour', 'life'] ==> ['bakery'] : 8 : 1.0 
+Rule: ['milk,yogurt,whipped/sour', 'life'] ==> ['vegetables,whole'] : 7 : 0.875 
+Rule: ['milk,yogurt,whipped/sour', 'life', 'bakery'] ==> ['vegetables,whole'] : 7 : 0.875 
+Rule: ['milk,yogurt,whipped/sour', 'milk,butter'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['milk,yogurt,whipped/sour', 'other'] ==> ['vegetables,whole'] : 4 : 1.0 
+Rule: ['milk,yogurt,whipped/sour', 'root'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk,yogurt,whipped/sour', 'tropical'] ==> ['vegetables,whole'] : 4 : 0.5 
+Rule: ['milk,yogurt,whipped/sour', 'vegetables,frozen'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk,yogurt,whipped/sour', 'vegetables,other'] ==> ['vegetables,whole'] : 12 : 1.0 
+Rule: ['milk,yogurt,whipped/sour', 'vegetables,other', 'fruit,pip'] ==> ['fruit,root'] : 3 : 1.0 
+Rule: ['milk,yogurt,whipped/sour', 'vegetables,other', 'fruit,pip'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['milk,yogurt,white'] ==> ['fruit,whole'] : 3 : 0.5 
+Rule: ['misc.'] ==> ['beverages\n'] : 31 : 0.6327 
+Rule: ['misc.', 'beer\n'] ==> ['beverages,canned'] : 3 : 1.0 
+Rule: ['other', 'bakery'] ==> ['vegetables,whole'] : 11 : 0.6471 
+Rule: ['other', 'vegetables,whole', 'milk,frozen', 'bakery'] ==> ['life'] : 3 : 1.0 
+Rule: ['pastry,long'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['pip', 'cheese,domestic'] ==> ['fruit,whole'] : 3 : 0.5 
+Rule: ['pip', 'cream\n'] ==> ['milk,whipped/sour'] : 3 : 0.75 
+Rule: ['pip', 'eggs,shopping'] ==> ['bags\n'] : 3 : 1.0 
+Rule: ['pip', 'fruit,herbs,other'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['pip', 'fruit,other'] ==> ['vegetables,whole'] : 14 : 0.4118 
+Rule: ['pip', 'fruit,other', 'juice\n'] ==> ['vegetables,fruit/vegetable'] : 3 : 0.75 
+Rule: ['pip', 'fruit,root'] ==> ['vegetables,whole'] : 12 : 0.4 
+Rule: ['pip', 'fruit,root', 'vegetables,other'] ==> ['vegetables,whole'] : 7 : 0.7 
+Rule: ['pip', 'juice\n'] ==> ['vegetables,fruit/vegetable'] : 4 : 0.5 
+Rule: ['pip', 'life'] ==> ['bakery'] : 9 : 1.0 
+Rule: ['pip', 'life'] ==> ['product\n'] : 4 : 0.4444 
+Rule: ['pip', 'life', 'product\n'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['pip', 'milk\n'] ==> ['fruit,whole'] : 4 : 0.5714 
+Rule: ['pip', 'milk,domestic'] ==> ['fruit,whole'] : 6 : 0.75 
+Rule: ['pip', 'milk,frozen'] ==> ['fruit,other'] : 3 : 0.4286 
+Rule: ['pip', 'milk,whipped/sour'] ==> ['vegetables,whole'] : 4 : 0.6667 
+Rule: ['pip', 'product\n'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['pip', 'vegetables,other'] ==> ['vegetables,whole'] : 8 : 0.7273 
+Rule: ['pip', 'water,fruit/vegetable'] ==> ['fruit,whole'] : 3 : 0.6 
+Rule: ['plants\n', 'articles,potted'] ==> ['fruit,pip'] : 3 : 0.6 
+Rule: ['plants\n', 'bakery'] ==> ['product,potted'] : 5 : 0.4167 
+Rule: ['plants\n', 'bakery'] ==> ['vegetables,whole'] : 5 : 0.4167 
+Rule: ['plants\n', 'cheese,frozen'] ==> ['fruit,whole'] : 3 : 0.4286 
+Rule: ['plants\n', 'citrus'] ==> ['fruit,other'] : 4 : 0.5 
+Rule: ['plants\n', 'citrus'] ==> ['fruit,tropical'] : 5 : 0.625 
+Rule: ['plants\n', 'fruit,other', 'fruit,tropical'] ==> ['citrus'] : 3 : 1.0 
+Rule: ['plants\n', 'juice,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['plants\n', 'life'] ==> ['bakery'] : 12 : 1.0 
+Rule: ['plants\n', 'life'] ==> ['product,potted'] : 5 : 0.4167 
+Rule: ['plants\n', 'life'] ==> ['vegetables,whole'] : 5 : 0.4167 
+Rule: ['plants\n', 'life', 'bakery'] ==> ['product,potted'] : 5 : 0.4167 
+Rule: ['plants\n', 'life', 'bakery'] ==> ['vegetables,whole'] : 5 : 0.4167 
+Rule: ['plants\n', 'life', 'juice,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['plants\n', 'life', 'vegetables,whole'] ==> ['product,potted'] : 3 : 0.6 
+Rule: ['plants\n', 'other'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['plants\n', 'pip'] ==> ['fruit,root'] : 4 : 0.5714 
+Rule: ['plants\n', 'vegetables,whole', 'bakery'] ==> ['product,potted'] : 3 : 0.6 
+Rule: ['plants\n', 'vegetables,whole', 'product,potted', 'bakery'] ==> ['life'] : 3 : 1.0 
+Rule: ['plants,shopping'] ==> ['bags\n'] : 18 : 1.0 
+Rule: ['pork,beef,root'] ==> ['vegetables,other'] : 4 : 0.5714 
+Rule: ['pork,beef,root'] ==> ['vegetables,whole'] : 3 : 0.4286 
+Rule: ['pork,citrus', 'fruit,pip'] ==> ['fruit,root'] : 3 : 0.5 
+Rule: ['pork,citrus', 'fruit,pip'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['pork,citrus', 'vegetables,other'] ==> ['fruit,root'] : 4 : 1.0 
+Rule: ['pork,frozen'] ==> ['potato'] : 4 : 0.4 
+Rule: ['potato', 'keeping'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['potato', 'other'] ==> ['vegetables,whole'] : 5 : 0.625 
+Rule: ['potato', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['powder,dog'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['powder,long'] ==> ['bakery'] : 9 : 1.0 
+Rule: ['product\n'] ==> ['bakery'] : 130 : 1.0 
+Rule: ['product\n', 'beer,long'] ==> ['bakery'] : 9 : 1.0 
+Rule: ['product\n', 'beer,long', 'vegetables,whole', 'bakery'] ==> ['life'] : 3 : 1.0 
+Rule: ['product\n', 'beverages,long'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['product\n', 'cheese,frozen'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['product\n', 'citrus'] ==> ['bakery'] : 6 : 1.0 
+Rule: ['product\n', 'fruit,tropical', 'fruit,pip', 'bakery'] ==> ['life'] : 3 : 1.0 
+Rule: ['product\n', 'juice,long'] ==> ['bakery'] : 12 : 1.0 
+Rule: ['product\n', 'other'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['product\n', 'other'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['product\n', 'other', 'bakery'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['product\n', 'other', 'vegetables,whole', 'bakery'] ==> ['life'] : 4 : 1.0 
+Rule: ['product\n', 'powder,long'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['product\n', 'snack,long'] ==> ['bakery'] : 6 : 1.0 
+Rule: ['product\n', 'snack,long'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['product\n', 'snack,long', 'bakery'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['product\n', 'soda,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['product\n', 'vegetables,fruit/vegetable', 'bakery', 'life'] ==> ['juice,long'] : 4 : 1.0 
+Rule: ['product\n', 'vegetables,whole', 'snack,long', 'bakery'] ==> ['life'] : 3 : 1.0 
+Rule: ['product\n', 'whole'] ==> ['bakery'] : 8 : 1.0 
+Rule: ['product\n', 'wine,long'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['product,cake'] ==> ['bakery'] : 7 : 1.0 
+Rule: ['product,candles\n'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['product,candy\n'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['product,chewing'] ==> ['bakery'] : 7 : 1.0 
+Rule: ['product,chocolate'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['product,chocolate\n'] ==> ['vegetables,whole'] : 6 : 0.4615 
+Rule: ['product,chocolate,shopping'] ==> ['bags\n'] : 3 : 1.0 
+Rule: ['product,chocolate,shopping'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['product,chocolate,shopping'] ==> ['life'] : 3 : 1.0 
+Rule: ['product,chocolate,shopping', 'bags\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['product,chocolate,shopping', 'life'] ==> ['bags\n'] : 3 : 1.0 
+Rule: ['product,chocolate,shopping', 'life'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['product,chocolate,shopping', 'life', 'bags\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['product,cling'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['product,cling'] ==> ['film/bags\n'] : 3 : 0.6 
+Rule: ['product,cling'] ==> ['life'] : 5 : 1.0 
+Rule: ['product,cling', 'film/bags\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['product,cling', 'film/bags\n'] ==> ['life'] : 3 : 1.0 
+Rule: ['product,cling', 'film/bags\n', 'life'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['product,cling', 'life'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['product,dish'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['product,flower'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['product,house'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['product,house'] ==> ['keeping'] : 3 : 1.0 
+Rule: ['product,hygiene'] ==> ['bakery'] : 8 : 1.0 
+Rule: ['product,hygiene'] ==> ['life'] : 8 : 1.0 
+Rule: ['product,hygiene', 'articles,shopping'] ==> ['bags\n'] : 3 : 1.0 
+Rule: ['product,hygiene', 'articles,shopping'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['product,hygiene', 'articles,shopping'] ==> ['life'] : 3 : 1.0 
+Rule: ['product,hygiene', 'articles,shopping', 'bags\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['product,hygiene', 'articles,shopping', 'bags\n', 'bakery'] ==> ['life'] : 3 : 1.0 
+Rule: ['product,hygiene', 'articles,shopping', 'life'] ==> ['bags\n'] : 3 : 1.0 
+Rule: ['product,hygiene', 'articles,shopping', 'life'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['product,hygiene', 'bags\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['product,hygiene', 'life'] ==> ['bakery'] : 8 : 1.0 
+Rule: ['product,hygiene', 'life', 'bags\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['product,napkins\n'] ==> ['bakery'] : 9 : 1.0 
+Rule: ['product,napkins\n'] ==> ['life'] : 9 : 1.0 
+Rule: ['product,napkins\n', 'life'] ==> ['bakery'] : 9 : 1.0 
+Rule: ['product,napkins,shopping'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['product,newspapers\n'] ==> ['bakery'] : 12 : 1.0 
+Rule: ['product,seasonal'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['product,specialty'] ==> ['bakery'] : 25 : 1.0 
+Rule: ['product,specialty', 'bar\n'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['product,specialty', 'cheese,frozen'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['product,specialty', 'chocolate\n'] ==> ['bakery'] : 7 : 1.0 
+Rule: ['product,specialty', 'chocolate,specialty'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['product,specialty', 'juice,long'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['product,specialty', 'vegetables,frozen'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['product,waffles\n'] ==> ['bakery'] : 8 : 1.0 
+Rule: ['product,waffles\n'] ==> ['life'] : 8 : 1.0 
+Rule: ['product,waffles\n', 'fruit,root'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['product,waffles\n', 'life'] ==> ['bakery'] : 8 : 1.0 
+Rule: ['product,waffles\n', 'life', 'fruit,root'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['product,waffles,chocolate\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['product,waffles,chocolate,specialty'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['product,waffles,shopping'] ==> ['bags\n'] : 3 : 1.0 
+Rule: ['product,waffles,shopping'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['product,waffles,shopping'] ==> ['life'] : 3 : 1.0 
+Rule: ['product,waffles,shopping', 'bags\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['product,waffles,shopping', 'life'] ==> ['bags\n'] : 3 : 1.0 
+Rule: ['product,waffles,shopping', 'life'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['product,waffles,shopping', 'life', 'bags\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['product,waffles,specialty'] ==> ['bags\n'] : 3 : 0.6 
+Rule: ['product,waffles,specialty'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['product,waffles,specialty'] ==> ['life'] : 5 : 1.0 
+Rule: ['product,waffles,specialty', 'bags\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['product,waffles,specialty', 'life'] ==> ['bags\n'] : 3 : 0.6 
+Rule: ['product,waffles,specialty', 'life'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['product,waffles,specialty', 'life', 'bags\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['products\n', 'articles,house'] ==> ['keeping'] : 4 : 1.0 
+Rule: ['products\n', 'bakery'] ==> ['keeping'] : 7 : 0.7 
+Rule: ['products\n', 'beer,house'] ==> ['keeping'] : 5 : 1.0 
+Rule: ['products\n', 'beer,house'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['products\n', 'beer,house', 'keeping'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['products\n', 'female'] ==> ['sanitary'] : 3 : 1.0 
+Rule: ['products\n', 'fruit,pip'] ==> ['vegetables,whole'] : 5 : 0.5556 
+Rule: ['products\n', 'house'] ==> ['keeping'] : 5 : 1.0 
+Rule: ['products\n', 'life', 'bakery'] ==> ['keeping'] : 7 : 0.7 
+Rule: ['products\n', 'milk,whipped/sour'] ==> ['keeping'] : 5 : 0.8333 
+Rule: ['products\n', 'milk,whipped/sour'] ==> ['vegetables,whole'] : 5 : 0.8333 
+Rule: ['products\n', 'milk,whipped/sour', 'keeping'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['products\n', 'other'] ==> ['vegetables,whole'] : 7 : 0.5385 
+Rule: ['products\n', 'potato', 'keeping'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['products\n', 'vegetables,frozen'] ==> ['keeping'] : 3 : 1.0 
+Rule: ['products\n', 'vegetables,frozen'] ==> ['potato'] : 3 : 1.0 
+Rule: ['products\n', 'vegetables,frozen'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['products\n', 'vegetables,frozen', 'keeping'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['products\n', 'vegetables,frozen', 'potato'] ==> ['keeping'] : 3 : 1.0 
+Rule: ['products\n', 'vegetables,frozen', 'potato'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['products\n', 'vegetables,frozen', 'potato', 'vegetables,whole'] ==> ['keeping'] : 3 : 1.0 
+Rule: ['products\n', 'vegetables,other'] ==> ['vegetables,whole'] : 6 : 0.5455 
+Rule: ['products,brown'] ==> ['potato'] : 5 : 1.0 
+Rule: ['products,brown'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['products,brown', 'potato'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['products,cat'] ==> ['bags\n'] : 3 : 0.6 
+Rule: ['products,detergent\n'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['products,domestic'] ==> ['potato'] : 5 : 1.0 
+Rule: ['products,female'] ==> ['sanitary'] : 4 : 1.0 
+Rule: ['products,flower'] ==> ['keeping'] : 4 : 0.5 
+Rule: ['products,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['products,long'] ==> ['life'] : 3 : 1.0 
+Rule: ['products,long', 'life'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['products,misc.'] ==> ['beverages\n'] : 3 : 0.75 
+Rule: ['products,newspapers\n'] ==> ['keeping'] : 7 : 0.4667 
+Rule: ['products,newspapers,shopping'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['products,soda\n'] ==> ['potato'] : 4 : 0.4444 
+Rule: ['red/blush'] ==> ['wine\n'] : 10 : 0.7692 
+Rule: ['remover\n'] ==> ['up'] : 5 : 1.0 
+Rule: ['rolls/buns,Instant'] ==> ['products\n'] : 3 : 1.0 
+Rule: ['rolls/buns,canned'] ==> ['beer\n'] : 17 : 0.6538 
+Rule: ['rolls/buns,canned', 'fish,canned'] ==> ['beer\n'] : 3 : 0.75 
+Rule: ['rolls/buns,shopping'] ==> ['bags\n'] : 3 : 1.0 
+Rule: ['root', 'bags\n'] ==> ['vegetables,whole'] : 15 : 0.4286 
+Rule: ['root', 'bags\n', 'bakery'] ==> ['product,shopping'] : 3 : 1.0 
+Rule: ['root', 'bags\n', 'bakery'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['root', 'bags\n', 'vegetables,herbs,other'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['root', 'bags\n', 'vegetables,other'] ==> ['vegetables,whole'] : 4 : 0.4 
+Rule: ['root', 'bakery'] ==> ['vegetables,whole'] : 8 : 0.7273 
+Rule: ['root', 'beer\n', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['root', 'cheese,frozen'] ==> ['vegetables,other'] : 4 : 0.4 
+Rule: ['root', 'cheese,frozen'] ==> ['vegetables,whole'] : 6 : 0.6 
+Rule: ['root', 'cheese,frozen', 'vegetables,other'] ==> ['vegetables,whole'] : 4 : 1.0 
+Rule: ['root', 'chocolate\n'] ==> ['vegetables,other'] : 3 : 0.75 
+Rule: ['root', 'juice\n'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['root', 'life'] ==> ['bakery'] : 11 : 1.0 
+Rule: ['root', 'life'] ==> ['vegetables,other'] : 5 : 0.4545 
+Rule: ['root', 'life'] ==> ['vegetables,whole'] : 8 : 0.7273 
+Rule: ['root', 'life', 'bags\n'] ==> ['product,shopping'] : 3 : 1.0 
+Rule: ['root', 'life', 'bags\n'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['root', 'life', 'bakery'] ==> ['vegetables,whole'] : 8 : 0.7273 
+Rule: ['root', 'life', 'vegetables,other'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['root', 'milk,whipped/sour'] ==> ['vegetables,whole'] : 6 : 0.75 
+Rule: ['root', 'product\n'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['root', 'vegetables,herbs,other'] ==> ['vegetables,whole'] : 5 : 0.4545 
+Rule: ['root', 'vegetables,onions,other'] ==> ['vegetables,whole'] : 6 : 0.5455 
+Rule: ['root', 'vegetables,other'] ==> ['vegetables,whole'] : 32 : 0.4 
+Rule: ['root', 'wine\n'] ==> ['vegetables,other'] : 4 : 0.5 
+Rule: ['salty'] ==> ['snack\n'] : 30 : 0.7692 
+Rule: ['sanitary', 'film/bags\n'] ==> ['products,cling'] : 3 : 0.75 
+Rule: ['sausage,beef,citrus'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['sausage,chicken,other'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['sausage,finished'] ==> ['fruit,other'] : 3 : 0.4286 
+Rule: ['sausage,liver'] ==> ['bags\n'] : 3 : 0.6 
+Rule: ['sausage,other', 'life'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['sausage,pork,tropical'] ==> ['fruit,other'] : 3 : 0.6 
+Rule: ['sausage,rolls/buns,bottled'] ==> ['beer\n'] : 3 : 0.75 
+Rule: ['sausage,rolls/buns,fruit/vegetable'] ==> ['juice\n'] : 3 : 0.75 
+Rule: ['seasonal'] ==> ['products\n'] : 7 : 0.7 
+Rule: ['snack,cake', 'products\n'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['snack,chewing'] ==> ['bags\n'] : 4 : 0.4444 
+Rule: ['snack,chewing'] ==> ['gum\n'] : 4 : 0.4444 
+Rule: ['snack,kitchen'] ==> ['towels\n'] : 4 : 0.8 
+Rule: ['snack,long'] ==> ['bakery'] : 33 : 1.0 
+Rule: ['snack,long', 'bags\n'] ==> ['bakery'] : 7 : 1.0 
+Rule: ['snack,long', 'bakery', 'vegetables,other'] ==> ['juice,salty'] : 3 : 0.75 
+Rule: ['snack,long', 'bakery', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['snack,long', 'potato'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['snack,long', 'product,chewing'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['snack,long', 'product,specialty'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['snack,long', 'vegetables,other'] ==> ['juice,salty'] : 3 : 0.75 
+Rule: ['snack,long', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['snack,long', 'whole'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['snack,newspapers,shopping'] ==> ['bags\n'] : 3 : 1.0 
+Rule: ['snack,shopping'] ==> ['bags\n'] : 21 : 1.0 
+Rule: ['soda,bottled'] ==> ['beer\n'] : 10 : 0.4348 
+Rule: ['soda,chewing'] ==> ['gum\n'] : 3 : 0.6 
+Rule: ['soda,fruit/vegetable'] ==> ['juice\n'] : 6 : 0.4615 
+Rule: ['soda,long'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['spreads,shopping'] ==> ['bags\n'] : 4 : 1.0 
+Rule: ['towels,shopping'] ==> ['bags\n'] : 8 : 1.0 
+Rule: ['tropical', 'bar\n'] ==> ['fruit,whole'] : 5 : 0.4167 
+Rule: ['tropical', 'beverages,fruit/vegetable'] ==> ['fruit,pip'] : 3 : 0.6 
+Rule: ['tropical', 'cheese,curd'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['tropical', 'cheese,frozen', 'fruit,pip'] ==> ['fruit,whole'] : 3 : 1.0 
+Rule: ['tropical', 'cheese,frozen', 'milk,cream'] ==> ['fruit,whole'] : 3 : 0.75 
+Rule: ['tropical', 'eggs,brown'] ==> ['fruit,root'] : 4 : 0.6667 
+Rule: ['tropical', 'eggs,brown'] ==> ['vegetables,whole'] : 4 : 0.6667 
+Rule: ['tropical', 'eggs,brown', 'fruit,root'] ==> ['vegetables,whole'] : 4 : 1.0 
+Rule: ['tropical', 'fruit,onions,other'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['tropical', 'fruit,root'] ==> ['vegetables,whole'] : 27 : 0.5 
+Rule: ['tropical', 'fruit,root', 'fruit,pip'] ==> ['vegetables,whole'] : 7 : 0.5833 
+Rule: ['tropical', 'fruit,root', 'milk,whipped/sour'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['tropical', 'fruit,root', 'vegetables,other'] ==> ['vegetables,whole'] : 8 : 0.4 
+Rule: ['tropical', 'fruit,yogurt,frozen'] ==> ['fruit,pip'] : 3 : 0.75 
+Rule: ['tropical', 'fruit/vegetables,whole'] ==> ['fruit,other'] : 3 : 1.0 
+Rule: ['tropical', 'fruit/vegetables,whole'] ==> ['vegetables,packaged'] : 3 : 1.0 
+Rule: ['tropical', 'fruit/vegetables,whole', 'fruit,other'] ==> ['vegetables,packaged'] : 3 : 1.0 
+Rule: ['tropical', 'juice,long'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['tropical', 'life'] ==> ['bakery'] : 21 : 1.0 
+Rule: ['tropical', 'life', 'fruit,other'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['tropical', 'life', 'juice,long'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['tropical', 'life', 'product\n'] ==> ['bakery'] : 8 : 1.0 
+Rule: ['tropical', 'life', 'snack,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['tropical', 'milk\n'] ==> ['fruit,whole'] : 9 : 0.8182 
+Rule: ['tropical', 'milk,cream'] ==> ['fruit,whole'] : 6 : 0.6667 
+Rule: ['tropical', 'milk,domestic'] ==> ['fruit,whole'] : 5 : 0.7143 
+Rule: ['tropical', 'milk,frozen'] ==> ['vegetables,whole'] : 4 : 0.5 
+Rule: ['tropical', 'milk,whipped/sour'] ==> ['vegetables,whole'] : 3 : 0.4286 
+Rule: ['tropical', 'product\n'] ==> ['bakery'] : 8 : 1.0 
+Rule: ['tropical', 'snack,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['tropical', 'vegetables,ice'] ==> ['cheese,frozen'] : 3 : 0.5 
+Rule: ['turkey,citrus'] ==> ['fruit,pip'] : 4 : 0.5714 
+Rule: ['turkey,root'] ==> ['vegetables,other'] : 3 : 1.0 
+Rule: ['turkey,tropical'] ==> ['fruit,root'] : 5 : 0.4167 
+Rule: ['turkey,tropical', 'fruit,root'] ==> ['vegetables,other'] : 3 : 0.6 
+Rule: ['vegetables,Instant'] ==> ['food'] : 3 : 1.0 
+Rule: ['vegetables,bottled', 'citrus'] ==> ['fruit,pip'] : 3 : 0.6 
+Rule: ['vegetables,bottled', 'fruit,root'] ==> ['vegetables,other'] : 4 : 0.4 
+Rule: ['vegetables,bottled', 'life'] ==> ['bakery'] : 6 : 1.0 
+Rule: ['vegetables,bottled', 'product\n'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['vegetables,brown', 'life'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['vegetables,cake'] ==> ['bar\n'] : 3 : 0.6 
+Rule: ['vegetables,canned', 'citrus'] ==> ['fruit,other'] : 3 : 0.5 
+Rule: ['vegetables,canned', 'root'] ==> ['bags\n'] : 4 : 0.6667 
+Rule: ['vegetables,canned', 'root'] ==> ['vegetables,other'] : 3 : 0.5 
+Rule: ['vegetables,chewing'] ==> ['gum\n'] : 4 : 0.5 
+Rule: ['vegetables,cream', 'vegetables,other'] ==> ['fruit,root'] : 3 : 0.6 
+Rule: ['vegetables,curd,butter'] ==> ['vegetables,other'] : 4 : 0.8 
+Rule: ['vegetables,dessert,whipped/sour'] ==> ['bags\n'] : 3 : 0.5 
+Rule: ['vegetables,dessert,whipped/sour'] ==> ['vegetables,other'] : 3 : 0.5 
+Rule: ['vegetables,domestic', 'life'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['vegetables,domestic', 'milk,frozen'] ==> ['vegetables,whole'] : 7 : 0.7 
+Rule: ['vegetables,domestic', 'tropical'] ==> ['fruit,root'] : 5 : 0.7143 
+Rule: ['vegetables,domestic', 'tropical'] ==> ['vegetables,whole'] : 3 : 0.4286 
+Rule: ['vegetables,domestic', 'tropical', 'fruit,root'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['vegetables,frozen', 'juice,long'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['vegetables,frozen', 'keeping'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['vegetables,frozen', 'potato', 'keeping'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['vegetables,frozen', 'vegetables,onions,other'] ==> ['fruit,root'] : 3 : 0.4286 
+Rule: ['vegetables,frozen', 'vegetables,other', 'fruit,pip', 'fruit,root'] ==> ['cheese,frozen'] : 3 : 1.0 
+Rule: ['vegetables,frozen', 'vegetables,other', 'vegetables,whole', 'fruit,root'] ==> ['cheese,frozen'] : 3 : 0.75 
+Rule: ['vegetables,frozen', 'vegetables,whole', 'fruit,pip', 'fruit,root'] ==> ['cheese,frozen'] : 3 : 1.0 
+Rule: ['vegetables,herbs,other'] ==> ['vegetables,whole'] : 19 : 0.5758 
+Rule: ['vegetables,herbs,other', 'bakery'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['vegetables,herbs,other', 'fruit,pip'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['vegetables,herbs,packaged'] ==> ['beef,root'] : 3 : 0.75 
+Rule: ['vegetables,herbs,whole'] ==> ['fruit,root'] : 8 : 0.5333 
+Rule: ['vegetables,ice', 'vegetables,other'] ==> ['fruit,root'] : 4 : 0.6667 
+Rule: ['vegetables,long'] ==> ['bakery'] : 9 : 1.0 
+Rule: ['vegetables,long'] ==> ['life'] : 9 : 1.0 
+Rule: ['vegetables,long'] ==> ['product\n'] : 5 : 0.5556 
+Rule: ['vegetables,long', 'life'] ==> ['bakery'] : 9 : 1.0 
+Rule: ['vegetables,long', 'product\n'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['vegetables,misc.'] ==> ['beverages\n'] : 4 : 0.5 
+Rule: ['vegetables,misc.'] ==> ['other'] : 4 : 0.5 
+Rule: ['vegetables,onions,herbs,other'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['vegetables,onions,other'] ==> ['vegetables,whole'] : 27 : 0.5294 
+Rule: ['vegetables,onions,other', 'fruit,pip'] ==> ['vegetables,whole'] : 4 : 1.0 
+Rule: ['vegetables,other'] ==> ['vegetables,whole'] : 175 : 0.4642 
+Rule: ['vegetables,other', 'bags\n', 'bakery'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['vegetables,other', 'bags\n', 'fruit,pip'] ==> ['fruit,root'] : 6 : 1.0 
+Rule: ['vegetables,other', 'bakery'] ==> ['vegetables,whole'] : 11 : 0.4074 
+Rule: ['vegetables,other', 'cheese,frozen', 'fruit,pip'] ==> ['vegetables,whole'] : 5 : 0.8333 
+Rule: ['vegetables,other', 'cheese,frozen', 'vegetables,frozen'] ==> ['fruit,pip'] : 3 : 0.5 
+Rule: ['vegetables,other', 'citrus', 'fruit,pip'] ==> ['fruit,root'] : 4 : 0.5714 
+Rule: ['vegetables,other', 'fruit,grapes,root'] ==> ['fruit,pip'] : 4 : 0.4 
+Rule: ['vegetables,other', 'fruit,grapes,root', 'fruit,pip'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['vegetables,other', 'fruit,pip'] ==> ['vegetables,whole'] : 21 : 0.6176 
+Rule: ['vegetables,other', 'fruit,pip', 'fruit,root', 'bakery'] ==> ['life'] : 3 : 1.0 
+Rule: ['vegetables,other', 'fruit,root', 'fruit,pip'] ==> ['vegetables,whole'] : 16 : 0.5926 
+Rule: ['vegetables,other', 'keeping'] ==> ['vegetables,whole'] : 5 : 0.7143 
+Rule: ['vegetables,other', 'life'] ==> ['bakery'] : 27 : 1.0 
+Rule: ['vegetables,other', 'life', 'bags\n'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['vegetables,other', 'life', 'bakery'] ==> ['vegetables,whole'] : 11 : 0.4074 
+Rule: ['vegetables,other', 'life', 'cheese,frozen'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['vegetables,other', 'life', 'fruit,pip'] ==> ['fruit,root'] : 3 : 0.75 
+Rule: ['vegetables,other', 'life', 'fruit,root'] ==> ['bakery'] : 12 : 1.0 
+Rule: ['vegetables,other', 'pork,root'] ==> ['vegetables,whole'] : 7 : 0.5 
+Rule: ['vegetables,other', 'products\n'] ==> ['keeping'] : 5 : 0.4545 
+Rule: ['vegetables,other', 'products\n', 'keeping'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['vegetables,other', 'root', 'bakery'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['vegetables,other', 'root', 'life'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['vegetables,other', 'sausage,root'] ==> ['vegetables,whole'] : 7 : 0.5 
+Rule: ['vegetables,other', 'snack,long', 'bakery', 'juice,salty'] ==> ['life'] : 3 : 1.0 
+Rule: ['vegetables,other', 'tropical', 'fruit,pip'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['vegetables,other', 'vegetables,frozen', 'fruit,pip'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['vegetables,other', 'vegetables,whole', 'articles\n', 'fruit,root'] ==> ['cheese,frozen'] : 3 : 0.5 
+Rule: ['vegetables,other', 'vegetables,whole', 'bags\n', 'bakery'] ==> ['life'] : 3 : 1.0 
+Rule: ['vegetables,other', 'vegetables,whole', 'cheese,domestic', 'citrus'] ==> ['fruit,root'] : 3 : 1.0 
+Rule: ['vegetables,other', 'vegetables,whole', 'food', 'fruit,root'] ==> ['cheese,frozen'] : 3 : 1.0 
+Rule: ['vegetables,other', 'vegetables,whole', 'fruit,pip', 'milk,yogurt,whipped/sour'] ==> ['fruit,root'] : 3 : 1.0 
+Rule: ['vegetables,other', 'vegetables,whole', 'fruit,root', 'bakery'] ==> ['life'] : 4 : 1.0 
+Rule: ['vegetables,other', 'vegetables,whole', 'fruit,tropical', 'citrus'] ==> ['fruit,root'] : 6 : 0.75 
+Rule: ['vegetables,other', 'vegetables,whole', 'root', 'bakery'] ==> ['life'] : 4 : 1.0 
+Rule: ['vegetables,other', 'vegetables,whole', 'snack,long', 'bakery'] ==> ['life'] : 3 : 1.0 
+Rule: ['vegetables,red/blush'] ==> ['wine\n'] : 3 : 0.6 
+Rule: ['vegetables,shopping'] ==> ['bags\n'] : 11 : 1.0 
+Rule: ['vegetables,sweet', 'life'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['vegetables,whole', 'articles\n', 'citrus'] ==> ['fruit,root'] : 3 : 1.0 
+Rule: ['vegetables,whole', 'bags\n', 'bakery'] ==> ['product,shopping'] : 5 : 0.5 
+Rule: ['vegetables,whole', 'bags\n', 'bakery', 'life'] ==> ['product,shopping'] : 5 : 0.5 
+Rule: ['vegetables,whole', 'bags\n', 'root', 'bakery'] ==> ['life'] : 3 : 1.0 
+Rule: ['vegetables,whole', 'bags\n', 'root', 'bakery', 'life'] ==> ['product,shopping'] : 3 : 1.0 
+Rule: ['vegetables,whole', 'bags\n', 'root', 'life'] ==> ['product,shopping'] : 3 : 1.0 
+Rule: ['vegetables,whole', 'bags\n', 'vegetables,onions,other'] ==> ['fruit,root'] : 3 : 0.6 
+Rule: ['vegetables,whole', 'beverages,fruit/vegetable'] ==> ['water,misc.'] : 4 : 0.4444 
+Rule: ['vegetables,whole', 'bread,brown'] ==> ['milk,white'] : 5 : 0.5556 
+Rule: ['vegetables,whole', 'cheese,domestic', 'citrus'] ==> ['fruit,root'] : 3 : 0.5 
+Rule: ['vegetables,whole', 'citrus', 'cheese,frozen'] ==> ['fruit,root'] : 4 : 1.0 
+Rule: ['vegetables,whole', 'cream,hard', 'vegetables,other'] ==> ['fruit,root'] : 3 : 0.75 
+Rule: ['vegetables,whole', 'fruit,grapes,root', 'vegetables,other'] ==> ['meals,frozen'] : 3 : 0.4286 
+Rule: ['vegetables,whole', 'fruit,other', 'citrus', 'bakery'] ==> ['life'] : 3 : 1.0 
+Rule: ['vegetables,whole', 'fruit,other', 'powder,long', 'bakery'] ==> ['life'] : 3 : 1.0 
+Rule: ['vegetables,whole', 'fruit,other', 'snack,long', 'bakery'] ==> ['life'] : 3 : 1.0 
+Rule: ['vegetables,whole', 'fruit,pip', 'bakery', 'life'] ==> ['cheese,frozen'] : 3 : 0.6 
+Rule: ['vegetables,whole', 'fruit,root', 'bakery', 'life'] ==> ['cheese,frozen'] : 4 : 0.4444 
+Rule: ['vegetables,whole', 'fruit,tropical', 'fruit,pip', 'fruit,root'] ==> ['cheese,frozen'] : 3 : 0.4286 
+Rule: ['vegetables,whole', 'life', 'cheese,frozen'] ==> ['fruit,root'] : 4 : 0.5 
+Rule: ['vegetables,whole', 'life', 'snack,long'] ==> ['juice,salty'] : 5 : 0.4545 
+Rule: ['vegetables,whole', 'meat,tropical'] ==> ['fruit,root'] : 7 : 0.5833 
+Rule: ['vegetables,whole', 'milk,curd,domestic'] ==> ['fruit,root'] : 3 : 0.5 
+Rule: ['vegetables,whole', 'milk,rolls/buns,bottled'] ==> ['fruit,root'] : 3 : 0.6 
+Rule: ['vegetables,whole', 'pork,citrus'] ==> ['fruit,root'] : 5 : 0.5556 
+Rule: ['vegetables,whole', 'pork,hamburger'] ==> ['meat,pip'] : 3 : 0.6 
+Rule: ['vegetables,whole', 'products,hygiene'] ==> ['sanitary'] : 3 : 0.75 
+Rule: ['vegetables,whole', 'root', 'bakery', 'bags\n'] ==> ['product,shopping'] : 3 : 1.0 
+Rule: ['vegetables,whole', 'sausage,hamburger'] ==> ['fruit,root'] : 3 : 0.75 
+Rule: ['vegetables,whole', 'snack,long'] ==> ['juice,salty'] : 5 : 0.4545 
+Rule: ['vegetables,whole', 'snack,long', 'bakery'] ==> ['juice,salty'] : 5 : 0.4545 
+Rule: ['vegetables,whole', 'snack,long', 'bakery', 'juice,salty'] ==> ['life'] : 5 : 1.0 
+Rule: ['vegetables,whole', 'water,fruit/vegetable', 'bakery', 'life'] ==> ['cheese,frozen'] : 3 : 0.75 
+Rule: ['vegetables,yogurt,frozen'] ==> ['fruit,other'] : 4 : 0.5 
+Rule: ['vegetables,yogurt,soft'] ==> ['cheese,domestic'] : 3 : 0.6 
+Rule: ['water\n', 'fruit,root'] ==> ['vegetables,other'] : 6 : 0.4615 
+Rule: ['water\n', 'fruit,root'] ==> ['vegetables,whole'] : 8 : 0.6154 
+Rule: ['water\n', 'fruit,root', 'vegetables,other'] ==> ['vegetables,whole'] : 4 : 0.6667 
+Rule: ['water\n', 'milk,bottled'] ==> ['whole'] : 7 : 0.5385 
+Rule: ['water\n', 'other'] ==> ['vegetables,whole'] : 5 : 0.4167 
+Rule: ['water\n', 'products,bottled'] ==> ['food'] : 3 : 0.75 
+Rule: ['water\n', 'tropical', 'fruit,root'] ==> ['vegetables,whole'] : 4 : 1.0 
+Rule: ['water\n', 'vegetables,other'] ==> ['vegetables,whole'] : 5 : 0.625 
+Rule: ['water,bottled'] ==> ['beer\n'] : 46 : 0.5412 
+Rule: ['water,bottled', 'beer,specialty'] ==> ['chocolate\n'] : 3 : 0.6 
+Rule: ['water,bottled', 'citrus'] ==> ['beer\n'] : 4 : 0.5 
+Rule: ['water,bottled', 'citrus'] ==> ['vegetables,whole'] : 5 : 0.625 
+Rule: ['water,bottled', 'citrus', 'beer\n'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['water,bottled', 'fruit,other'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['water,bottled', 'fruit,root'] ==> ['beer\n'] : 4 : 0.5714 
+Rule: ['water,bottled', 'fruit,root'] ==> ['vegetables,herbs,other'] : 4 : 0.5714 
+Rule: ['water,bottled', 'fruit,root'] ==> ['vegetables,whole'] : 6 : 0.8571 
+Rule: ['water,bottled', 'fruit,root', 'beer\n'] ==> ['vegetables,whole'] : 4 : 1.0 
+Rule: ['water,bottled', 'fruit,root', 'vegetables,herbs,other'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['water,bottled', 'root'] ==> ['beer\n'] : 3 : 1.0 
+Rule: ['water,bottled', 'vegetables,herbs,other'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['water,bottled', 'vegetables,other'] ==> ['vegetables,whole'] : 3 : 1.0 
+Rule: ['water,bottled', 'whole'] ==> ['beer\n'] : 6 : 0.5 
+Rule: ['water,chewing'] ==> ['gum\n'] : 4 : 0.5 
+Rule: ['water,dish'] ==> ['cleaner\n'] : 3 : 0.5 
+Rule: ['water,dish'] ==> ['food,bottled'] : 3 : 0.5 
+Rule: ['water,dish'] ==> ['vegetables,whole'] : 3 : 0.5 
+Rule: ['water,fruit/vegetable', 'bakery'] ==> ['fruit,pip'] : 3 : 0.4286 
+Rule: ['water,fruit/vegetable', 'bakery'] ==> ['vegetables,whole'] : 4 : 0.5714 
+Rule: ['water,fruit/vegetable', 'bakery', 'juice,long'] ==> ['fruit,pip'] : 3 : 0.75 
+Rule: ['water,fruit/vegetable', 'cheese,frozen'] ==> ['bakery'] : 4 : 0.4444 
+Rule: ['water,fruit/vegetable', 'cheese,frozen'] ==> ['vegetables,whole'] : 4 : 0.4444 
+Rule: ['water,fruit/vegetable', 'cheese,frozen', 'bakery'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['water,fruit/vegetable', 'citrus'] ==> ['juice\n'] : 3 : 0.6 
+Rule: ['water,fruit/vegetable', 'fruit,pip', 'bakery', 'life'] ==> ['juice,long'] : 3 : 1.0 
+Rule: ['water,fruit/vegetable', 'fruit,root'] ==> ['vegetables,whole'] : 4 : 0.8 
+Rule: ['water,fruit/vegetable', 'juice,long'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['water,fruit/vegetable', 'juice,long'] ==> ['fruit,pip'] : 3 : 0.75 
+Rule: ['water,fruit/vegetable', 'life'] ==> ['bakery'] : 7 : 1.0 
+Rule: ['water,fruit/vegetable', 'life'] ==> ['cheese,frozen'] : 4 : 0.5714 
+Rule: ['water,fruit/vegetable', 'life'] ==> ['fruit,pip'] : 3 : 0.4286 
+Rule: ['water,fruit/vegetable', 'life'] ==> ['juice,long'] : 4 : 0.5714 
+Rule: ['water,fruit/vegetable', 'life'] ==> ['product,specialty'] : 3 : 0.4286 
+Rule: ['water,fruit/vegetable', 'life'] ==> ['vegetables,whole'] : 4 : 0.5714 
+Rule: ['water,fruit/vegetable', 'life', 'bakery'] ==> ['fruit,pip'] : 3 : 0.4286 
+Rule: ['water,fruit/vegetable', 'life', 'bakery'] ==> ['vegetables,whole'] : 4 : 0.5714 
+Rule: ['water,fruit/vegetable', 'life', 'cheese,frozen'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['water,fruit/vegetable', 'life', 'cheese,frozen'] ==> ['vegetables,whole'] : 3 : 0.75 
+Rule: ['water,fruit/vegetable', 'life', 'juice,long'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['water,fruit/vegetable', 'life', 'juice,long'] ==> ['fruit,pip'] : 3 : 0.75 
+Rule: ['water,fruit/vegetable', 'life', 'product,specialty'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['water,fruit/vegetable', 'product,specialty'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['water,fruit/vegetable', 'root'] ==> ['juice\n'] : 3 : 0.6 
+Rule: ['water,fruit/vegetable', 'root'] ==> ['vegetables,other'] : 3 : 0.6 
+Rule: ['water,fruit/vegetable', 'root'] ==> ['vegetables,whole'] : 3 : 0.6 
+Rule: ['water,fruit/vegetable', 'vegetables,frozen'] ==> ['fruit,pip'] : 3 : 0.75 
+Rule: ['water,fruit/vegetable', 'vegetables,other'] ==> ['vegetables,whole'] : 6 : 0.6 
+Rule: ['water,hygiene'] ==> ['articles\n'] : 8 : 0.6154 
+Rule: ['water,long'] ==> ['bakery'] : 17 : 1.0 
+Rule: ['water,long'] ==> ['life'] : 17 : 1.0 
+Rule: ['water,long'] ==> ['product\n'] : 12 : 0.7059 
+Rule: ['water,long', 'citrus'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['water,long', 'life'] ==> ['bakery'] : 17 : 1.0 
+Rule: ['water,long', 'life'] ==> ['product\n'] : 12 : 0.7059 
+Rule: ['water,long', 'life', 'citrus'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['water,long', 'life', 'product\n'] ==> ['bakery'] : 12 : 1.0 
+Rule: ['water,long', 'product\n'] ==> ['bakery'] : 12 : 1.0 
+Rule: ['water,male'] ==> ['cosmetics\n'] : 5 : 0.8333 
+Rule: ['water,potted'] ==> ['plants\n'] : 7 : 1.0 
+Rule: ['water,potted'] ==> ['vegetables,whole'] : 3 : 0.4286 
+Rule: ['water,potted', 'plants\n'] ==> ['vegetables,whole'] : 3 : 0.4286 
+Rule: ['water,red/blush', 'life'] ==> ['bakery'] : 4 : 1.0 
+Rule: ['water,red/blush', 'life'] ==> ['wine,long'] : 3 : 0.75 
+Rule: ['water,red/blush', 'life', 'wine,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['water,red/blush', 'wine,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['water,salty'] ==> ['snack\n'] : 7 : 0.5833 
+Rule: ['water,shopping'] ==> ['bags\n'] : 14 : 1.0 
+Rule: ['water,soda,bottled', 'bread,bottled'] ==> ['beer\n'] : 3 : 1.0 
+Rule: ['water,soda,canned'] ==> ['bags\n'] : 7 : 0.4118 
+Rule: ['water,soda,chewing'] ==> ['gum\n'] : 4 : 0.6667 
+Rule: ['water,soda,cling'] ==> ['film/bags\n'] : 3 : 1.0 
+Rule: ['water,soda,fruit/vegetable', 'juice,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['water,soda,fruit/vegetable', 'life'] ==> ['bakery'] : 6 : 1.0 
+Rule: ['water,soda,fruit/vegetable', 'life'] ==> ['juice,long'] : 3 : 0.5 
+Rule: ['water,soda,fruit/vegetable', 'life', 'juice,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['water,soda,shopping'] ==> ['bags\n'] : 8 : 1.0 
+Rule: ['water,specialty'] ==> ['chocolate\n'] : 9 : 0.4737 
+Rule: ['water,white'] ==> ['wine\n'] : 13 : 0.619 
+Rule: ['white'] ==> ['wine\n'] : 22 : 0.4151 
+Rule: ['white', 'life'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['whole', 'beverages,long'] ==> ['bakery'] : 3 : 1.0 
+Rule: ['whole', 'juice,long'] ==> ['bakery'] : 5 : 1.0 
+Rule: ['wine\n', 'fruit,root'] ==> ['beef,citrus'] : 3 : 0.6 
+Rule: ['wine,chewing'] ==> ['bags\n'] : 6 : 0.75 
+Rule: ['wine,chocolate,shopping'] ==> ['bags\n'] : 4 : 1.0 
+Rule: ['wine,dish'] ==> ['cleaner\n'] : 6 : 0.8571 
+Rule: ['wine,hygiene'] ==> ['articles\n'] : 4 : 0.6667 
+Rule: ['wine,long'] ==> ['bakery'] : 16 : 1.0 
+Rule: ['wine,shopping'] ==> ['bags\n'] : 30 : 1.0 
+Rule: ['wine,shopping', 'beer,red/blush'] ==> ['bags\n'] : 3 : 1.0 

@@ -1,0 +1,14 @@
+/Hard margin SVM has code for hard margin SVM classifier
+/Soft margin SVM has code for soft margin SVM classifier
+/Kernels has code for kernel experiments
+/Breast cancer has code for all the experiments on real world dataset
+
+smo.py has implementation of simplified SMO.
+
+report.pdf is report of whole project.
+
+
+project done by:
+
+Sai Srinadhu K [2015CSB1015]
+2015csb1015@iitrpr.ac.in

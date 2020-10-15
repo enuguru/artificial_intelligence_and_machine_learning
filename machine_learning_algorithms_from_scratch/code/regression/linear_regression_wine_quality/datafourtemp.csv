@@ -1,0 +1,20 @@
+
+# The below value is the error that we get for case 1, when load is constant
+# The tyre pressure is almost constant at 50psi
+# multiple variable regresssion using random forest algorithm
+# case 1 with complete load from start to finish
+# this is the csv file input to the model with the tiles
+# Initial_SOC,Final_SOC,Charge_utilized,payload,tyre_pressure,range_covered
+95,84.76,10.26,7400,40,12413
+84.76,74.52,10.26,7500,50,12413
+24.99,20.00,4.99,7500,50,4193
+50.00,29.43,20.57,7500,50,24800
+84.51,44.50,40.01,7500,50,49500
+
+
+
+# results
+# cross validation scores
+# 7.23,3.39,10.34,4.43,9.9
+# averate Root Mean Square Error
+# RMSE = 7.058

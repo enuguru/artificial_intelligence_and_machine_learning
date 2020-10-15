@@ -1,0 +1,3 @@
+
+keep the Social_Network_Ads.csv in the same directory as svm.py
+python svm.py

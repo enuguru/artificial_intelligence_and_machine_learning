@@ -1,0 +1,1 @@
+python lda.py digits.csv -1

@@ -41,7 +41,7 @@ def Apriori_count_subset(Canditate,Canditate_len):
                 Lk[key] += 1
     file.close()
     return Lk
-minsupport = 5
+minsupport = 2
 C1={} 
 file = open('example.txt')
 """Count one canditate"""
