@@ -1,0 +1,91 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
+import pandas as pd
+import numpy as np
+# In[2]:
+model = pd.read_csv(r"C://Users//Anu//Downloads//Salary_Data.csv")
+# In[11]:
+model.head()
+# In[32]:
+array = np.array(model)
+# In[42]:
+X = array[:,0]
+# In[43]:
+y = array[:,1]
+# In[44]:
+#     Salary = m*YearsExperience + c
+# In[45]:
+from sklearn.model_selection import train_test_split
+# In[51]:
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20)
+# In[63]:
+X_train = X_train.reshape((len(X_train),1))
+y_train = y_train.reshape((len(y_train),1))
+X_test = X_test.reshape((len(X_test),1))
+y_test = y_test.reshape((len(y_test),1))
+# In[64]:
+print (X_train.shape)
+# In[65]:
+from sklearn.linear_model import LinearRegression
+# In[66]:
+linear_reg = LinearRegression()
+# In[67]:
+linear_reg.fit(X_train,y_train)
+# In[69]:
+#finding m or Slope of the line
+linear_reg.coef_
+# In[70]:
+#finding c or y intercept
+linear_reg.intercept_
+
+
+# In[72]:
+
+
+print (X_test, y_test)
+
+
+# In[73]:
+
+
+y_pred = linear_reg.predict(X_test)
+
+
+# In[75]:
+
+
+print (y_test, y_pred)
+
+
+# In[78]:
+
+
+import matplotlib.pyplot as plt
+get_ipython().run_line_magic('matplotlib', 'inline')
+
+
+# In[80]:
+
+
+plt.scatter(X_test,y_test,color = 'green')
+
+
+# In[83]:
+
+
+plt.plot(X_test,y_pred,color = 'black')
+
+
+# In[84]:
+
+
+linear_reg.score(X_test,y_test)
+
+
+# In[ ]:
+
+
+
+

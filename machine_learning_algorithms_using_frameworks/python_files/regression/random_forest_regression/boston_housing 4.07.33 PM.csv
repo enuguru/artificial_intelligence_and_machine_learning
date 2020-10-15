@@ -1,0 +1,38 @@
+
+
+random forests 
+
+increase accuracy
+give more stability
+it reduces variance becuase
+each tree is completey different
+
+hyper parameters
+
+n estmators = number of trees
+d depth     = depth of the tree
+
+D data     = amount of data at each node
+randomness = you can use, WOR WR or any other type of sampling
+
+M and m = number of features at each tree
+splitting criteria = gini index or information gain
+
+number of folds in cross validation - 2 fold or 5 fold
+or hold out dataset, LOOCV - Leave One Out Cross Validation
+
+amount of data used for testing - all of oob sample and
+the test data
+
+
+
+
+
+
+
+
+
+
+
+
+
