@@ -1,0 +1,26 @@
+
+pandas - statsmodels
+matplotlib - seaborn
+
+results and visualization
+
+visualization
+
+density plot
+histogram
+box plot
+pie chart
+bar chart
+
+2d
+3d
+
+animated or (live) dashboard visualization
+stationary
+
+
+75% + 1.5 IQR
+75% + 3IQR
+
+25% - 1.5 IQR
+25% - 3IQR

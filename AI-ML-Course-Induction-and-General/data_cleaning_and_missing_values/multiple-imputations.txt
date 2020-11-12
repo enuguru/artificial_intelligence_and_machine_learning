@@ -1,0 +1,22 @@
+
+handling missing data
+https://towardsdatascience.com/how-to-handle-missing-data-8646b18db0d4
+
+
+multiple imputations - one
+https://www.statisticssolutions.com/multiple-imputation-for-missing-data/
+
+
+multiple imputations - two
+https://www.theanalysisfactor.com/multiple-imputation-in-a-nutshell/
+
+markov chain monte carlo 
+https://towardsdatascience.com/markov-chain-monte-carlo-in-python-44f7e609be98
+
+https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-017-0442-1
+
+Probabilistic-Programming-and-Bayesian-Methods-for-Hackers - book
+https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers
+
+
+

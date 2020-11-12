@@ -1,0 +1,17 @@
+
+
+Histogram and Bar graph
+
+Histogram displays data by way of bars to show the frequency of numerical data. A bar graph representation of data that uses bars to compare different categories of data
+
+A histogram represents the frequency distribution of continuous variables. Conversely, a bar graph is a diagrammatic comparison of discrete variables
+
+Histogram presents numerical data whereas bar graph shows categorical data
+
+The histogram is drawn in such a way that there is no gap between the bars. On the other hand, there is proper spacing between bars in a bar graph that indicates discontinuity
+
+Items of the histogram are numbers, which are categorised together, to represent ranges of data. As opposed to the bar graph, items are considered as individual entities
+
+In the case of a bar graph, it is quite common to rearrange the blocks, from highest to lowest. But with histogram, this cannot be done, as they are shown in the sequences of classes
+
+The width of rectangular blocks in a histogram may or may not be same while the width of the bars in a  bar graph is always same

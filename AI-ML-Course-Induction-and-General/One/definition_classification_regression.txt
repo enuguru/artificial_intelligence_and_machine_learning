@@ -1,0 +1,7 @@
+
+
+
+from Harsh D to everyone:
+Finite set of outcomes => Classification
+from Harsh D to everyone:
+Real value outcome => Regression

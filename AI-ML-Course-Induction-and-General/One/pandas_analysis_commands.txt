@@ -1,0 +1,8 @@
+
+
+
+groupby
+crosstab
+pivot
+pivot_table
+concat

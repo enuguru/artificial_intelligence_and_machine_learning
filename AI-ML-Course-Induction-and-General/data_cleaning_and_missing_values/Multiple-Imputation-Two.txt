@@ -1,0 +1,53 @@
+
+Markov Chain Monte Carlo
+
+Markov Chain Monte Carlo refers to a class of methods for sampling 
+from a probability distribution in order to construct the most likely 
+distribution. We cannot directly calculate the logistic distribution, 
+so instead we generate thousands of values — called samples — for the 
+parameters of the function (alpha and beta) to create an approximation of the distribution. The idea behind MCMC is that as we generate more samples, our approximation gets closer and closer to the actual true distribution.
+
+
+Monte Carlo
+
+There are two parts to a Markov Chain Monte Carlo method. Monte Carlo 
+refers to a general technique of using repeated random samples to obtain a numerical answer. Monte Carlo can be thought of as carrying out many experiments, each time changing the variables in a model and observing the response. By choosing random values, we can explore a large portion of the parameter space, the range of possible values for the variables. 
+
+We cannot try every single point in these plots, but by randomly 
+sampling from regions of higher probability (red) we can create the most likely model for our problem.
+
+
+Markov Chain
+
+A Markov Chain is a process where the next state depends only on the 
+current state. (A state in this context refers to the assignment of 
+values to the parameters). A Markov Chain is memoryless because only 
+the current state matters and not how it arrived in that state. 
+
+I feel is that is a little difficult to understand, consider an everyday 
+phenomenon, the weather. If we want to predict the weather tomorrow 
+we can get a reasonable estimate using only the weather today. 
+If it snowed today, we look at historical data showing the distribution 
+of weather on the day after it snows to estimate probabilities of the 
+weather tomorrow. The concept of a Markov Chain is that we do not need 
+to know the entire history of a process to predict the next output, an 
+approximation that works well in many real-world situations.
+
+
+Markov Chain and Monte Carlo
+
+Putting together the ideas of Markov Chain and Monte Carlo, MCMC is a 
+method that repeatedly draws random values for the parameters of a 
+distribution based on the current values. Each sample of values is 
+random, but the choices for the values are limited by the current 
+state and the assumed prior distribution of the parameters. MCMC can 
+be considered as a random walk that gradually converges to the 
+true distribution.
+
+In order to draw random values of alpha and beta, we need to assume a 
+prior distribution for these values. As we have no assumptions about 
+the parameters ahead of time, we can use a normal distribution. 
+The normal, or Gaussian distribution, is defined by the mean, showing 
+the location of the data, and the variance, showing the spread. 
+Several normal distributions with different means and spreads are below
+

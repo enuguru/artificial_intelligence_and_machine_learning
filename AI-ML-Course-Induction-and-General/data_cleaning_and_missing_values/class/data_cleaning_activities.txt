@@ -1,0 +1,15 @@
+
+
+doing and taking care following things
+
+1. remove or keep the outliers
+2. remove or keep the duplicates
+3. empty field
+4. invalid data present - .,: vague data
+5. N/A or NAN or NA or na
+6. fill the empty, N/A and vague
+7. what is the process to follow for filling ?
+8. is data really missing ?
+9. data is missing in groups or alone ?
+
+
