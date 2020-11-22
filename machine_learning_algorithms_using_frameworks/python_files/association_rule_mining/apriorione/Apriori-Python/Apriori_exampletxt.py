@@ -25,7 +25,7 @@ def Apriori_prune(Ck,MinSupport):
 def Apriori_count_subset(Canditate,Canditate_len):
     """ Use bool to know is subset or not """
     Lk = dict()
-    file = open('simple_groceries.csv')
+    file = open('example.txt')
     for l in file:
         l = str(l.split())
         count = 0
@@ -43,7 +43,7 @@ def Apriori_count_subset(Canditate,Canditate_len):
     return Lk
 minsupport = 2
 C1={} 
-file = open('simple_groceries.csv')
+file = open('example.txt')
 """Count one canditate"""
 for line in file:
     for item in line.split():

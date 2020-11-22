@@ -14,8 +14,6 @@ scriptpath = "../../Tools" # functions of acc and CAP
 # Add the directory containing your module to the Python path
 sys.path.append(os.path.abspath(scriptpath))
 
-
-
 # Importing dataset
 dataset = pd.read_csv('Market_Basket_Optimisation.csv',names=np.arange(1,21))
 
