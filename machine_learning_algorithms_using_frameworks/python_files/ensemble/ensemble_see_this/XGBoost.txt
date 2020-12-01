@@ -1,0 +1,27 @@
+
+
+XGBoost(Extreme Gradient Boosting)
+
+XGBoost has taken data science competition by storm. XGBoost seems to be a part of an ensemble of classifiers/predictors which are used to win data science competitions. Why is this so? why is XGBoost so powerful ?
+
+XGBoost is similar to gradient boosting algorithm but it has a few tricks up its sleeve which makes it stand out from the rest
+
+Features of XGBoost are:
+Clever Penalisation of Trees
+A Proportional shrinking of leaf nodes
+Newton Boosting
+Extra Randomisation Parameter
+
+
+In XGBoost the trees can have a varying number of terminal nodes and left weights of the trees that are calculated with less evidence is shrunk more heavily. Newton Boosting uses Newton-Raphson method of approximations which provides a direct route to the minima than gradient descent. The extra randomisation parameter can be used to reduce the correlation between the trees, as seen in the previous article, the lesser the correlation among classifiers, the better our ensemble of classifiers will turn out. Generally, XGBoost is faster than gradient boosting but gradient boosting has a wide range of application
+
+
+simple code for XGBoost
+
+# XGBoost 
+from xgboost import XGBClassifier
+clf = XGBClassifier()
+# n_estimators = 100 (default)
+# max_depth = 3 (default)
+clf.fit(x_train,y_train)
+clf.predict(x_test)

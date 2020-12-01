@@ -1,0 +1,18 @@
+
+Boosting follows the following steps:
+
+Creates a subset from the original dataset (Initially, all datapoints are weighted equally)
+
+Creates and trains a base-model on the subset
+
+The base model is used to make predictions on the whole dataset errors of the predictions are calculated
+
+Incorrectly predicted datapoints (datapoints with bigger error) are given higher weights
+
+Another model is created on the datapoints with high weights
+
+Steps are repeated as long as needed
+
+The final model is the weighted average of all models 
+(better models get higher weights)
+

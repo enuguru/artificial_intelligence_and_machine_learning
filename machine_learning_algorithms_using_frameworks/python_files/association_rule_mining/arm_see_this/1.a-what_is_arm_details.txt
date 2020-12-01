@@ -1,0 +1,64 @@
+
+association rule mining - this is a technical name
+market basket analysis  - this is a commercial name
+
+Market Basket Analysis is a modelling technique based upon the theory that if you buy a certain group of items, you are more (or less) likely to buy another group of items. 
+
+Although Market Basket Analysis conjures up pictures of shopping carts and supermarket shoppers, it is important to realize that there are many other areas in which it can be applied. These include:
+
+Analysis of credit card purchases.
+Analysis of telephone calling patterns
+Identification of fraudulent medical insurance claims. 
+(Consider cases where common rules are broken).
+Analysis of telecom service purchases.
+
+A predictive market basket analysis can be used to identify sets of item purchases (or events) that generally occur in sequence — something of interest to direct marketers, criminologists and many others
+
+
+market basket analysis consists of three algorithms -
+what are they ?
+
+algorithms
+
+1. apriori
+2. FP Growth - Frequent Pattern Growth
+3. ECLAT - Equalence Class Transformation
+
+www.cse.msu.edu/~cse960/Papers/MiningAssoc-AgrawalAS-VLDB94.pdf
+
+foot fall
+
+why we buy - the science of shopping - 2008
+by paco underhill
+
+the call of the mall - how we shop - 2004
+by paco underhill
+
+the call of the mall - why we buy - 2005
+by paco underhill
+
+
+what is arm
+
+An association rule has 2 parts:
+
+an antecedent (if) and
+a consequent (then)
+
+An antecedent is something that’s found in data, and a consequent is an item that is found in combination with the antecedent. Have a look at this rule for instance:
+
+“If a customer buys bread, he’s 70% likely of buying milk.”
+
+
+
+
+
+
+
+
+
+
+
+
+
+

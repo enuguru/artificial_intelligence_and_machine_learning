@@ -1,0 +1,18 @@
+
+
+what is ensemble?
+https://www.youtube.com/watch?v=sVriC_Ys2cw
+
+bagging
+https://www.youtube.com/watch?v=2Mg8QD0F1dQ
+
+boosting - part 1 - overview
+https://www.youtube.com/watch?v=GM3CDQfQ4sw
+
+
+
+random forests - part 1 - overview
+https://www.youtube.com/watch?v=J4Wdy0Wc_xQ
+
+random forests - part 2 - how to handle missing data
+https://www.youtube.com/watch?v=nyxTdL_4Q-Q

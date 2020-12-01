@@ -1,0 +1,14 @@
+
+
+some practical advice on ensembles
+
+If the classifier is unstable (high variance), then apply bagging!
+
+If the classifier is stable and simple (high bias) then apply boosting!
+
+If the classifier is stable and complex then apply randomization injection!
+
+If you have many classes and a binary classifier then try error-correcting codes! If it does not work then use a complex binary classifier!
+
+
+

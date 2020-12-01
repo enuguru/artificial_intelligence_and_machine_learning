@@ -1,0 +1,54 @@
+
+
+
+ensemble learning
+
+pshchological phenomenon called "wisdom of the crowd"
+
+
+ensemble examples
+-----------------
+audience poll in who wants to be a millionaire - un-weighted average or majority vote
+
+committee opinion - un-weighted average or majority vote
+
+weighted average or majority vote
+
+
+
+combining different predictors
+this may be same kind of learner or different kinds of
+learners
+
+they can combine neural networks learners, decision trees and support vector machines (SVM)
+
+predictor of predictors - using the outputs of the 
+first set of predictors as features for the second set of predictors - somewhat like multilayer perceptrons
+
+
+
+
+M features
+m = Sq(M) = number of features used to build each tree
+
+m = Sq(M/2)
+
+25 features = M = 0 to 24 INPUT vectors or input variables or features
+
+choose Sq(M) features to be used for each tree
+m = 5
+in 0 to 24 which number to take?
+randomly any 5 by rnning a random number generator function
+with range 0 t0 24 
+rational reasoing
+empirical reasoning
+
+splitting criteria information gain, 
+
+
+
+
+
+
+
+

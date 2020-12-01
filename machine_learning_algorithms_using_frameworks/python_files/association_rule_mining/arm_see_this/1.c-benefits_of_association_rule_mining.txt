@@ -1,0 +1,29 @@
+
+
+what are the benefits of association rule mining?
+
+Both X and Y can be placed on the same shelf, so that buyers of one item would be prompted to buy the other
+
+Promotional discounts could be applied to just one out of the two items 
+
+Advertisements on X could be targeted at buyers who purchase Y
+
+X and Y could be combined into a new product, such as having Y in flavors of X
+
+ARM is very similar to item-item collaborative filtering
+
+In ARM you dont have user profiles
+you one have what people have actually bought
+market basket analysis
+e-commerce - what is the equ - cart - shopping cart
+
+
+
+
+
+
+
+
+
+
+

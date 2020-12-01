@@ -1,0 +1,5 @@
+
+
+what are extra trees - extremely randomized trees?
+
+https://www.thekerneltrip.com/statistics/random-forest-vs-extra-tree/

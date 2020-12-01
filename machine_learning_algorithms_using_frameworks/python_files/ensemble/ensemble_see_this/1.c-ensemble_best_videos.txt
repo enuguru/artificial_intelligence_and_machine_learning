@@ -1,0 +1,51 @@
+
+
+statquest with joshua stammer
+
+1. bagging very good video
+
+https://www.youtube.com/watch?v=2Mg8QD0F1dQ
+
+2. bagging and boosting
+https://www.youtube.com/watch?v=m-S9Hojj1as&t=32s
+
+2. gradient boosting - Alexander Ihler
+https://www.youtube.com/watch?v=sRktKszFmSk
+
+3. boosting introduction - super video - udacity
+https://www.youtube.com/watch?v=GM3CDQfQ4sw
+
+4. Adaboost - statquest
+https://www.youtube.com/watch?v=LsK-xG1cLYA
+
+4. Gradient boost - statquest
+https://www.youtube.com/watch?v=3CC4N4z3GJc&t=55s
+
+3. stacking and blending - good video
+https://www.youtube.com/watch?v=DCrcoh7cMHU
+
+
+
+machine learning very good video
+
+https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF
+
+
+introduction to machine learning - Alexander Ihler
+https://www.youtube.com/watch?v=qPhMX0vb6D8&list=PLaXDtXvwY-oDvedS3f4HW0b4KxqpJ_imw
+
+
+bootstrapping
+
+
+4. random forests part 1
+https://www.youtube.com/watch?v=nyxTdL_4Q-Q
+
+random forest part 2
+https://www.youtube.com/watch?v=nyxTdL_4Q-Q
+
+random forests in R part 3
+https://www.youtube.com/watch?v=6EXPYzbfLCE&t=64s
+
+
+

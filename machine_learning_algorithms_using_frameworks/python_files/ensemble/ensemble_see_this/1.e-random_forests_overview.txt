@@ -1,0 +1,21 @@
+
+What are Random Forests?
+
+Random forests or random decision forests are an ensemble learning method for classification, regression and other tasks that operates by constructing a multitude of decision trees at training time and outputting the class that is the mode of the classes (classification) or mean prediction (regression) of the ...
+
+
+random forest -
+
+there are some datasets that never make it to the 
+data we use for testing the random forest
+
+
+out of bag dataset or out of boot dataset
+
+out of bag error
+based on this error we estimate the 
+accracy of the random forest
+
+usually we take the square root of the number
+of features in the dataset (or number of columns or 
+number of variables)
