@@ -1,0 +1,38 @@
+
+
+
+what does recommendation do?
+
+there are 3 things done by recommender system
+
+find the rating of a product - rate a product
+recommend a product to the customer - recommend
+rank products as "top 10 or top 5" to the customer - ranking
+
+youtube videos
+
+amazon, flipkart, myntra, walmart, ....
+
+netflix
+
+pandora - music streaming service
+
+google recommendation
+
+playstore
+
+35% of revenue in amazon comes from recommendation
+
+netflix connection - 
+netflix had a prize money of $1 million dollars
+for an algorithm that improves their recommendation rating
+by 15 to 20%
+
+137 algorithms are combined as an ensemble
+
+
+One of the most famous examples of collaborative filtering is an algorithm popularized by Amazon’s recommender system The idea behind their method is item-to-item collaborative filtering
+
+
+
+

@@ -1,0 +1,49 @@
+
+
+
+Algorithms in ecommerce are used in several ways:
+-------------------------------------------------
+
+To increase understanding of the customer / target customer
+
+Segmentation, learning from user behaviour and on-site data
+
+Predicting customer preferences. Recommendation engines, which seek to show relevant products at the right time are one example of this
+
+Predicting customer intent 
+
+Using data such as previous browsing and add to cart behavior, algorithms can predict customer intent, when using site search for example
+
+
+
+other benefits are
+
+onsite search
+pricing
+inventory forecasting 
+chatbots
+helping and optimizing the subject of an email
+personalization
+segmentation
+Common segmentation methods include:
+
+Customer demographics – data such as age, gender, income and occupation can be used to target different customer groups in different ways
+
+Customer lifetime value. It’s a good tactic to target the most valuable and most growable segments amongst your customers
+
+Customer behavior – previous purchase history, browsing behavior on site etc
+
+Devices and channels used. Customers can be grouped according to the devices they use to access your site, or the preferred channels
+
+AI powered algorithms have the potential to analyse the various data sources, making connections that traditional segmentation methods may miss
+
+image recognition ML algorithms can help
+
+
+
+
+
+
+
+
+

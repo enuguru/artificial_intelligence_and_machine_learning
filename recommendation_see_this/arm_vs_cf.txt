@@ -1,0 +1,14 @@
+
+
+
+basic difference between the two is that Market basket analysis is a representation for the whole population (to understand the fact that what products are purchased together as a bunch by the users) whereas the collaborative filtering on the other side restricts itself only to a particular user to identify their personal pattern for prediction.
+
+cf is very user centric
+arm is not
+
+cf concerts one user
+arm concerns any user with that in the basket
+
+cf that way is personalized
+arm is for a session, anybody who buys this also buys this
+

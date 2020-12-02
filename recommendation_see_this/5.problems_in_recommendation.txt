@@ -1,0 +1,16 @@
+
+
+cold start - a problem - you dont have sufficient users
+new items or new product
+users dont give feedback - so cant rate
+data scarcity - it is scarce - 
+for popular items you have rating, you dont 
+have ratings for rare items
+user is new or product is new
+fake ratings are present for products
+registered user - who has previously bought items
+the user has a history on the webpage
+user for which he has filled the "know your customer" thing
+with credit card and debit card numbers
+loss of customer - double edged sword - democles sword
+if recommendation was not good, the customers might lose interest

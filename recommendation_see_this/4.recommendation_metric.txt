@@ -1,0 +1,61 @@
+
+metric for recommendation
+
+how will you evaluate the recommendation algorithm?
+
+if you buy the item
+even if the user clicks on the item it is a validation
+
+novelty factor
+if you recommend raspberry pi board to the user
+
+they may recommend a casio digital or apple watch
+
+serendipity factor
+occurence by chance
+
+when there is very less data you can do this
+the user many times likes this
+
+stumbleupon goto this webpage
+now mix.com
+
+
+real life recommendation systems - they are usually
+what?  ..... ensemble technique - combination of 
+content, collaboration based, model based ....
+137 algoritms are present in the netflix recommendation product
+
+the algorithm that won the netflix 1million prize is
+a ensemble algorithm
+
+in R, python 
+
+association rule mining - 
+which is an offshoot of recommendation
+
+
+
+relevance
+novelty factor
+serendipity factor
+based on data
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,13 @@
+
+
+what are we covering in recommendation for the next two days
+
+
+what is recommendation
+what are the important properties in a good recommendation system
+what are the immediate benefits of recommendation
+what are the indirect benefits of recommendation
+different types of recommenation
+how does it work - broad overview
+what are the problems in a recommender system
+movie dataset case studies in from kaggle
