@@ -1,3 +1,4 @@
+
 # Example of forward propagating input
 from math import exp
 
@@ -31,8 +32,8 @@ def forward_propagate(network, row):
     return inputs
 
 # test forward propagation
-network = [[{'weights': [0.13436424411240122, 0.8474337369372327, 0.34564598723719715, 0.763774618976614]}],
+network = [[{'weights': [0.13436424411240122, 0.34564598723719715, 0.763774618976614]}],
 		[{'weights': [0.2550690257394217, 0.49543508709194095]}]]#, {'weights': [0.4494910647887381, 0.651592972722763]}]]
-row = [1, 0, 1, None]
+row = [1, 0, None]
 output = forward_propagate(network, row)
 print(output)

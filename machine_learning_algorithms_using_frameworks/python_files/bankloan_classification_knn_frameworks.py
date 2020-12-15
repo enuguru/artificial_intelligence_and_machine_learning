@@ -8,7 +8,7 @@ df = read_csv(filename, names=names)
 array = df.values
 inputx = array[:,0:2]
 outputy = array[:,2]
-thismodel = KNeighborsClassifier()
+thismodel = KNeighborsClassifier(n_neighbors=3)
 print(thismodel.fit(inputx,outputy))
 filename = '../../datasets/bankloan_classification_test.csv'
 names = ['age', 'loanamount']

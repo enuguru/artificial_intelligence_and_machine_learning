@@ -10,8 +10,8 @@ dataframe = read_csv(filename, names=names)
 array = dataframe.values
 inputx = array[:,0:8]
 outputy = array[:,8]
-num_folds = 10
-kfold = KFold(n_splits=10, random_state=None)
+num_folds = 700
+kfold = KFold(n_splits=700, random_state=None)
 model = KNeighborsClassifier()
 results = cross_val_score(model, inputx, outputy, cv=kfold)
 print(results.mean())

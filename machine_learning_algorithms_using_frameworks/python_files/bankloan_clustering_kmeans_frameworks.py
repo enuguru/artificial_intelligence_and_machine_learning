@@ -7,7 +7,7 @@ from sklearn.cluster import KMeans
 
 #import the dataset
 filename = '../../datasets/bankloan_clustering_train.csv'
-names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width']
+names = ['age', 'loan amount']
 df = pd.read_csv(filename, names=names)
 
 array = df.values
