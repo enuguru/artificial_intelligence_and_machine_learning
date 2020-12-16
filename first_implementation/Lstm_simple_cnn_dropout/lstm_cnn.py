@@ -1,4 +1,6 @@
 # LSTM and CNN for sequence classification in the IMDB dataset
+import os
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
 import numpy
 from keras.datasets import imdb
 from keras.models import Sequential

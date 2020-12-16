@@ -1,4 +1,6 @@
 # Visualize training history
+import os
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
 from keras.models import Sequential
 from keras.layers import Dense
 import matplotlib.pyplot as plt

@@ -1,4 +1,6 @@
 # LSTM with Variable Length Input Sequences to One Character Output
+import os
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
 import numpy
 from keras.models import Sequential
 from keras.layers import Dense

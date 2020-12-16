@@ -1,4 +1,6 @@
 # Naive LSTM to learn three-char window to one-char mapping
+import os
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
 import numpy
 from keras.models import Sequential
 from keras.layers import Dense

@@ -1,5 +1,7 @@
 # Regression Example With Boston Dataset: Standardized and Larger
 import numpy
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
 from pandas import read_csv
 from keras.models import Sequential
 from keras.layers import Dense
