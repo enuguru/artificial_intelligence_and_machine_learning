@@ -17,7 +17,7 @@ print(input_test)
 
 # using simple Linear Regression model to train
 model = LinearRegression()
-model.fit(input_train, output_train)
+print(model.fit(input_train, output_train))
 
 # model predicting the Test set results
 predicted_output = model.predict(input_test)
@@ -28,7 +28,6 @@ predicted_output = model.predict(testinput)
 print('The number of years of experience is ',testinput) 
 print('The salary is ',predicted_output) 
 yes = input("Can I proceed")
-
 
 # Visualising the training results
 plt.scatter(input_train, output_train, color = 'red')

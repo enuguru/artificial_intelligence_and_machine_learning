@@ -1,0 +1,126 @@
+
+k-Nearest Neighbors
+-------------------
+
+pseudo code for KNN algorithm
+-----------------------------
+
+For every point in our dataset do the following
+1.calculate the distance between input X and 
+  the current point
+2.sort the distances in increasing order
+3.take k items with lowest distances to inX
+4.find the majority class among these items
+5.return the majority class as our prediction 
+  for the class of inX
+
+machine learning in action
+
+
+Advantages of KNN
+-----------------
+
+High accuracy, 
+insensitive to outliers, 
+no assumptions about data
+easy to visualize and understand
+very less time in training (infact none)
+
+
+Dis-advantages of KNN
+---------------------
+
+Computationally expensive, 
+requires a lot of memory
+takes lot of time to predict
+
+
+What does KNN need
+------------------
+
+Numeric values, 
+nominal values
+
+
+features of KNN
+---------------
+
+1. no training is needed for KNN
+2. it is instance based learning 
+   or lazy learning
+3. infact the work starts only when there 
+   is an input
+4. data needs to be in a specific format
+
+
+applications of classification
+------------------------------
+
+1.  handwriting recognition
+2.  spam detection
+3.  identifying flowers based on features (botany)
+4.  face recognition 
+5.  housing price detection 
+6.  classification of documents (categorization)
+7.  identifying the author of a historical document
+8.  identifying the author as male or female
+9.  sentiment analysis
+10. classification of reviews on websites
+12. language modelling
+13. stock selection in trading
+14. gene selection in computational biology  
+    computational biology and bioinformatics
+
+                        label or classes
+
+dataset as input  --->  learning algorithm  ---->   model
+
+test data as input --->    model     -->  prediction
+
+
+
+1000  total data set
+
+900   training set or modelling set
+100   test set or validation set
+
+take 1st item in 100 compare with 900
+take 2nd item in 100 compare with 900
+
+
+main
+calls everything
+
+distance  function
+apply KNN and tell the response function
+interating with everything function
+
+
+what happens if you change the value of K ?
+
+Increasing k will decrease variance and increase bias, While decreasing k will increase variance and decrease bias. As k increases this variability is reduced. But if we increase k too much, then we no longer follow the true boundary line and we observe high bias. This is the nature of the Bias-Variance Tradeoff
+
+
+how should we select the value of K?
+
+if the number of datasets are very small, k should be chosen as the odd number to avoid having a tie
+
+the value of k should be preferably  SQRT(N) or SQRT(N/2)
+
+
+what is the best value of K ?
+
+You cannot know this before we executing the algorithm. we should experiment with different values of K and then choose that value of K for which we have the least generalization error
+
+
+
+
+
+
+
+
+
+
+
+
+
