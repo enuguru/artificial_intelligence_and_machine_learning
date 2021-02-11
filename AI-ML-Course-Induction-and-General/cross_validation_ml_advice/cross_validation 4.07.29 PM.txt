@@ -1,0 +1,37 @@
+
+
+cross validation
+
+Cross Validation is used to assess the predictive performance of the models and and to judge how they perform outside the sample to a new data set also known as test data
+
+The reason for using cross validation techniques is that when we fit a model, we are fitting it to a training dataset. Without cross validation we only have information on how does our model perform to our in-sample data. Ideally we would like to see how does the model perform when we have a new data in terms of accuracy of its predictions.   
+
+
+why do cross validation?
+
+Cross validation provide more accurate estimate of 
+"out-of-sample-data" accuracy
+
+The data that is availble to us is used more efficiently as every observation is used for both training as well as testing
+
+cross validation gives us more confidence about our models
+
+cross validation will reduce bias as it provide more data to fit the model and it will also reduce variance because most of the data is already seen in training, so really there are no surprises during testing
+
+
+three types of cross validation
+
+1. holdout method
+
+2. K-Fold cross validation
+
+3. LOOCV 
+
+
+
+
+
+
+
+
+
