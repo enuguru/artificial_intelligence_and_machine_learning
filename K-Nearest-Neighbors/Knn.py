@@ -90,9 +90,9 @@ plt.plot(range(1,40),error_rate,color='blue', linestyle='dashed', marker='o',mar
 
 plt.title('Error Rate vs. K Value')
 
-plt.xlabel('K')
+plt.xlabel('K Value in the X axis')
 
-plt.ylabel('Error Rate')
+plt.ylabel('Error Rate in the Y axis')
 plt.show()
 
 #Output for this code can be viewed at : https://tinyurl.com/y8p2kddm
