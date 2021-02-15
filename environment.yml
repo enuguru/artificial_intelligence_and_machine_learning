@@ -18,4 +18,6 @@ dependencies:         # everything under this, installed by conda
 - nltk==3.4
 - pydotplus==2.0.2
 - graphviz
+- seaborn==0.10.0
 - scikit-image
+- plotly==3.10.0
