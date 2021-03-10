@@ -29,5 +29,3 @@ model.fit(input_train, output_train)
 # model predicting the Test set results
 predicted_output = model.predict(input_test)
 print(predicted_output)
-
-
