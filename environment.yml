@@ -4,7 +4,7 @@ channels:
 dependencies:         # everything under this, installed by conda
 - numpy==1.16.5
 - scipy==1.3.0
-- scikit-learn==0.21.2
+- scikit-learn==0.23.2
 - pandas==0.23.4
 - matplotlib==3.0.2
 - statsmodels==0.9.0
@@ -21,4 +21,3 @@ dependencies:         # everything under this, installed by conda
 - seaborn==0.10.0
 - scikit-image
 - plotly==3.10.0
-- xgboost==1.2.1

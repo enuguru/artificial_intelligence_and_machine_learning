@@ -7,7 +7,6 @@ from sklearn import preprocessing
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn import tree
 from sklearn import ensemble
-from xgboost import XGBClassifier
 filename = '../../datasets/iris_classification_train.csv'
 names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width','flower_name']
 df = read_csv(filename, names=names)
@@ -18,7 +17,21 @@ df['flower_name'].unique()
 array = df.values
 inputx = array[:,0:4]
 outputy = array[:,4]
-model = XGBClassifier(eval_metric='mlogloss',use_label_encoder=False)
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.svm import LinearSVC
+from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import make_pipeline
+from sklearn.ensemble import StackingClassifier
+estimators = [
+    ('rf', RandomForestClassifier(n_estimators=10, random_state=42)),
+    ('svr', make_pipeline(StandardScaler(),
+                          LinearSVC(random_state=42)))
+]
+model = StackingClassifier(
+    estimators=estimators, final_estimator=LogisticRegression()
+)
+
 print(model.fit(inputx,outputy))
 filename = '../../datasets/iris_classification_test.csv'
 names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width']

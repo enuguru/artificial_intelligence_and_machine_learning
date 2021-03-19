@@ -7,8 +7,6 @@ from sklearn import preprocessing
 from sklearn import tree
 from sklearn.ensemble import BaggingClassifier
 from sklearn.ensemble import AdaBoostClassifier
-#import xgboost
-from xgboost import XGBClassifier
 
 filename = '../../datasets/university_admission_classification_train.csv'
 names = ['selection', 'gre', 'gpa', 'prestige']
@@ -20,7 +18,21 @@ df['prestige'].unique()
 array = df.values
 inputx = array[:,1:4]
 outputy = array[:,0]
-model = XGBClassifier(use_label_encoder=False,eval_metric='logloss')
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.svm import LinearSVC
+from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import make_pipeline
+from sklearn.ensemble import StackingClassifier
+estimators = [
+    ('rf', RandomForestClassifier(n_estimators=10, random_state=42)),
+    ('svr', make_pipeline(StandardScaler(),
+                          LinearSVC(random_state=42)))
+]
+model = StackingClassifier(
+    estimators=estimators, final_estimator=LogisticRegression()
+)
+
 model.fit(inputx,outputy)
 filename = '../../datasets/university_admission_classification_small_test.csv'
 names = ['gre', 'gpa', 'prestige']

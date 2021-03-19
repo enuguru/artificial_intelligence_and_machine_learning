@@ -6,9 +6,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn import preprocessing
 from sklearn import tree
 from sklearn.ensemble import BaggingClassifier
-from sklearn.ensemble import AdaBoostClassifier
-#import xgboost
-from xgboost import XGBClassifier
+from sklearn.ensemble import ExtraTreesClassifier
 
 filename = '../../datasets/university_admission_classification_train.csv'
 names = ['selection', 'gre', 'gpa', 'prestige']
@@ -20,7 +18,8 @@ df['prestige'].unique()
 array = df.values
 inputx = array[:,1:4]
 outputy = array[:,0]
-model = XGBClassifier(use_label_encoder=False,eval_metric='logloss')
+model = ExtraTreesClassifier(n_estimators=100)
+print(model)
 model.fit(inputx,outputy)
 filename = '../../datasets/university_admission_classification_small_test.csv'
 names = ['gre', 'gpa', 'prestige']

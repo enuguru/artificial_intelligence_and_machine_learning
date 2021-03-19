@@ -7,7 +7,6 @@ from sklearn import preprocessing
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn import tree
 from sklearn import ensemble
-from xgboost import XGBClassifier
 filename = '../../datasets/iris_classification_train.csv'
 names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width','flower_name']
 df = read_csv(filename, names=names)
@@ -18,7 +17,7 @@ df['flower_name'].unique()
 array = df.values
 inputx = array[:,0:4]
 outputy = array[:,4]
-model = XGBClassifier(eval_metric='mlogloss',use_label_encoder=False)
+model = ensemble.ExtraTreesClassifier(n_estimators=100)
 print(model.fit(inputx,outputy))
 filename = '../../datasets/iris_classification_test.csv'
 names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width']
