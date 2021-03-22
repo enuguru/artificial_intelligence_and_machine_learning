@@ -1,0 +1,17 @@
+
+
+applications of decision trees
+
+Building knowledge management platforms for customer service that improve first call resolution, average handling time, and customer satisfaction rates
+
+In finance, forecasting future outcomes and assigning probabilities to those outcomes
+
+Binomial option pricing predictions and real option analysis
+
+Customer’s willingness to purchase a given product in a given setting, i.e. offline and online both
+
+Product planning; for example, Gerber Products, Inc. used decision trees to decide whether to continue planning PVC or metal or wood for manufacturing toys or not
+
+General business decision-making
+
+Loan approval and credit risk assessment

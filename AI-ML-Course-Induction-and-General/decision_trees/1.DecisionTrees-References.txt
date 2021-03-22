@@ -1,0 +1,26 @@
+
+ID3 algorithm explained
+https://slideplayer.com/slide/3955317/
+
+
+spam filtering using naive bayes
+https://www.cse.buffalo.edu/~bina/amrita/cse651C/day2/NaïveBayesLec4.pptx
+
+
+gini index
+https://paginas.fe.up.pt/~ec/files_1011/week%2008%20-%20Decision%20Trees.pdf
+take this
+https://www.cs.indiana.edu/~predrag/classes/2017fallb365/ch4.pdf
+
+CART - One
+https://www.google.com/search?ei=LMrNW-ecBYKv9QOR2Iv4Cg&q=decision+trees+CART+gini+index+ppt&oq=decision+trees+CART+gini+index+ppt&gs_l=psy-ab.3..33i22i29i30k1.2311.2834.0.2973.4.4.0.0.0.0.136.506.0j4.4.0....0...1c.1.64.psy-ab..0.4.502...0i22i30k1.0.PEsrzTa14AA
+
+Classification and Decision Trees
+www.cs.kent.edu/~jin/DM07/ClassificationDecisionTree.ppt
+
+
+GiniIndex explained
+http://dni-institute.in/blogs/cart-decision-tree-gini-index-explained/
+http://dni-institute.in/blogs/gini-index-work-out-example/
+
+

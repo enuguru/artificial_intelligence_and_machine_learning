@@ -1,0 +1,40 @@
+
+
+ID3 handles only categorical values in its inputs
+
+"Change in Variance" method is used for creating regresssion trees
+
+Gini Index is the parameter used in CART algorithm and it is applicable both for categorical and continuous input variables
+
+Then we have the C4.5 algorithm which is applicable for both categorical and continuous input variables
+
+
+ID3 Vs C4.5
+
+1. C4.5 uses information gain when generating the decision tree
+
+2. Although other systems also incorporate pruning, C4.5 uses a single-pass pruning process to mitigate over-fitting. Pruning results in many improvements
+
+3. Third, C4.5 can work with both continuous and discrete data. My understanding is it does this by specifying ranges or thresholds for continuous data thus turning continuous data into discrete data
+
+4. Finally, incomplete data is dealt with in its own ways by marking as ?
+
+5. Handling attributes with differing costs
+
+
+C4.5 Vs C5.0
+
+Quinlan also created C5.0 and See5 (C5.0 for Unix/Linux, See5 for Windows) which he markets commercially. C5.0 offers a number of improvements on C4.5
+
+Speed of the algorithm - C5.0 is significantly faster than C4.5 (several orders of magnitude)
+
+Memory usage - C5.0 is more memory efficient than C4.5
+
+Smaller decision trees - C5.0 gets similar results to C4.5 with considerably smaller decision trees
+
+Support for boosting - Boosting improves the trees and gives them more accuracy
+
+Weighting - C5.0 allows you to weight different cases and misclassification types
+
+Winnowing - a C5.0 option automatically winnows the attributes to remove those that may be unhelpful
+

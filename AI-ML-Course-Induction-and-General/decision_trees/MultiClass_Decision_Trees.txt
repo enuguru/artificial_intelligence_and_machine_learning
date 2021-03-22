@@ -1,0 +1,7 @@
+
+
+We can use any form of tree as a decision tree, the implementation need not be restricted to binary tree only. There's no restriction to two children per node. In a binary tree each decision is a Yes/No decision but you can of course also model A/B/C decisions where you have more than two alternatives
+
+We can use decision trees and one way of doing it is to assign a unique integer to each of the classes. All examples of class one will be assigned the value y=1, all the examples of class two will be assigned to value y=2 etc. After this we could train a decision classification tree
+
+

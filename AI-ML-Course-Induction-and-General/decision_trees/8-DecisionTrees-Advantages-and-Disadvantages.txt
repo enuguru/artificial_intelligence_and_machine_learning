@@ -1,0 +1,33 @@
+
+decision trees advantages
+
+decision trees are easy to understand and have a easier learning curve (easy to understand, but not easy to build, with pun intended)
+
+decision trees require no domain knowledge
+
+The learning and classification steps of a 
+decision tree are simple and fast
+
+decision trees automatically do feature selection
+and variable screening
+
+algorithms using decision trees are easy to explain 
+to top-management
+
+this is not only used in ML, but this is widely used tool to take business decisions by CEOs, board senior management, like growing bottom line or topline, whether to acquire a startup or leave it
+
+if there are non-linear relationships between the features of data, it does not affect the performance of the trees
+
+decision trees do not require special effort from the users in terms of data preparation
+
+
+
+decision trees dis-advantages
+
+decision trees tend to be very long
+
+decision trees have much lesser performance metric
+compared to naive bayes and SVM
+
+it is not easy to understand how to build the tree
+

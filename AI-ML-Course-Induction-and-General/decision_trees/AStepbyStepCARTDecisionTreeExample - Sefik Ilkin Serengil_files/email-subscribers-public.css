@@ -1,0 +1,54 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+.es_caption {
+    padding-bottom: 1em;
+    padding-right: 0.5em;
+}
+
+.es_msg {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #F00;
+}
+
+.es_textbox {
+    padding-bottom: 10px;
+}
+
+.es_button {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.es_textbox_class {
+    width: 200px;
+}
+
+.es_textbox_button {
+    width: 130px;
+}
+
+.es_lablebox {
+    padding-bottom: 3px;
+}
+
+.es_subscription_message.success {
+    color: #008000;
+    font-size: 16px;
+}
+
+.es_subscription_message.error {
+    color: #ff0000;
+    font-size: 16px;
+}
+
+.es_spinner_image {
+    display: none;
+    float: right;
+}
+.es-field-wrap{
+    margin-bottom: 0.6em;
+}

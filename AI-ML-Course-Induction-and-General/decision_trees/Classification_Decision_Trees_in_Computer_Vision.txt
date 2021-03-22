@@ -1,0 +1,12 @@
+
+
+Face Detection
+Arms, legs, facial parts detection
+Human Pose estimation
+Gaze estimation
+Anatomy detection in CT Scans
+Tracking key points / objects in video
+brightness / shadow detection
+glare detection
+Semantic Segmentation of photos and videos
+3D delineation of brain lesions

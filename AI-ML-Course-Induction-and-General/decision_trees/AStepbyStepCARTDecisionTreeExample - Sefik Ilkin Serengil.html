@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)https://sefiks.com/2018/08/27/a-step-by-step-cart-decision-tree-example/ -->
+<html class="js" lang="en-US" prefix="og: http://ogp.me/ns#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script type="text/javascript" async="" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/recaptcha__en.js"></script><script src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/osd.js"></script><script src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/ca-pub-8160896551633284.js"></script><script type="text/javascript" async="" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/analytics.js"></script><script async="" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-115471718-1');
+</script>
+
+<!-- google adsense -->
+<!--
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8160896551633284",
+    enable_page_level_ads: true
+  });
+</script>
+-->
+
+<!--
+<br>
+<div class="aligncenter">
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<ins class="adsbygoogle"
+		 style="display:inline-block;width:728px;height:90px"
+		 data-ad-client="ca-pub-8160896551633284"
+		 data-ad-slot="6793816323"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</div>
+-->
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://sefiks.com/xmlrpc.php">
+<title>A Step by Step CART Decision Tree Example - Sefik Ilkin Serengil</title>
+<script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>
+
+<!-- This site is optimized with the Yoast SEO plugin v10.0.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="https://sefiks.com/2018/08/27/a-step-by-step-cart-decision-tree-example/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A Step by Step CART Decision Tree Example - Sefik Ilkin Serengil">
+<meta property="og:description" content="An algorithm can be transparent only if its decisions can be read and understood by people clearly. Even though deep … More">
+<meta property="og:url" content="https://sefiks.com/2018/08/27/a-step-by-step-cart-decision-tree-example/">
+<meta property="og:site_name" content="Sefik Ilkin Serengil">
+<meta property="article:tag" content="decision tree">
+<meta property="article:tag" content="gini index">
+<meta property="article:section" content="Machine Learning">
+<meta property="article:published_time" content="2018-08-27T13:02:29+00:00">
+<meta property="article:modified_time" content="2018-08-28T09:53:45+00:00">
+<meta property="og:updated_time" content="2018-08-28T09:53:45+00:00">
+<meta property="og:image" content="https://sefiks.com/wp-content/uploads/2018/08/WOZ_1.jpg">
+<meta property="og:image:secure_url" content="https://sefiks.com/wp-content/uploads/2018/08/WOZ_1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="An algorithm can be transparent only if its decisions can be read and understood by people clearly. Even though deep … More">
+<meta name="twitter:title" content="A Step by Step CART Decision Tree Example - Sefik Ilkin Serengil">
+<meta name="twitter:image" content="https://sefiks.com/wp-content/uploads/2018/08/WOZ_1.jpg">
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="https://s0.wp.com/">
+<link rel="dns-prefetch" href="https://secure.gravatar.com/">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="Sefik Ilkin Serengil » Feed" href="https://sefiks.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Sefik Ilkin Serengil » Comments Feed" href="https://sefiks.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Sefik Ilkin Serengil » A Step by Step CART Decision Tree Example Comments Feed" href="https://sefiks.com/2018/08/27/a-step-by-step-cart-decision-tree-example/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/sefiks.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.1"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/wp-emoji-release.min.js" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="email-subscribers-css" href="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/email-subscribers-public.css" type="text/css" media="all">
+<link rel="stylesheet" id="rebalance-fonts-css" href="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-css" href="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/font-awesome.css" type="text/css" media="all">
+<link rel="stylesheet" id="rebalance-style-css" href="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/style.css" type="text/css" media="all">
+<style id="rebalance-style-inline-css" type="text/css">
+.entry-meta .author { clip: rect(1px, 1px, 1px, 1px); height: 1px; position: absolute; overflow: hidden; width: 1px; }
+</style>
+<link rel="stylesheet" id="social-logos-css" href="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/social-logos.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack_css-css" href="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/jetpack.css" type="text/css" media="all">
+<script type="text/javascript" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/jquery.js"></script>
+<script type="text/javascript" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/jquery-migrate.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/related-posts.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var es_data = {"messages":{"es_empty_email_notice":"Please enter email address","es_rate_limit_notice":"You need to wait for sometime before subscribing again","es_single_optin_success_message":"Successfully Subscribed.","es_double_optin_success_message":"Your subscription was successful! Kindly check your mailbox and confirm your subscription. If you don't see the email within a few minutes, check the spam\/junk folder.","es_email_exists_notice":"Email Address already exists!","es_unexpected_error_notice":"Oops.. Unexpected error occurred.","es_invalid_email_notice":"Invalid email address","es_try_later_notice":"Please try after some time"},"es_ajax_url":"https:\/\/sefiks.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/email-subscribers-public.js"></script>
+<link rel="https://api.w.org/" href="https://sefiks.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://sefiks.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://sefiks.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.1.1">
+<link rel="shortlink" href="https://wp.me/p9JO5B-3hp">
+<link rel="alternate" type="application/json+oembed" href="https://sefiks.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fsefiks.com%2F2018%2F08%2F27%2Fa-step-by-step-cart-decision-tree-example%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://sefiks.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fsefiks.com%2F2018%2F08%2F27%2Fa-step-by-step-cart-decision-tree-example%2F&amp;format=xml">
+
+<link rel="dns-prefetch" href="https://v0.wordpress.com/">
+<link rel="dns-prefetch" href="https://i0.wp.com/">
+<link rel="dns-prefetch" href="https://i1.wp.com/">
+<link rel="dns-prefetch" href="https://i2.wp.com/">
+<link rel="dns-prefetch" href="https://widgets.wp.com/">
+<link rel="dns-prefetch" href="https://s0.wp.com/">
+<link rel="dns-prefetch" href="https://0.gravatar.com/">
+<link rel="dns-prefetch" href="https://1.gravatar.com/">
+<link rel="dns-prefetch" href="https://2.gravatar.com/">
+<style type="text/css">img#wpstats{display:none}</style><style type="text/css" id="syntaxhighlighteranchor"></style>
+<link rel="icon" href="https://i1.wp.com/sefiks.com/wp-content/uploads/2018/03/cropped-cropped-sefiks-icon-v2.png?fit=32%2C32&amp;ssl=1" sizes="32x32">
+<link rel="icon" href="https://i1.wp.com/sefiks.com/wp-content/uploads/2018/03/cropped-cropped-sefiks-icon-v2.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="https://i1.wp.com/sefiks.com/wp-content/uploads/2018/03/cropped-cropped-sefiks-icon-v2.png?fit=180%2C180&amp;ssl=1">
+<meta name="msapplication-TileImage" content="https://i1.wp.com/sefiks.com/wp-content/uploads/2018/03/cropped-cropped-sefiks-icon-v2.png?fit=270%2C270&amp;ssl=1">
+<link rel="preload" href="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/f(4).txt" as="script"><script type="text/javascript" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/f(4).txt"></script><link rel="preload" href="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/f(5).txt" as="script"><script type="text/javascript" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/f(5).txt"></script><link rel="preload" href="https://pagead2.googlesyndication.com/pagead/js/r20190320/r20190131/show_ads_impl.js" as="script"><style type="text/css"></style><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/hovercard.min.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/services.min.css"></head>
+
+<body class="post-template-default single single-post postid-12611 single-format-standard author-hidden" style="opacity: 1;">
+
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="https://sefiks.com/2018/08/27/a-step-by-step-cart-decision-tree-example/#content">Skip to content</a>
+
+	<header id="masthead" class="site-header" role="banner">
+		<div class="col-width header-wrap">
+						
+			<!--
+			<br>
+			<center>
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<ins class="adsbygoogle"
+					 style="display:inline-block;width:728px;height:90px"
+					 data-ad-client="ca-pub-8160896551633284"
+					 data-ad-slot="6793816323"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</center>
+			-->
+			
+			<div class="site-heading">
+				<div class="site-branding">
+																<p class="site-title"><a href="https://sefiks.com/" rel="home">Sefik Ilkin Serengil</a></p>
+									</div><!-- .site-branding -->
+								<nav class="social-navigation" role="navigation">
+					<div class="social-menu-wrap"><ul id="menu-social" class="social-menu"><li id="menu-item-9776" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9776"><a href="https://twitter.com/serengil"><span>Twitter</span></a></li>
+<li id="menu-item-11844" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11844"><a href="https://www.linkedin.com/in/serengil/"><span>Linkedin</span></a></li>
+<li id="menu-item-11765" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11765"><a href="https://www.facebook.com/sefikscom/"><span>Facebook</span></a></li>
+<li id="menu-item-11759" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11759"><a href="https://www.instagram.com/serengil/"><span>Instagram</span></a></li>
+<li id="menu-item-11997" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11997"><a href="https://www.youtube.com/SefikIlkinSerengil"><span>Youtube</span></a></li>
+<li id="menu-item-11845" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11845"><a href="https://github.com/serengil"><span>GitHub</span></a></li>
+<li id="menu-item-11762" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11762"><a href="https://sefiks.com//feed/"><span>RSS</span></a></li>
+<li id="menu-item-12006" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12006"><a href="mailto:serengil@gmail.com"><span>Mail</span></a></li>
+</ul></div>				</nav>
+				<!-- #social-navigation -->
+								
+				<!--
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<ins class="adsbygoogle"
+					 style="display:inline-block;width:728px;height:90px"
+					 data-ad-client="ca-pub-8160896551633284"
+					 data-ad-slot="6793816323"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+				-->
+				
+				<!--
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<ins class="adsbygoogle"
+					 style="display:inline-block;width:468px;height:60px"
+					 data-ad-client="ca-pub-8160896551633284"
+					 data-ad-slot="5109215470"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+				-->
+			</div><!-- .site-heading -->
+		</div>
+		<div class="col-width sub-header-wrap">
+							<p class="site-description">Developer's Log</p>
+			
+						<nav id="site-navigation" class="main-navigation" role="navigation">
+				<button class="menu-toggle" aria-controls="header-menu" data-close-text="Close">Menu</button>
+				<div class="menu-menu-1-container"><ul class="nav-menu nav-menu-0"><li id="menu-item-11584" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-11584"><a href="https://sefiks.com//">Home</a></li><li id="menu-item-11755" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11755"><a href="https://sefiks.com/about-me/">About Me</a></li></ul><ul class="nav-menu nav-menu-1"><li id="menu-item-11840" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11840"><a href="https://sefiks.com/publications/">Publications</a></li><li id="menu-item-11763" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11763"><a href="https://sefiks.com/courses/">Courses</a></li></ul><ul class="nav-menu nav-menu-2"><li id="menu-item-11841" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11841"><a href="https://sefiks.com/talks/">Talks</a></li></ul></div>			</nav><!-- #site-navigation -->
+			
+		</div><!-- .col-width -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content clear">
+	
+		<div class="col-width">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+			
+<article id="post-12611" class="post-12611 post type-post status-publish format-standard hentry category-machine-learning tag-decision-tree tag-gini-index clear-fix ">
+
+	<header class="entry-header">
+		<h1 class="entry-title">A Step by Step CART Decision Tree Example</h1>
+		<div class="entry-meta">
+			<span class="author vcard"><a class="url fn n" href="https://sefiks.com/author/sefik/">Sefik Serengil</a></span><span class="entry-tags-date"><a href="https://sefiks.com/2018/08/27/a-step-by-step-cart-decision-tree-example/" rel="bookmark"><time class="entry-date published" datetime="2018-08-27T13:02:29+00:00">August 27, 2018</time><time class="updated" datetime="2018-08-28T09:53:45+00:00">August 28, 2018</time></a></span><span class="entry-categories"><a href="https://sefiks.com/category/machine-learning/" rel="tag">Machine Learning</a></span>		</div><!-- .entry-meta -->
+
+		
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://sefiks.com/2018/08/25/indeterminate-forms-and-lhospitals-rule-in-decision-trees/" rel="prev"><span class="meta-nav" aria-hidden="true">Previous</span></a></div><div class="nav-next"><a href="https://sefiks.com/2018/08/28/a-step-by-step-regression-decision-tree-example/" rel="next"><span class="meta-nav" aria-hidden="true">Next</span></a></div></div>
+	</nav>		
+		
+		<!-- bottom of previous button-->
+		
+	</header><!-- .entry-header -->
+
+		
+	<!-- bottom of previous button and left of post content -->
+					<!-- google adsense -->
+				<script async="" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/f(6).txt"></script>
+				<ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-8160896551633284" data-ad-slot="1401108590" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent;"><iframe width="160" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0px;width:160px;height:600px;" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/saved_resource(2).html"></iframe></ins></ins></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+				
+				<!-- media.net -->
+				<!--
+				<div class="alignleft">
+					<div id="media-left" style="width:160px; height:600px;">
+						<script id="mNCC" language="javascript">
+							medianet_width = "160";
+							medianet_height = "600";
+							medianet_crid = "818781157";
+							medianet_versionId = "3111299"; 
+						</script>
+						<script src="//contextual.media.net/nmedianet.js?cid=8CUS8605M"></script>
+					</div>
+				</div>
+	-->				
+				
+	<div class="entry-content">
+		
+		<p>An algorithm can be <a href="https://sefiks.com/2017/08/01/transparency-in-ai/" target="_blank" rel="noopener">transparent</a> only if its decisions can be read and understood by people clearly. Even though deep learning is superstar of machine learning nowadays, it is an opaque algorithm and we do not know the reason of decision. Herein, Decision tree algorithms still keep their popularity because they can produce transparent decisions.&nbsp;<a href="https://sefiks.com/2017/11/20/a-step-by-step-id3-decision-tree-example/" target="_blank" rel="noopener">ID3</a> uses information gain whereas <a href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/" target="_blank" rel="noopener">C4.5</a> uses gain ratio for splitting. Here, CART is an alternative decision tree building algorithm.&nbsp;It can handle both classification and regression tasks. This algorithm uses a new metric named gini index to create decision points for classification tasks. We will mention a step by step CART decision tree example by hand from scratch.</p>
+<figure id="attachment_12613" aria-describedby="caption-attachment-12613" style="width: 600px" class="wp-caption aligncenter"><img data-attachment-id="12613" data-permalink="https://sefiks.com/2018/08/27/a-step-by-step-cart-decision-tree-example/woz_1/" data-orig-file="https://i0.wp.com/sefiks.com/wp-content/uploads/2018/08/WOZ_1.jpg?fit=600%2C463&amp;ssl=1" data-orig-size="600,463" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="WOZ_1" data-image-description="" data-medium-file="https://i0.wp.com/sefiks.com/wp-content/uploads/2018/08/WOZ_1.jpg?fit=300%2C232&amp;ssl=1" data-large-file="https://i0.wp.com/sefiks.com/wp-content/uploads/2018/08/WOZ_1.jpg?fit=600%2C463&amp;ssl=1" class=" size-full wp-image-12613 aligncenter" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/WOZ_1.jpg" alt="WOZ_1" width="600" height="463" srcset="https://i0.wp.com/sefiks.com/wp-content/uploads/2018/08/WOZ_1.jpg?w=600&amp;ssl=1 600w, https://i0.wp.com/sefiks.com/wp-content/uploads/2018/08/WOZ_1.jpg?resize=300%2C232&amp;ssl=1 300w, https://i0.wp.com/sefiks.com/wp-content/uploads/2018/08/WOZ_1.jpg?resize=560%2C432&amp;ssl=1 560w" sizes="(max-width: 600px) 100vw, 600px"><figcaption id="caption-attachment-12613" class="wp-caption-text"><a href="https://www.imdb.com/title/tt0032138/" target="_blank" rel="noopener">Wizard of Oz (1939)</a></figcaption></figure>
+<p>We will work on same dataset in ID3. There are 14 instances of golf playing decisions based on outlook, temperature, humidity and wind factors.									</p><hr>
+									<center>
+										<a href="https://www.udemy.com/tensorflow-101-introduction-to-deep-learning/?couponCode=TF101-BLOG-201710" target="_blank">
+											<img src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/course-tf.png" alt="TensorFlow 101" scale="0">
+										</a>
+									</center>
+									<hr>
+								<p></p>
+<table style="height: 635px;" width="674">
+<tbody>
+<tr>
+<th>Day</th>
+<th>Outlook</th>
+<th>Temp.</th>
+<th>Humidity</th>
+<th>Wind</th>
+<th>Decision</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Sunny</td>
+<td>Hot</td>
+<td>High</td>
+<td>Weak</td>
+<td>No</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sunny</td>
+<td>Hot</td>
+<td>High</td>
+<td>Strong</td>
+<td>No</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Overcast</td>
+<td>Hot</td>
+<td>High</td>
+<td>Weak</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Rain</td>
+<td>Mild</td>
+<td>High</td>
+<td>Weak</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Rain</td>
+<td>Cool</td>
+<td>Normal</td>
+<td>Weak</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Rain</td>
+<td>Cool</td>
+<td>Normal</td>
+<td>Strong</td>
+<td>No</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Overcast</td>
+<td>Cool</td>
+<td>Normal</td>
+<td>Strong</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Sunny</td>
+<td>Mild</td>
+<td>High</td>
+<td>Weak</td>
+<td>No</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Sunny</td>
+<td>Cool</td>
+<td>Normal</td>
+<td>Weak</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Rain</td>
+<td>Mild</td>
+<td>Normal</td>
+<td>Weak</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Sunny</td>
+<td>Mild</td>
+<td>Normal</td>
+<td>Strong</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Overcast</td>
+<td>Mild</td>
+<td>High</td>
+<td>Strong</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Overcast</td>
+<td>Hot</td>
+<td>Normal</td>
+<td>Weak</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Rain</td>
+<td>Mild</td>
+<td>High</td>
+<td>Strong</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h3>Gini index</h3>
+<p>Gini index is a metric for classification tasks in CART. It stores sum of squared probabilities of each class. We can formulate it as illustrated below.</p>
+<p style="text-align: center;">Gini = 1 –&nbsp;Σ (Pi)<sup>2</sup>&nbsp;for i=1 to number of classes</p>
+<h3>Outlook</h3>
+<p>Outlook is a nominal feature. It can be sunny, overcast or rain. I will summarize the final decisions for outlook feature.</p>
+<table width="322">
+<tbody>
+<tr>
+<td width="64">Outlook</td>
+<td width="64">Yes</td>
+<td width="64">No</td>
+<td width="130">Number of instances</td>
+</tr>
+<tr>
+<td>Sunny</td>
+<td>2</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Overcast</td>
+<td>4</td>
+<td>0</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Rain</td>
+<td>3</td>
+<td>2</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<p>Gini(Outlook=Sunny) = 1 – (2/5)<sup>2</sup> – (3/5)<sup>2</sup> = 1 – 0.16 – 0.36 = 0.48</p>
+<p>Gini(Outlook=Overcast) = 1 – (4/4)<sup>2</sup> – (0/4)<sup>2</sup> = 0</p>
+<p>Gini(Outlook=Rain) = 1 – (3/5)<sup>2</sup> – (2/5)<sup>2</sup> = 1 – 0.36 – 0.16 = 0.48</p>
+<p>Then, we will calculate weighted sum of gini indexes for outlook feature.</p>
+<p>Gini(Outlook) = (5/14) x 0.48 + (4/14) x 0 + (5/14) x 0.48 = 0.171 + 0 + 0.171 = 0.342							<!--
+							<br><br>
+							<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+							<ins class="adsbygoogle"
+								 style="display:block; text-align:center;"
+								 data-ad-layout="in-article"
+								 data-ad-format="fluid"
+								 data-ad-client="ca-pub-8160896551633284"
+								 data-ad-slot="7645849096"></ins>
+							<script>
+								 (adsbygoogle = window.adsbygoogle || []).push({});
+							</script>
+							<br>
+							-->
+						</p>
+<h3>Temperature</h3>
+<p>Similarly, temperature is a nominal feature and it could have 3 different values: Cool, Hot and Mild. Let’s summarize decisions for temperature feature.</p>
+<table width="341">
+<tbody>
+<tr>
+<td width="83">Temperature</td>
+<td width="64">Yes</td>
+<td width="64">No</td>
+<td width="130">Number of instances</td>
+</tr>
+<tr>
+<td>Hot</td>
+<td>2</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Cool</td>
+<td>3</td>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Mild</td>
+<td>4</td>
+<td>2</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p>Gini(Temp=Hot) = 1 – (2/4)<sup>2</sup> – (2/4)<sup>2</sup> = 0.5</p>
+<p>Gini(Temp=Cool) = 1 – (3/4)<sup>2</sup> – (1/4)<sup>2</sup>&nbsp;= 1 – 0.5625 – 0.0625 = 0.375</p>
+<p>Gini(Temp=Mild) = 1 – (4/6)<sup>2</sup> – (2/6)<sup>2</sup> = 1 – 0.444 – 0.111 = 0.445</p>
+<p>We’ll calculate weighted sum of gini index for temperature feature</p>
+<p>Gini(Temp) = (4/14) x 0.5 + (4/14) x 0.375 + (6/14) x 0.445 = 0.142 + 0.107 + 0.190 = 0.439</p>
+<h3>Humidity</h3>
+<p>Humidity is a binary class feature. It can be high or normal.</p>
+<table width="341">
+<tbody>
+<tr>
+<td width="83">Humidity</td>
+<td width="64">Yes</td>
+<td width="64">No</td>
+<td width="130">Number of instances</td>
+</tr>
+<tr>
+<td>High</td>
+<td>3</td>
+<td>4</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>6</td>
+<td>1</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<p>Gini(Humidity=High) = 1 – (3/7)<sup>2</sup> – (4/7)<sup>2</sup> = 1 – 0.183 – 0.326 = 0.489</p>
+<p>Gini(Humidity=Normal) = 1 – (6/7)<sup>2</sup> – (1/7)<sup>2</sup> = 1 – 0.734 – 0.02 = 0.244</p>
+<p>Weighted sum for humidity feature will be calculated next</p>
+<p>Gini(Humidity) = (7/14) x 0.489 + (7/14) x 0.244 = 0.367</p>
+<h3>Wind</h3>
+<p>Wind is a binary class similar to humidity. It can be weak and strong.</p>
+<table width="341">
+<tbody>
+<tr>
+<td width="83">Wind</td>
+<td width="64">Yes</td>
+<td width="64">No</td>
+<td width="130">Number of instances</td>
+</tr>
+<tr>
+<td>Weak</td>
+<td>6</td>
+<td>2</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Strong</td>
+<td>3</td>
+<td>3</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p>Gini(Wind=Weak) = 1 – (6/8)<sup>2</sup> – (2/8)<sup>2</sup> = 1 – 0.5625 – 0.062 = 0.375</p>
+<p>Gini(Wind=Strong) = 1 – (3/6)<sup>2</sup> – (3/6)<sup>2</sup> = 1 – 0.25 – 0.25 = 0.5</p>
+<p>Gini(Wind) = (8/14) x 0.375 + (6/14) x 0.5 = 0.428</p>
+<h3>Time to decide</h3>
+<p>We’ve calculated gini index values for each feature. The winner will be outlook feature because its cost is the lowest.</p>
+<table width="147">
+<tbody>
+<tr>
+<td width="83">Feature</td>
+<td width="64">Gini index</td>
+</tr>
+<tr>
+<td>Outlook</td>
+<td>0.342</td>
+</tr>
+<tr>
+<td>Temperature</td>
+<td>0.439</td>
+</tr>
+<tr>
+<td>Humidity</td>
+<td>0.367</td>
+</tr>
+<tr>
+<td>Wind</td>
+<td>0.428</td>
+</tr>
+</tbody>
+</table>
+<p>We’ll put outlook decision at the top of the tree.</p>
+<figure id="attachment_12617" aria-describedby="caption-attachment-12617" style="width: 1236px" class="wp-caption aligncenter"><a href="https://i0.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-1.png?ssl=1" target="_blank" rel="noopener"><img data-attachment-id="12617" data-permalink="https://sefiks.com/2018/08/27/a-step-by-step-cart-decision-tree-example/cart-step-1/" data-orig-file="https://i0.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-1.png?fit=1236%2C714&amp;ssl=1" data-orig-size="1236,714" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="cart-step-1" data-image-description="" data-medium-file="https://i0.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-1.png?fit=300%2C173&amp;ssl=1" data-large-file="https://i0.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-1.png?fit=1024%2C592&amp;ssl=1" class=" size-full wp-image-12617 aligncenter" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/cart-step-1.png" alt="cart-step-1" width="760" height="439" srcset="https://i0.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-1.png?w=1236&amp;ssl=1 1236w, https://i0.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-1.png?resize=300%2C173&amp;ssl=1 300w, https://i0.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-1.png?resize=768%2C444&amp;ssl=1 768w, https://i0.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-1.png?resize=1024%2C592&amp;ssl=1 1024w, https://i0.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-1.png?resize=720%2C416&amp;ssl=1 720w, https://i0.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-1.png?resize=560%2C323&amp;ssl=1 560w" sizes="(max-width: 1140px) 100vw, 1140px"></a><figcaption id="caption-attachment-12617" class="wp-caption-text">First decision would be outlook feature</figcaption></figure>
+<p>You might realize that sub dataset in the overcast leaf has only yes decisions. This means that overcast leaf is over.</p>
+<figure id="attachment_12618" aria-describedby="caption-attachment-12618" style="width: 1345px" class="wp-caption aligncenter"><a href="https://i2.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-2.png?ssl=1" target="_blank" rel="noopener"><img data-attachment-id="12618" data-permalink="https://sefiks.com/2018/08/27/a-step-by-step-cart-decision-tree-example/cart-step-2/" data-orig-file="https://i2.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-2.png?fit=1345%2C471&amp;ssl=1" data-orig-size="1345,471" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="cart-step-2" data-image-description="" data-medium-file="https://i2.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-2.png?fit=300%2C105&amp;ssl=1" data-large-file="https://i2.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-2.png?fit=1024%2C359&amp;ssl=1" class=" size-full wp-image-12618 aligncenter" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/cart-step-2.png" alt="cart-step-2" width="760" height="266" srcset="https://i2.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-2.png?w=1345&amp;ssl=1 1345w, https://i2.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-2.png?resize=300%2C105&amp;ssl=1 300w, https://i2.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-2.png?resize=768%2C269&amp;ssl=1 768w, https://i2.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-2.png?resize=1024%2C359&amp;ssl=1 1024w, https://i2.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-2.png?resize=720%2C252&amp;ssl=1 720w, https://i2.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-2.png?resize=560%2C196&amp;ssl=1 560w" sizes="(max-width: 1140px) 100vw, 1140px"></a><figcaption id="caption-attachment-12618" class="wp-caption-text">Tree is over for overcast outlook leaf</figcaption></figure>
+<p>We will apply same principles to those sub datasets in the following steps.</p>
+<p>Focus on the sub dataset for sunny outlook. We need to find the gini index scores for temperature, humidity and wind features respectively.</p>
+<table width="424">
+<tbody>
+<tr>
+<td width="64">Day</td>
+<td width="76">Outlook</td>
+<td width="64">Temp.</td>
+<td width="82">Humidity</td>
+<td width="64">Wind</td>
+<td width="74">Decision</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Sunny</td>
+<td>Hot</td>
+<td>High</td>
+<td>Weak</td>
+<td>No</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sunny</td>
+<td>Hot</td>
+<td>High</td>
+<td>Strong</td>
+<td>No</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Sunny</td>
+<td>Mild</td>
+<td>High</td>
+<td>Weak</td>
+<td>No</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Sunny</td>
+<td>Cool</td>
+<td>Normal</td>
+<td>Weak</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Sunny</td>
+<td>Mild</td>
+<td>Normal</td>
+<td>Strong</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h3>Gini of temperature for sunny outlook</h3>
+<table width="388">
+<tbody>
+<tr>
+<td width="130">Temperature</td>
+<td width="64">Yes</td>
+<td width="64">No</td>
+<td width="130">Number of instances</td>
+</tr>
+<tr>
+<td>Hot</td>
+<td>0</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Cool</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Mild</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>Gini(Outlook=Sunny and Temp.=Hot) = 1 – (0/2)<sup>2</sup> – (2/2)<sup>2</sup> = 0</p>
+<p>Gini(Outlook=Sunny and Temp.=Cool) = 1 – (1/1)<sup>2</sup> – (0/1)<sup>2</sup> = 0</p>
+<p>Gini(Outlook=Sunny and Temp.=Mild) = 1 – (1/2)<sup>2</sup> – (1/2)<sup>2</sup> = 1 – 0.25 – 0.25 = 0.5</p>
+<p>Gini(Outlook=Sunny and Temp.) = (2/5)x0 + (1/5)x0 + (2/5)x0.5 = 0.2</p>
+<h3>Gini of humidity for sunny outlook</h3>
+<table width="388">
+<tbody>
+<tr>
+<td width="130">Humidity</td>
+<td width="64">Yes</td>
+<td width="64">No</td>
+<td width="130">Number of instances</td>
+</tr>
+<tr>
+<td>High</td>
+<td>0</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>Gini(Outlook=Sunny and Humidity=High) = 1 – (0/3)<sup>2</sup> – (3/3)<sup>2</sup> = 0</p>
+<p>Gini(Outlook=Sunny and Humidity=Normal) = 1 – (2/2)<sup>2</sup> – (0/2)<sup>2</sup> = 0</p>
+<p>Gini(Outlook=Sunny and Humidity) = (3/5)x0 + (2/5)x0 = 0</p>
+<h3>Gini of wind for sunny outlook</h3>
+<table width="388">
+<tbody>
+<tr>
+<td width="130">Wind</td>
+<td width="64">Yes</td>
+<td width="64">No</td>
+<td width="130">Number of instances</td>
+</tr>
+<tr>
+<td>Weak</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Strong</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>Gini(Outlook=Sunny and Wind=Weak) = 1 – (1/3)<sup>2</sup> – (2/3)<sup>2</sup> = 0.266</p>
+<p>Gini(Outlook=Sunny and Wind=Strong) = 1- (1/2)<sup>2</sup> – (1/2)<sup>2</sup> = 0.2</p>
+<p>Gini(Outlook=Sunny and Wind) = (3/5)x0.266 + (2/5)x0.2 = 0.466</p>
+<h3>Decision for sunny outlook</h3>
+<p>We’ve calculated gini index scores for feature when outlook is sunny. The winner is humidity because it has the lowest value.</p>
+<table width="194">
+<tbody>
+<tr>
+<td width="130">Feature</td>
+<td width="64">Gini index</td>
+</tr>
+<tr>
+<td>Temperature</td>
+<td>0.2</td>
+</tr>
+<tr>
+<td>Humidity</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Wind</td>
+<td>0.466</td>
+</tr>
+</tbody>
+</table>
+<p>We’ll put humidity check at the extension of sunny outlook.</p>
+<figure id="attachment_12619" aria-describedby="caption-attachment-12619" style="width: 1474px" class="wp-caption aligncenter"><a href="https://i0.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-3.png?ssl=1" target="_blank" rel="noopener"><img data-attachment-id="12619" data-permalink="https://sefiks.com/2018/08/27/a-step-by-step-cart-decision-tree-example/cart-step-3/" data-orig-file="https://i0.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-3.png?fit=1474%2C740&amp;ssl=1" data-orig-size="1474,740" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="cart-step-3" data-image-description="" data-medium-file="https://i0.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-3.png?fit=300%2C151&amp;ssl=1" data-large-file="https://i0.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-3.png?fit=1024%2C514&amp;ssl=1" class=" size-full wp-image-12619 aligncenter" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/cart-step-3.png" alt="cart-step-3" width="760" height="382" srcset="https://i0.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-3.png?w=1474&amp;ssl=1 1474w, https://i0.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-3.png?resize=300%2C151&amp;ssl=1 300w, https://i0.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-3.png?resize=768%2C386&amp;ssl=1 768w, https://i0.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-3.png?resize=1024%2C514&amp;ssl=1 1024w, https://i0.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-3.png?resize=720%2C361&amp;ssl=1 720w, https://i0.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-3.png?resize=560%2C281&amp;ssl=1 560w" sizes="(max-width: 1140px) 100vw, 1140px"></a><figcaption id="caption-attachment-12619" class="wp-caption-text">Sub datasets for high and normal humidity</figcaption></figure>
+<p>As seen, decision is always no for high humidity and sunny outlook. On the other hand, decision will always be yes for normal humidity and sunny outlook. This branch is over.</p>
+<figure id="attachment_12620" aria-describedby="caption-attachment-12620" style="width: 1514px" class="wp-caption aligncenter"><a href="https://i2.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-4.png?ssl=1" target="_blank" rel="noopener"><img data-attachment-id="12620" data-permalink="https://sefiks.com/2018/08/27/a-step-by-step-cart-decision-tree-example/cart-step-4/" data-orig-file="https://i2.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-4.png?fit=1514%2C680&amp;ssl=1" data-orig-size="1514,680" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="cart-step-4" data-image-description="" data-medium-file="https://i2.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-4.png?fit=300%2C135&amp;ssl=1" data-large-file="https://i2.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-4.png?fit=1024%2C460&amp;ssl=1" class=" size-full wp-image-12620 aligncenter" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/cart-step-4.png" alt="cart-step-4" width="760" height="341" srcset="https://i2.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-4.png?w=1514&amp;ssl=1 1514w, https://i2.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-4.png?resize=300%2C135&amp;ssl=1 300w, https://i2.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-4.png?resize=768%2C345&amp;ssl=1 768w, https://i2.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-4.png?resize=1024%2C460&amp;ssl=1 1024w, https://i2.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-4.png?resize=720%2C323&amp;ssl=1 720w, https://i2.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-4.png?resize=560%2C252&amp;ssl=1 560w" sizes="(max-width: 1140px) 100vw, 1140px"></a><figcaption id="caption-attachment-12620" class="wp-caption-text">Decisions for high and normal humidity</figcaption></figure>
+<p>Now, we need to focus on rain outlook.</p>
+<h3>Rain outlook</h3>
+<table width="424">
+<tbody>
+<tr>
+<td width="64">Day</td>
+<td width="76">Outlook</td>
+<td width="64">Temp.</td>
+<td width="82">Humidity</td>
+<td width="64">Wind</td>
+<td width="74">Decision</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Rain</td>
+<td>Mild</td>
+<td>High</td>
+<td>Weak</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Rain</td>
+<td>Cool</td>
+<td>Normal</td>
+<td>Weak</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Rain</td>
+<td>Cool</td>
+<td>Normal</td>
+<td>Strong</td>
+<td>No</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Rain</td>
+<td>Mild</td>
+<td>Normal</td>
+<td>Weak</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Rain</td>
+<td>Mild</td>
+<td>High</td>
+<td>Strong</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p>We’ll calculate gini index scores for temperature, humidity and wind features when outlook is rain.</p>
+<h3>Gini of temprature for rain outlook</h3>
+<table width="388">
+<tbody>
+<tr>
+<td width="130">Temperature</td>
+<td width="64">Yes</td>
+<td width="64">No</td>
+<td width="130">Number of instances</td>
+</tr>
+<tr>
+<td>Cool</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Mild</td>
+<td>2</td>
+<td>1</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>Gini(Outlook=Rain and Temp.=Cool) = 1 – (1/2)<sup>2</sup> – (1/2)<sup>2</sup> = 0.5</p>
+<p>Gini(Outlook=Rain and Temp.=Mild) = 1 – (2/3)<sup>2</sup> – (1/3)<sup>2</sup> = 0.444</p>
+<p>Gini(Outlook=Rain and Temp.) = (2/5)x0.5 + (3/5)x0.444 = 0.466</p>
+<h3>Gini of humidity for rain outlook</h3>
+<table width="388">
+<tbody>
+<tr>
+<td width="130">Humidity</td>
+<td width="64">Yes</td>
+<td width="64">No</td>
+<td width="130">Number of instances</td>
+</tr>
+<tr>
+<td>High</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Normal</td>
+<td>2</td>
+<td>1</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>Gini(Outlook=Rain and Humidity=High) = 1 – (1/2)<sup>2</sup> – (1/2)<sup>2</sup> = 0.5</p>
+<p>Gini(Outlook=Rain and Humidity=Normal) = 1 – (2/3)<sup>2</sup> – (1/3)<sup>2</sup> = 0.444</p>
+<p>Gini(Outlook=Rain and Humidity) = (2/5)x0.5 + (3/5)x0.444 = 0.466</p>
+<h3>Gini of wind for rain outlook</h3>
+<table width="388">
+<tbody>
+<tr>
+<td width="130">Wind</td>
+<td width="64">Yes</td>
+<td width="64">No</td>
+<td width="130">Number of instances</td>
+</tr>
+<tr>
+<td>Weak</td>
+<td>3</td>
+<td>0</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Strong</td>
+<td>0</td>
+<td>2</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>Gini(Outlook=Rain and Wind=Weak) = 1 – (3/3)<sup>2</sup> – (0/3)<sup>2</sup> = 0</p>
+<p>Gini(Outlook=Rain and Wind=Strong) = 1 – (0/2)<sup>2</sup> – (2/2)<sup>2</sup> = 0</p>
+<p>Gini(Outlook=Rain and Wind) = (3/5)x0 + (2/5)x0 = 0</p>
+<h3>Decision for rain outlook</h3>
+<p>The winner is wind feature for rain outlook because it has the minimum gini index score in features.</p>
+<table width="194">
+<tbody>
+<tr>
+<td width="130">Feature</td>
+<td width="64">Gini index</td>
+</tr>
+<tr>
+<td>Temperature</td>
+<td>0.466</td>
+</tr>
+<tr>
+<td>Humidity</td>
+<td>0.466</td>
+</tr>
+<tr>
+<td>Wind</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Put the wind feature for rain outlook branch and monitor the new sub data sets.</p>
+<figure id="attachment_12622" aria-describedby="caption-attachment-12622" style="width: 1496px" class="wp-caption aligncenter"><a href="https://i2.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-5.png?ssl=1" target="_blank" rel="noopener"><img data-attachment-id="12622" data-permalink="https://sefiks.com/2018/08/27/a-step-by-step-cart-decision-tree-example/cart-step-5/" data-orig-file="https://i2.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-5.png?fit=1496%2C706&amp;ssl=1" data-orig-size="1496,706" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="cart-step-5" data-image-description="" data-medium-file="https://i2.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-5.png?fit=300%2C142&amp;ssl=1" data-large-file="https://i2.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-5.png?fit=1024%2C483&amp;ssl=1" class=" size-full wp-image-12622 aligncenter" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/cart-step-5.png" alt="cart-step-5" width="760" height="359" srcset="https://i2.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-5.png?w=1496&amp;ssl=1 1496w, https://i2.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-5.png?resize=300%2C142&amp;ssl=1 300w, https://i2.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-5.png?resize=768%2C362&amp;ssl=1 768w, https://i2.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-5.png?resize=1024%2C483&amp;ssl=1 1024w, https://i2.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-5.png?resize=720%2C340&amp;ssl=1 720w, https://i2.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-5.png?resize=560%2C264&amp;ssl=1 560w" sizes="(max-width: 1140px) 100vw, 1140px"></a><figcaption id="caption-attachment-12622" class="wp-caption-text">Sub data sets for weak and strong wind and rain outlook</figcaption></figure>
+<p>As seen, decision is always yes when wind is weak. On the other hand, decision is always no if wind is strong. This means that this branch is over.</p>
+<figure id="attachment_12623" aria-describedby="caption-attachment-12623" style="width: 1596px" class="wp-caption aligncenter"><a href="https://i1.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-6.png?ssl=1" target="_blank" rel="noopener"><img data-attachment-id="12623" data-permalink="https://sefiks.com/2018/08/27/a-step-by-step-cart-decision-tree-example/cart-step-6/" data-orig-file="https://i1.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-6.png?fit=1596%2C658&amp;ssl=1" data-orig-size="1596,658" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="cart-step-6" data-image-description="" data-medium-file="https://i1.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-6.png?fit=300%2C124&amp;ssl=1" data-large-file="https://i1.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-6.png?fit=1024%2C422&amp;ssl=1" class=" size-full wp-image-12623 aligncenter" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/cart-step-6.png" alt="cart-step-6" width="760" height="313" srcset="https://i1.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-6.png?w=1596&amp;ssl=1 1596w, https://i1.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-6.png?resize=300%2C124&amp;ssl=1 300w, https://i1.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-6.png?resize=768%2C317&amp;ssl=1 768w, https://i1.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-6.png?resize=1024%2C422&amp;ssl=1 1024w, https://i1.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-6.png?resize=720%2C297&amp;ssl=1 720w, https://i1.wp.com/sefiks.com/wp-content/uploads/2018/08/cart-step-6.png?resize=560%2C231&amp;ssl=1 560w" sizes="(max-width: 1140px) 100vw, 1140px"></a><figcaption id="caption-attachment-12623" class="wp-caption-text">Final form of the decision tree built by CART algorithm</figcaption></figure>
+<p>So, decision tree building is over. We have built a decision tree by hand. BTW, you might realize that we’ve created exactly the same tree in <a href="https://sefiks.com/2017/11/20/a-step-by-step-id3-decision-tree-example/" target="_blank" rel="noopener">ID3 example</a>. This does not mean that ID3 and CART algorithms produce same trees always. We are just lucky. Finally, I believe that CART is easier than ID3 and C4.5, isn’t it?</p>
+<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-12611" class="share-twitter sd-button share-icon no-text" href="https://sefiks.com/2018/08/27/a-step-by-step-cart-decision-tree-example/?share=twitter&amp;nb=1" target="_blank" title="Click to share on Twitter"><span></span><span class="sharing-screen-reader-text">Click to share on Twitter (Opens in new window)</span></a></li><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-12611" class="share-facebook sd-button share-icon no-text" href="https://sefiks.com/2018/08/27/a-step-by-step-cart-decision-tree-example/?share=facebook&amp;nb=1" target="_blank" title="Click to share on Facebook"><span><span class="share-count">12</span></span><span class="sharing-screen-reader-text">Click to share on Facebook (Opens in new window)<span class="share-count">12</span></span></a></li><li class="share-end"></li></ul></div></div></div><div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded" id="like-post-wrapper-143904331-12611-5c94b383a8b70" data-src="https://widgets.wp.com/likes/#blog_id=143904331&amp;post_id=12611&amp;origin=sefiks.com&amp;obj_id=143904331-12611-5c94b383a8b70" data-name="like-post-frame-143904331-12611-5c94b383a8b70"><h3 class="sd-title">Like this:</h3><div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px;"><span class="button"><span>Like</span></span> <span class="loading">Loading...</span></div><span class="sd-text-color"></span><a class="sd-link-color"></a></div>
+<div id="jp-relatedposts" class="jp-relatedposts" style="display: block;">
+	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
+<div class="jp-relatedposts-items jp-relatedposts-items-visual jp-relatedposts-grid "><div class="jp-relatedposts-post jp-relatedposts-post0 jp-relatedposts-post-thumbs" data-post-id="12091" data-post-format="false"><a class="jp-relatedposts-post-a" href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/" title="A Step By Step C4.5 Decision Tree Example
+
+Decision trees are still hot topics nowadays in data science world. Here, ID3 is the most common conventional decision tree algorithm but it has bottlenecks. Attributes must be nominal values, dataset must not include missing data, and finally the algorithm tend to fall into overfitting. Here, Ross Quinlan, inventor of ID3,…" rel="nofollow" data-origin="12611" data-position="0"><img class="jp-relatedposts-post-img" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/guardians_galaxy_Groot_1000-920x584.jpg" width="237" alt="A Step By Step C4.5 Decision Tree Example" height="135" srcset="https://i0.wp.com/sefiks.com/wp-content/uploads/2018/05/guardians_galaxy_Groot_1000-920x584.jpg?zoom=2&amp;fit=920%2C584&amp;ssl=1&amp;resize=237%2C135" src-orig="https://i0.wp.com/sefiks.com/wp-content/uploads/2018/05/guardians_galaxy_Groot_1000-920x584.jpg?fit=920%2C584&amp;ssl=1&amp;resize=350%2C200" scale="2"></a><h4 class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/" title="A Step By Step C4.5 Decision Tree Example
+
+Decision trees are still hot topics nowadays in data science world. Here, ID3 is the most common conventional decision tree algorithm but it has bottlenecks. Attributes must be nominal values, dataset must not include missing data, and finally the algorithm tend to fall into overfitting. Here, Ross Quinlan, inventor of ID3,…" rel="nofollow" data-origin="12611" data-position="0">A Step By Step C4.5 Decision Tree Example</a></h4><p class="jp-relatedposts-post-excerpt">Decision trees are still hot topics nowadays in data science world. Here,&nbsp;ID3 is the most common conventional decision tree algorithm but it has bottlenecks. Attributes must be nominal values, dataset must not include missing data, and finally the algorithm tend to fall into overfitting. Here, Ross Quinlan, inventor of ID3,…</p></div><div class="jp-relatedposts-post jp-relatedposts-post1 jp-relatedposts-post-thumbs" data-post-id="11352" data-post-format="false"><a class="jp-relatedposts-post-a" href="https://sefiks.com/2017/11/20/a-step-by-step-id3-decision-tree-example/" title="A Step by Step ID3 Decision Tree Example
+
+Decision tree algorithms transfom raw data to rule based decision making trees. Herein, ID3 is one of the most common decision tree algorithm. Firstly, It was introduced in 1986 and it is acronym of Iterative Dichotomiser. First of all, dichotomisation means dividing into two completely opposite things. That&#39;s why, the algorithm…" rel="nofollow" data-origin="12611" data-position="1"><img class="jp-relatedposts-post-img" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/premonition_cover.jpg" width="237" alt="A Step by Step ID3 Decision Tree Example" height="135" srcset="https://i1.wp.com/sefiks.com/wp-content/uploads/2017/11/premonition_cover.jpg?zoom=2&amp;resize=237%2C135&amp;ssl=1" src-orig="https://i1.wp.com/sefiks.com/wp-content/uploads/2017/11/premonition_cover.jpg?resize=350%2C200&amp;ssl=1" scale="2"></a><h4 class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://sefiks.com/2017/11/20/a-step-by-step-id3-decision-tree-example/" title="A Step by Step ID3 Decision Tree Example
+
+Decision tree algorithms transfom raw data to rule based decision making trees. Herein, ID3 is one of the most common decision tree algorithm. Firstly, It was introduced in 1986 and it is acronym of Iterative Dichotomiser. First of all, dichotomisation means dividing into two completely opposite things. That&#39;s why, the algorithm…" rel="nofollow" data-origin="12611" data-position="1">A Step by Step ID3 Decision Tree Example</a></h4><p class="jp-relatedposts-post-excerpt">Decision tree algorithms transfom raw data to rule based decision making trees. Herein, ID3 is one of the most common decision tree algorithm. Firstly, It was introduced in 1986&nbsp;and it is acronym of Iterative Dichotomiser. First of all, dichotomisation means dividing into two completely opposite things. That's why, the algorithm…</p></div><div class="jp-relatedposts-post jp-relatedposts-post2 jp-relatedposts-post-thumbs" data-post-id="12765" data-post-format="false"><a class="jp-relatedposts-post-a" href="https://sefiks.com/2018/10/04/a-step-by-step-gradient-boosting-decision-tree-example/" title="A Step by Step Gradient Boosting Decision Tree Example
+
+Adoption of decision trees is mainly based on its transparent decisions. Also, they overwhelmingly over-perform in applied machine learning studies. Particularly, GBM based trees dominate Kaggle competitions nowadays. Some kaggle winner researchers mentioned that they just used a specific boosting algorithm. However, some practitioners think GBM as a black box just like…" rel="nofollow" data-origin="12611" data-position="2"><img class="jp-relatedposts-post-img" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/boosting-in-golf.jpg" width="237" alt="A Step by Step Gradient Boosting Decision Tree Example" height="135" srcset="https://i0.wp.com/sefiks.com/wp-content/uploads/2018/10/boosting-in-golf.jpg?zoom=2&amp;fit=768%2C512&amp;ssl=1&amp;resize=237%2C135" src-orig="https://i0.wp.com/sefiks.com/wp-content/uploads/2018/10/boosting-in-golf.jpg?fit=768%2C512&amp;ssl=1&amp;resize=350%2C200" scale="2"></a><h4 class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://sefiks.com/2018/10/04/a-step-by-step-gradient-boosting-decision-tree-example/" title="A Step by Step Gradient Boosting Decision Tree Example
+
+Adoption of decision trees is mainly based on its transparent decisions. Also, they overwhelmingly over-perform in applied machine learning studies. Particularly, GBM based trees dominate Kaggle competitions nowadays. Some kaggle winner researchers mentioned that they just used a specific boosting algorithm. However, some practitioners think GBM as a black box just like…" rel="nofollow" data-origin="12611" data-position="2">A Step by Step Gradient Boosting Decision Tree Example</a></h4><p class="jp-relatedposts-post-excerpt">Adoption of decision trees is mainly based on its transparent decisions. Also, they overwhelmingly over-perform in applied machine learning studies. Particularly, GBM based trees dominate Kaggle competitions nowadays. Some kaggle winner researchers mentioned that they&nbsp;just used a specific boosting algorithm.&nbsp;However, some practitioners think GBM as a black box just like…</p></div></div></div><p></p>		
+		<!-- media.net footer -->
+		<!-- this is good for mobile -->
+		<!--
+		<script id="mNCC" language="javascript">
+			medianet_width = "468";
+			medianet_height = "60";
+			medianet_crid = "475792699";
+			medianet_versionId = "3111299"; 
+		  </script>
+		<script src="//contextual.media.net/nmedianet.js?cid=8CUS8605M"></script>
+		-->
+			</div><!-- .entry-content -->
+	
+	
+
+	<footer class="entry-footer">
+		<div class="entry-meta">
+			<span class="entry-tags"><a href="https://sefiks.com/tag/decision-tree/" rel="tag">decision tree</a>, <a href="https://sefiks.com/tag/gini-index/" rel="tag">gini index</a></span>		</div>
+	</footer><!-- .entry-footer -->
+
+</article><!-- #post-## -->
+
+
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://sefiks.com/2018/08/25/indeterminate-forms-and-lhospitals-rule-in-decision-trees/" rel="prev"><span class="meta-nav" aria-hidden="true">Previous</span> <span class="meta-nav-title">Indeterminate Forms and L’Hospital’s Rule in Decision Trees</span></a></div><div class="nav-next"><a href="https://sefiks.com/2018/08/28/a-step-by-step-regression-decision-tree-example/" rel="next"><span class="meta-nav" aria-hidden="true">Next</span> <span class="meta-nav-title">A Step By Step Regression Tree Example</span> </a></div></div>
+	</nav>
+			
+<div id="comments" class="comments-area clear-fix">
+
+	
+			<h2 class="comments-title">
+			3 Comments		</h2>
+
+		
+		<ol class="comment-list">
+					<li id="comment-318" class="comment even thread-even depth-1 parent">
+			<article id="div-comment-318" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/83367502befd4be875a7eb1b63977524.png" srcset="https://secure.gravatar.com/avatar/83367502befd4be875a7eb1b63977524?s=222&amp;d=mm&amp;r=g 2x" class="avatar avatar-111 photo grav-hashed grav-hijack" height="111" width="111" originals="111" src-orig="https://secure.gravatar.com/avatar/83367502befd4be875a7eb1b63977524?s=111&amp;d=mm&amp;r=g" scale="2" id="grav-83367502befd4be875a7eb1b63977524-0">						<b class="fn">Lorenzo</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://sefiks.com/2018/08/27/a-step-by-step-cart-decision-tree-example/#comment-318">
+							<time datetime="2018-10-10T21:48:04+00:00">
+								October 10, 2018 at 9:48 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>But Cart Algorithm isn’t used only with max 2 splits? Because it is a binary tree… In this example we can see three split (Sunny, Overcast and Rainy)… How is that possible? Sorry but I don’t understand.</p>
+<p>Thanks</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://sefiks.com/2018/08/27/a-step-by-step-cart-decision-tree-example/#comment-318" data-commentid="318" data-postid="12611" data-belowelement="div-comment-318" data-respondelement="respond" aria-label="Reply to Lorenzo">Reply</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-319" class="comment byuser comment-author-sefik bypostauthor odd alt depth-2">
+			<article id="div-comment-319" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/003f7711c95659ec4894d5f21fde8e0d.png" srcset="https://secure.gravatar.com/avatar/003f7711c95659ec4894d5f21fde8e0d?s=222&amp;d=mm&amp;r=g 2x" class="avatar avatar-111 photo grav-hashed grav-hijack" height="111" width="111" originals="111" src-orig="https://secure.gravatar.com/avatar/003f7711c95659ec4894d5f21fde8e0d?s=111&amp;d=mm&amp;r=g" scale="2" id="grav-003f7711c95659ec4894d5f21fde8e0d-0">						<b class="fn">Sefik Serengil</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://sefiks.com/2018/08/27/a-step-by-step-cart-decision-tree-example/#comment-319">
+							<time datetime="2018-10-11T05:44:52+00:00">
+								October 11, 2018 at 5:44 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>There is no up limit for classes of a feature in CART algorithm. As you mentioned, classes for outlook feature are sunny, overcast and rain. We’ve checked gini score for sunny outlook, overcast outlook and rainy outlook respectively. Then, we will combine these calculations and calculate gini score for outlook feature.  </p>
+<p>If you want to build a binary tree, you might still construct a tree for multiple classes as illustrated below.</p>
+<p>if outlook = ‘sunny’:<br>
+   #do something<br>
+else:<br>
+   if outlook = ‘overcast’:<br>
+      #do something<br>
+   else: #this case refers to rainy outlook<br>
+       #do something</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://sefiks.com/2018/08/27/a-step-by-step-cart-decision-tree-example/#comment-319" data-commentid="319" data-postid="12611" data-belowelement="div-comment-319" data-respondelement="respond" aria-label="Reply to Sefik Serengil">Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-360" class="comment even thread-odd thread-alt depth-1">
+			<article id="div-comment-360" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/72d05ecf79cf581675b60227e09d43cf.png" srcset="https://secure.gravatar.com/avatar/72d05ecf79cf581675b60227e09d43cf?s=222&amp;d=mm&amp;r=g 2x" class="avatar avatar-111 photo grav-hashed grav-hijack" height="111" width="111" originals="111" src-orig="https://secure.gravatar.com/avatar/72d05ecf79cf581675b60227e09d43cf?s=111&amp;d=mm&amp;r=g" scale="2" id="grav-72d05ecf79cf581675b60227e09d43cf-0">						<b class="fn">xlee</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://sefiks.com/2018/08/27/a-step-by-step-cart-decision-tree-example/#comment-360">
+							<time datetime="2019-02-14T04:09:17+00:00">
+								February 14, 2019 at 4:09 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>blogs are awesome, but i am confused too, because the representation for<br>
+cart model is a binary tree,  maybe the calculation need to be slightly adjusted?<br>
+just a small question.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://sefiks.com/2018/08/27/a-step-by-step-cart-decision-tree-example/#comment-360" data-commentid="360" data-postid="12611" data-belowelement="div-comment-360" data-respondelement="respond" aria-label="Reply to xlee">Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+		
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://sefiks.com/2018/08/27/a-step-by-step-cart-decision-tree-example/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="https://sefiks.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input placeholder="ex: jane doe" id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input type="email" placeholder="ex: janedoe@gmail.com" id="email" name="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input placeholder="ex: http://janedoe.wordpress.com" id="url" name="url" type="url" value="" size="30" maxlength="200"></p>
+<p class="form-submit"></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"> <label class="subscribe-label" id="subscribe-label" for="subscribe_comments">Notify me of follow-up comments by email.</label></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog">Notify me of new posts by email.</label></p><input name="submit" type="submit" id="submit" class="submit" value="Submit"> <input type="hidden" name="comment_post_ID" value="12611" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+<p></p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="d586c7ab08"></p><p style="display: none;"></p>			<input type="hidden" id="ak_js" name="ak_js" value="1553275926639"><input type="hidden" name="js-spam-prevention" value="1cf48ba6d9ab2c042ad13b6c1a32c4ac"></form>
+			</div><!-- #respond -->
+	<p class="akismet_comment_form_privacy_notice">This site uses Akismet to reduce spam. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Learn how your comment data is processed</a>.</p>	<script type="text/javascript">
+        jQuery( document ).ready( function( $ ) {
+            $( '.comment-form, #registerform' ).append( '<input type="hidden" name="js-spam-prevention" value="1cf48ba6d9ab2c042ad13b6c1a32c4ac"/>' );
+        } );
+	</script>
+	
+</div><!-- #comments -->
+
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+<div id="secondary" class="widget-area" role="complementary">
+	<aside id="wpforms-widget-13" class="widget wpforms-widget"><div class="wpforms-container wpforms-container-full" id="wpforms-12096"><form id="wpforms-form-12096" class="wpforms-validate wpforms-form" data-formid="12096" method="post" enctype="multipart/form-data" action="https://sefiks.com/2018/08/27/a-step-by-step-cart-decision-tree-example/" novalidate="novalidate"><div class="wpforms-head-container"><div class="wpforms-description">You can subscribe this blog and receive notifications for new posts</div></div><div class="wpforms-field-container"><div id="wpforms-12096-field_1-container" class="wpforms-field wpforms-field-email" data-field-id="1"><label class="wpforms-field-label" for="wpforms-12096-field_1">Email <span class="wpforms-required-label">*</span></label><input type="email" id="wpforms-12096-field_1" class="wpforms-field-medium wpforms-field-required" name="wpforms[fields][1]" required="" aria-required="true"></div></div><div class="wpforms-recaptcha-container"><div class="g-recaptcha" data-sitekey="6LfbV0wUAAAAAL_pu7X25wlkeIsrGe2nv3a7nY13"><div style="width: 304px; height: 78px;"><div><iframe src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/anchor.html" width="304" height="78" role="presentation" name="a-agn1cte6khn0" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div><input type="text" name="g-recaptcha-hidden" class="wpforms-recaptcha-hidden" style="position:absolute!important;clip:rect(0,0,0,0)!important;height:1px!important;width:1px!important;border:0!important;overflow:hidden!important;padding:0!important;margin:0!important;" required="" aria-required="true"></div><div class="wpforms-submit-container"><input type="hidden" name="wpforms[id]" value="12096"><input type="hidden" name="wpforms[author]" value="2"><input type="hidden" name="wpforms[post_id]" value="12611"><button type="submit" name="wpforms[submit]" class="wpforms-submit " id="wpforms-submit-12096" value="wpforms-submit" data-alt-text="Sending...">Follow Blog</button></div></form></div></aside><aside id="text-6" class="widget widget_text">			<div class="textwidget"><p>You can use any content of this blog just to the extent that you cite or reference</p>
+</div>
+		</aside></div><!-- #secondary -->
+			
+			<footer id="colophon" class="site-footer" role="contentinfo">
+				
+			</footer>
+
+		</div><!-- .col-width -->
+	</div><!-- #content -->
+
+</div><!-- #page -->
+
+	<div style="display:none">
+	<div class="grofile-hash-map-83367502befd4be875a7eb1b63977524">
+	</div>
+	<div class="grofile-hash-map-003f7711c95659ec4894d5f21fde8e0d">
+	</div>
+	<div class="grofile-hash-map-72d05ecf79cf581675b60227e09d43cf">
+	</div>
+	</div>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/sefiks.com\/2018\/08\/27\/a-step-by-step-cart-decision-tree-example\/":12611};
+	</script>
+				<link rel="stylesheet" id="wpforms-full-css" href="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/wpforms-full.css" type="text/css" media="all">
+<script type="text/javascript" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/photon.min.js"></script>
+<script type="text/javascript" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/devicepx-jetpack.js"></script>
+<script type="text/javascript" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/gprofiles.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/wpgroho.js"></script>
+<script type="text/javascript" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/columnlist.js"></script><iframe id="google_osd_static_frame_1959520219734" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/saved_resource(3).html"></iframe>
+<script type="text/javascript">
+/* <![CDATA[ */
+var rebalanceScreenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/navigation.js"></script>
+<script type="text/javascript" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/imagesloaded.min.js"></script>
+<script type="text/javascript" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/masonry.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var Rebalance = {"is_rtl":"0"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/scripts.js"></script>
+<script type="text/javascript" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/skip-link-focus-fix.js"></script>
+<script type="text/javascript" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/comment-reply.min.js"></script>
+<script type="text/javascript" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/wp-embed.min.js"></script>
+<script type="text/javascript" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/spin.min.js"></script>
+<script type="text/javascript" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/jquery.spin.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https:\/\/sefiks.com\/wp-admin\/admin-ajax.php","nonce":"711cc50855","display_exif":"1","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","copyright":"Copyright","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/sefiks.com\/wp-login.php?redirect_to=https%3A%2F%2Fsefiks.com%2F2018%2F08%2F27%2Fa-step-by-step-cart-decision-tree-example%2F","blog_id":"1","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"local_comments_commenting_as":"<fieldset><label for=\"email\">Email (Required)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name (Required)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/jetpack-carousel.min.js"></script>
+<script type="text/javascript" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/postmessage.min.js"></script>
+<script type="text/javascript" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/jquery.jetpack-resize.min.js"></script>
+<script type="text/javascript" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/queuehandler.min.js"></script>
+<script async="async" type="text/javascript" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/form.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/sharing.min.js"></script>
+<script type="text/javascript">
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-twitter', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+</script>
+<script type="text/javascript" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/jquery.validate.min.js"></script>
+<script type="text/javascript" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/wpforms.js"></script>
+<script type="text/javascript" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/api.js"></script>
+<script type="text/javascript">
+var wpformsRecaptchaLoad = function(){jQuery(".g-recaptcha").each(function(index, el){grecaptcha.render(el,{callback:function(){wpformsRecaptchaCallback(el);}},true);});};var wpformsRecaptchaCallback = function(el){jQuery(el).parent().find(".wpforms-recaptcha-hidden").val("1").trigger("change").valid();};
+</script>
+	<iframe src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/master.html" scrolling="no" id="likes-master" name="likes-master" style="display:none;"></iframe>
+	<div id="likes-other-gravatars"><div class="likes-text"><span>%d</span> bloggers like this:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+	<script type="text/javascript">
+/* <![CDATA[ */
+var wpforms_settings = {"val_required":"This field is required.","val_url":"Please enter a valid URL.","val_email":"Please enter a valid email address.","val_number":"Please enter a valid number.","val_confirm":"Field values do not match.","val_fileextension":"File type is not allowed.","val_filesize":"File exceeds max size allowed.","val_time12h":"Please enter time in 12-hour AM\/PM format (eg 8:45 AM).","val_time24h":"Please enter time in 24-hour format (eg 22:45).","val_requiredpayment":"Payment is required.","val_creditcard":"Please enter a valid credit card number.","uuid_cookie":"","locale":"en"}
+/* ]]> */
+</script>
+<script type="text/javascript" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/e-201912.js" async="async" defer="defer"></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:7.1.1',blog:'143904331',post:'12611',tz:'0',srv:'sefiks.com'} ]);
+	_stq.push([ 'clickTrackerInit', '143904331', '12611' ]);
+</script>
+<!--
+<div id="media-footer" style="width:728px; height:90px; margin:0 auto;">
+	<script id="mNCC" language="javascript">
+		medianet_width = "728";
+		medianet_height = "90";
+		medianet_crid = "128438573";
+		medianet_versionId = "3111299"; 
+	  </script>
+	<script src="//contextual.media.net/nmedianet.js?cid=8CUS8605M"></script>
+</div>
+<br>
+-->
+
+
+
+
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+
+Served from: sefiks.com @ 2019-03-22 10:05:55 by W3 Total Cache
+--><img src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/g.gif" alt=":)" width="6" height="5" id="wpstats" scale="0"><div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility 0s linear 0.3s, opacity 0.3s linear 0s; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div><div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div><div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div><div style="z-index: 2000000000; position: relative;"><iframe title="recaptcha challenge" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/bframe.html" name="c-agn1cte6khn0" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" style="width: 100%; height: 100%;"></iframe></div></div></body><iframe id="google_shimpl" style="display: none;" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/saved_resource(4).html"></iframe><iframe id="google_esf" name="google_esf" src="./AStepbyStepCARTDecisionTreeExample - Sefik Ilkin Serengil_files/zrt_lookup.html" data-ad-client="ca-pub-8160896551633284" style="display: none;"></iframe></html>

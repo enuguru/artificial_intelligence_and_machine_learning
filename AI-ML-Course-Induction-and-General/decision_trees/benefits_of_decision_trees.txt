@@ -1,0 +1,32 @@
+
+Advantage 1: Decision trees implicitly perform variable screening or feature selection
+
+When we fit a decision tree to a training dataset, the top few nodes on which the tree is split are essentially the most important variables within the dataset and feature selection is completed automatically!!!!
+
+
+Advantage 2: Decision trees require relatively little effort from users for data preparation
+
+To overcome scale differences between parameters - for example if we have a dataset which measures revenue in millions and loan age in years, say; this will require some form of normalization or scaling before we can fit a regression model and interpret the coefficients.  Such variable transformations are not required with  decision trees because the tree structure will remain the same with or without the transformation.
+
+Another feature which saves data prep time: missing values will not prevent splitting the data for building trees. 
+
+Decision trees are also not sensitive to outliers since the splitting happens based on proportion of samples within the split ranges and not on absolute values.
+
+
+Advantage 3: Nonlinear relationships between parameters do not affect tree performance
+
+Highly nonlinear relationships between variables will result in failing checks for simple regression models and thus make such models invalid. However, decision trees do not require any assumptions of linearity in the data. Thus, we can use them in scenarios where we know the parameters are nonlinearly related.
+
+
+
+Advantage 4: The best feature of using trees for analytics - easy to interpret and explain to higher management or executives!!!!
+
+Decision trees are very intuitive and easy to explain. Just build one and see for yourself! interpreting a decision tree is very easy
+
+
+shortcoming
+
+These advantages need to be tempered with one key disadvantage of decision trees: without proper pruning or limiting tree growth, they tend to overfit the training data, making them somewhat poor predictors.
+
+Decision trees have very less accuracy
+

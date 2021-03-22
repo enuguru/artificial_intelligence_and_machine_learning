@@ -1,0 +1,12 @@
+
+
+what did we cover so far in decision trees?
+
+ID3 handles both categorical and continuous values in its 
+inputs and it is used for classification only
+
+"Change in Variance" method is used for creating regresssion trees
+
+Gini Index is the parameter used in CART algorithm and it is applicable both for categorical and continuous input variables
+
+Then we have the C4.5 which is an improvement algorithm which is applicable for both categorical and continuous input variables

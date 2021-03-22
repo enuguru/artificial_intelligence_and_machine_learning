@@ -1,0 +1,41 @@
+
+
+Day 3 references 
+
+decision tree Gini Index example - one - take this
+https://www.slideshare.net/amrsb/decision-trees-for-machine-learning?from_action=save
+
+decision tree Gini Index example - two
+https://www.cc.gatech.edu/~lsong/teaching/CSE6740/lecture6.pdf
+
+good explanation for income tax data set problem - decision tree
+https://eclass.upatras.gr/modules/document/file.php/ECON1332/Lecture3-BasicClassification.pdf
+
+
+Decision tree explained well
+https://web.fhnw.ch/personenseiten/taoufik.nouri/Data%20Mining/Course/Course6/DM-Part6.htm
+
+
+Continuous Attributes: Computing Gini Index - one
+https://www.cs.indiana.edu/~predrag/classes/2017fallb365/ch4.pdf
+
+
+Continuous Attributes: Computing Gini Index - two - take this
+www.cs.kent.edu/~jin/DM07/ClassificationDecisionTree.ppt
+
+
+Binary Attributes: Computing GINI Index
+https://www.cs.indiana.edu/~predrag/classes/2017fallb365/ch4.pdf
+
+Playing tennis - C4.5 worked example - take this
+https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/
+
+Data mining - decision tree explanied - all methods - take this
+hanj.cs.illinois.edu/bk3/bk3_slides/08ClassBasic.ppt
+
+comparison between Decision tree algorithms
+wonderful paper
+http://saiconference.com/Downloads/SpecialIssueNo10/Paper_3-A_comparative_study_of_decision_tree_ID3_and_C4.5.pdf
+
+
+

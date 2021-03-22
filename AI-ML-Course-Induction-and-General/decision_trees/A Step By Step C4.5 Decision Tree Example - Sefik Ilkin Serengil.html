@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/ -->
+<html class="js" lang="en-US" prefix="og: http://ogp.me/ns#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/f(6).txt"></script><script src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/ca-pub-8160896551633284.js.download"></script><script type="text/javascript" async="" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/analytics.js.download"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-115471718-1');
+</script>
+
+<!-- google adsense -->
+<!--
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8160896551633284",
+    enable_page_level_ads: true
+  });
+</script>
+-->
+
+<!--
+<br>
+<div class="aligncenter">
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<ins class="adsbygoogle"
+		 style="display:inline-block;width:728px;height:90px"
+		 data-ad-client="ca-pub-8160896551633284"
+		 data-ad-slot="6793816323"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</div>
+-->
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://sefiks.com/xmlrpc.php">
+<title>A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil</title>
+<script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>
+
+<!-- This site is optimized with the Yoast SEO plugin v9.0.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Ross Quinlan, inventor of ID3, made some improvements for these bottlenecks and created a new algorithm named C4.5. Now, the algorithm can create a more generalized models including continuous data and could handle missing data.">
+<link rel="canonical" href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil">
+<meta property="og:description" content="Ross Quinlan, inventor of ID3, made some improvements for these bottlenecks and created a new algorithm named C4.5. Now, the algorithm can create a more generalized models including continuous data and could handle missing data.">
+<meta property="og:url" content="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/">
+<meta property="og:site_name" content="Sefik Ilkin Serengil">
+<meta property="article:tag" content="c4.5">
+<meta property="article:tag" content="decision tree">
+<meta property="article:tag" content="gradient boosted">
+<meta property="article:tag" content="id3">
+<meta property="article:section" content="Machine Learning">
+<meta property="article:published_time" content="2018-05-13T18:20:02+00:00">
+<meta property="article:modified_time" content="2018-08-25T09:51:42+00:00">
+<meta property="og:updated_time" content="2018-08-25T09:51:42+00:00">
+<meta property="og:image" content="https://i0.wp.com/sefiks.com/wp-content/uploads/2018/05/guardians_galaxy_Groot_1000-920x584.jpg?fit=920%2C584&amp;ssl=1">
+<meta property="og:image:secure_url" content="https://i0.wp.com/sefiks.com/wp-content/uploads/2018/05/guardians_galaxy_Groot_1000-920x584.jpg?fit=920%2C584&amp;ssl=1">
+<meta property="og:image:width" content="920">
+<meta property="og:image:height" content="584">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Ross Quinlan, inventor of ID3, made some improvements for these bottlenecks and created a new algorithm named C4.5. Now, the algorithm can create a more generalized models including continuous data and could handle missing data.">
+<meta name="twitter:title" content="A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil">
+<meta name="twitter:image" content="https://i0.wp.com/sefiks.com/wp-content/uploads/2018/05/guardians_galaxy_Groot_1000-920x584.jpg?fit=920%2C584&amp;ssl=1">
+<!-- / Yoast SEO plugin. -->
+
+<link rel="dns-prefetch" href="https://s0.wp.com/">
+<link rel="dns-prefetch" href="https://secure.gravatar.com/">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+<link rel="alternate" type="application/rss+xml" title="Sefik Ilkin Serengil » Feed" href="https://sefiks.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Sefik Ilkin Serengil » Comments Feed" href="https://sefiks.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Sefik Ilkin Serengil » A Step By Step C4.5 Decision Tree Example Comments Feed" href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/sefiks.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.8"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/wp-emoji-release.min.js.download" type="text/javascript" defer=""></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="es-widget-css-css" href="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/es-widget.css" type="text/css" media="all">
+<link rel="stylesheet" id="rebalance-fonts-css" href="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-css" href="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/font-awesome.css" type="text/css" media="all">
+<link rel="stylesheet" id="rebalance-style-css" href="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/style(1).css" type="text/css" media="all">
+<style id="rebalance-style-inline-css" type="text/css">
+.entry-meta .author { clip: rect(1px, 1px, 1px, 1px); height: 1px; position: absolute; overflow: hidden; width: 1px; }
+</style>
+<link rel="stylesheet" id="social-logos-css" href="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/social-logos.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack_css-css" href="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/jetpack.css" type="text/css" media="all">
+<script type="text/javascript" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/jquery.js.download"></script>
+<script type="text/javascript" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/jquery-migrate.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/related-posts.min.js.download"></script>
+<link rel="https://api.w.org/" href="https://sefiks.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://sefiks.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://sefiks.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 4.9.8">
+<link rel="shortlink" href="https://wp.me/p9JO5B-391">
+<link rel="alternate" type="application/json+oembed" href="https://sefiks.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fsefiks.com%2F2018%2F05%2F13%2Fa-step-by-step-c4-5-decision-tree-example%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://sefiks.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fsefiks.com%2F2018%2F05%2F13%2Fa-step-by-step-c4-5-decision-tree-example%2F&amp;format=xml">
+
+<link rel="dns-prefetch" href="https://v0.wordpress.com/">
+<link rel="dns-prefetch" href="https://i0.wp.com/">
+<link rel="dns-prefetch" href="https://i1.wp.com/">
+<link rel="dns-prefetch" href="https://i2.wp.com/">
+<link rel="dns-prefetch" href="https://widgets.wp.com/">
+<link rel="dns-prefetch" href="https://s0.wp.com/">
+<link rel="dns-prefetch" href="https://0.gravatar.com/">
+<link rel="dns-prefetch" href="https://1.gravatar.com/">
+<link rel="dns-prefetch" href="https://2.gravatar.com/">
+<style type="text/css">img#wpstats{display:none}</style><style type="text/css" id="syntaxhighlighteranchor"></style>
+<link rel="icon" href="https://i1.wp.com/sefiks.com/wp-content/uploads/2018/03/cropped-cropped-sefiks-icon-v2.png?fit=32%2C32&amp;ssl=1" sizes="32x32">
+<link rel="icon" href="https://i1.wp.com/sefiks.com/wp-content/uploads/2018/03/cropped-cropped-sefiks-icon-v2.png?fit=192%2C192&amp;ssl=1" sizes="192x192">
+<link rel="apple-touch-icon-precomposed" href="https://i1.wp.com/sefiks.com/wp-content/uploads/2018/03/cropped-cropped-sefiks-icon-v2.png?fit=180%2C180&amp;ssl=1">
+<meta name="msapplication-TileImage" content="https://i1.wp.com/sefiks.com/wp-content/uploads/2018/03/cropped-cropped-sefiks-icon-v2.png?fit=270%2C270&amp;ssl=1">
+<style type="text/css"></style><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/hovercard.min.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/services.min.css"><link rel="preload" href="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/f(7).txt" as="script"><script type="text/javascript" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/f(7).txt"></script><link rel="preload" href="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/f(8).txt" as="script"><script type="text/javascript" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/f(8).txt"></script></head>
+
+<body class="post-template-default single single-post postid-12091 single-format-standard author-hidden" style="opacity: 1;">
+
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#content">Skip to content</a>
+
+	<header id="masthead" class="site-header" role="banner">
+		<div class="col-width header-wrap">
+						
+			<!--
+			<br>
+			<center>
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<ins class="adsbygoogle"
+					 style="display:inline-block;width:728px;height:90px"
+					 data-ad-client="ca-pub-8160896551633284"
+					 data-ad-slot="6793816323"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</center>
+			-->
+			
+			<div class="site-heading">
+				<div class="site-branding">
+																<p class="site-title"><a href="https://sefiks.com/" rel="home">Sefik Ilkin Serengil</a></p>
+									</div><!-- .site-branding -->
+								<nav class="social-navigation" role="navigation">
+					<div class="social-menu-wrap"><ul id="menu-social" class="social-menu"><li id="menu-item-9776" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9776"><a href="https://twitter.com/serengil"><span>Twitter</span></a></li>
+<li id="menu-item-11844" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11844"><a href="https://www.linkedin.com/in/serengil/"><span>Linkedin</span></a></li>
+<li id="menu-item-11765" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11765"><a href="https://www.facebook.com/sefikscom/"><span>Facebook</span></a></li>
+<li id="menu-item-11759" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11759"><a href="https://www.instagram.com/serengil/"><span>Instagram</span></a></li>
+<li id="menu-item-11997" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11997"><a href="https://www.youtube.com/SefikIlkinSerengil"><span>Youtube</span></a></li>
+<li id="menu-item-11845" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11845"><a href="https://github.com/serengil"><span>GitHub</span></a></li>
+<li id="menu-item-11762" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11762"><a href="https://sefiks.com//feed/"><span>RSS</span></a></li>
+<li id="menu-item-12006" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12006"><a href="mailto:serengil@gmail.com"><span>Mail</span></a></li>
+</ul></div>				</nav>
+				<!-- #social-navigation -->
+								
+				<!--
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<ins class="adsbygoogle"
+					 style="display:inline-block;width:728px;height:90px"
+					 data-ad-client="ca-pub-8160896551633284"
+					 data-ad-slot="6793816323"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+				-->
+				
+				<!--
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<ins class="adsbygoogle"
+					 style="display:inline-block;width:468px;height:60px"
+					 data-ad-client="ca-pub-8160896551633284"
+					 data-ad-slot="5109215470"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+				-->
+			</div><!-- .site-heading -->
+		</div>
+		<div class="col-width sub-header-wrap">
+							<p class="site-description">Developer's Log</p>
+			
+						<nav id="site-navigation" class="main-navigation" role="navigation">
+				<button class="menu-toggle" aria-controls="header-menu" data-close-text="Close">Menu</button>
+				<div class="menu-menu-1-container"><ul class="nav-menu nav-menu-0"><li id="menu-item-11584" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-11584"><a href="https://sefiks.com//">Home</a></li><li id="menu-item-11755" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11755"><a href="https://sefiks.com/about-me/">About Me</a></li></ul><ul class="nav-menu nav-menu-1"><li id="menu-item-11840" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11840"><a href="https://sefiks.com/publications/">Publications</a></li><li id="menu-item-11763" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11763"><a href="https://sefiks.com/courses/">Courses</a></li></ul><ul class="nav-menu nav-menu-2"><li id="menu-item-11841" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11841"><a href="https://sefiks.com/talks/">Talks</a></li></ul></div>			</nav><!-- #site-navigation -->
+			
+		</div><!-- .col-width -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content clear">
+	
+		<div class="col-width">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+			
+<article id="post-12091" class="post-12091 post type-post status-publish format-standard hentry category-machine-learning tag-c4-5 tag-decision-tree tag-gradient-boosted tag-id3 clear-fix ">
+
+	<header class="entry-header">
+		<h1 class="entry-title">A Step By Step C4.5 Decision Tree Example</h1>
+		<div class="entry-meta">
+			<span class="author vcard"><a class="url fn n" href="https://sefiks.com/author/sefik/">Sefik Serengil</a></span><span class="entry-tags-date"><a href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/" rel="bookmark"><time class="entry-date published" datetime="2018-05-13T18:20:02+00:00">May 13, 2018</time><time class="updated" datetime="2018-08-25T09:51:42+00:00">August 25, 2018</time></a></span><span class="entry-categories"><a href="https://sefiks.com/category/machine-learning/" rel="tag">Machine Learning</a></span>		</div><!-- .entry-meta -->
+
+		
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://sefiks.com/2018/04/08/random-initialization-in-neural-networks/" rel="prev"><span class="meta-nav" aria-hidden="true">Previous</span></a></div><div class="nav-next"><a href="https://sefiks.com/2018/05/21/unofficial-guide-to-fermats-little-theorem/" rel="next"><span class="meta-nav" aria-hidden="true">Next</span></a></div></div>
+	</nav>		
+		
+		<!-- bottom of previous button-->
+		
+	</header><!-- .entry-header -->
+
+		
+	<!-- bottom of previous button and left of post content -->
+					<!-- google adsense -->
+				<script async="" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/f(9).txt"></script>
+				<ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-8160896551633284" data-ad-slot="1401108590" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent;"><ins id="aswift_0_anchor" style="display:block;border:none;height:600px;margin:0;padding:0;position:relative;visibility:visible;width:160px;background-color:transparent;"><iframe width="160" height="600" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;width:160px;height:600px;" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/saved_resource(3).html"></iframe></ins></ins></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+				
+				<!-- media.net -->
+				<!--
+				<div class="alignleft">
+					<div id="media-left" style="width:160px; height:600px;">
+						<script id="mNCC" language="javascript">
+							medianet_width = "160";
+							medianet_height = "600";
+							medianet_crid = "818781157";
+							medianet_versionId = "3111299"; 
+						</script>
+						<script src="//contextual.media.net/nmedianet.js?cid=8CUS8605M"></script>
+					</div>
+				</div>
+	-->				
+				
+	<div class="entry-content">
+		
+		<p>Decision trees are still hot topics nowadays in data science world. Here,&nbsp;<a href="https://sefiks.com/2017/11/20/a-step-by-step-id3-decision-tree-example/" target="_blank" rel="noopener">ID3</a> is the most common conventional decision tree algorithm but it has bottlenecks. Attributes must be nominal values, dataset must not include missing data, and finally the algorithm tend to fall into overfitting. Here, Ross Quinlan, inventor of ID3, made some improvements for these bottlenecks and created a new algorithm named C4.5. Now, the algorithm can create a more generalized models including continuous data and could handle missing data. Additionally, some resources such as Weka named this algorithm as J48. Actually, it refers to re-implementation of C4.5 release 8.</p>
+<figure id="attachment_12254" style="width: 920px" class="wp-caption aligncenter"><img data-attachment-id="12254" data-permalink="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/guardians_galaxy_groot_1000-920x584/" data-orig-file="https://i0.wp.com/sefiks.com/wp-content/uploads/2018/05/guardians_galaxy_Groot_1000-920x584.jpg?fit=920%2C584&amp;ssl=1" data-orig-size="920,584" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="guardians_galaxy_Groot_1000-920×584" data-image-description="" data-medium-file="https://i0.wp.com/sefiks.com/wp-content/uploads/2018/05/guardians_galaxy_Groot_1000-920x584.jpg?fit=300%2C190&amp;ssl=1" data-large-file="https://i0.wp.com/sefiks.com/wp-content/uploads/2018/05/guardians_galaxy_Groot_1000-920x584.jpg?fit=920%2C584&amp;ssl=1" class=" size-full wp-image-12254 aligncenter" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/guardians_galaxy_Groot_1000-920x584.jpg" alt="guardians_galaxy_Groot_1000-920x584" width="760" height="482" srcset="https://i0.wp.com/sefiks.com/wp-content/uploads/2018/05/guardians_galaxy_Groot_1000-920x584.jpg?resize=920%2C584&amp;ssl=1 920w, https://i0.wp.com/sefiks.com/wp-content/uploads/2018/05/guardians_galaxy_Groot_1000-920x584.jpg?resize=300%2C190&amp;ssl=1 300w, https://i0.wp.com/sefiks.com/wp-content/uploads/2018/05/guardians_galaxy_Groot_1000-920x584.jpg?resize=768%2C488&amp;ssl=1 768w, https://i0.wp.com/sefiks.com/wp-content/uploads/2018/05/guardians_galaxy_Groot_1000-920x584.jpg?resize=720%2C457&amp;ssl=1 720w, https://i0.wp.com/sefiks.com/wp-content/uploads/2018/05/guardians_galaxy_Groot_1000-920x584.jpg?resize=560%2C355&amp;ssl=1 560w" sizes="(max-width: 920px) 100vw, 920px"><figcaption class="wp-caption-text">Groot appears in Guardians of Galaxy and Avengers Infinity War</figcaption></figure>
+<p>We are going to create a decision table for the following dataset. It informs about decision making factors to play tennis at outside for previous 14 days. The dataset&nbsp;might be familiar from the <a href="https://sefiks.com/2017/11/20/a-step-by-step-id3-decision-tree-example/" target="_blank" rel="noopener">ID3 post</a>. The difference is that temperature and humidity columns have continuous values instead of nominal ones.									</p><hr>
+									<center>
+										<a href="https://www.udemy.com/decision-trees-for-machine-learning/?couponCode=DTML-BLOG-18" target="_blank">
+											<img src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/course-dtml.png" alt="TensorFlow 101">
+										</a>
+									</center>
+									<hr>
+								<p></p>
+<table width="674">
+<tbody>
+<tr>
+<th>Day</th>
+<th>Outlook</th>
+<th>Temp.</th>
+<th>Humidity</th>
+<th>Wind</th>
+<th>Decision</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Sunny</td>
+<td>85</td>
+<td>85</td>
+<td>Weak</td>
+<td>No</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sunny</td>
+<td>80</td>
+<td>90</td>
+<td>Strong</td>
+<td>No</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Overcast</td>
+<td>83</td>
+<td>78</td>
+<td>Weak</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Rain</td>
+<td>70</td>
+<td>96</td>
+<td>Weak</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Rain</td>
+<td>68</td>
+<td>80</td>
+<td>Weak</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Rain</td>
+<td>65</td>
+<td>70</td>
+<td>Strong</td>
+<td>No</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Overcast</td>
+<td>64</td>
+<td>65</td>
+<td>Strong</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Sunny</td>
+<td>72</td>
+<td>95</td>
+<td>Weak</td>
+<td>No</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Sunny</td>
+<td>69</td>
+<td>70</td>
+<td>Weak</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Rain</td>
+<td>75</td>
+<td>80</td>
+<td>Weak</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Sunny</td>
+<td>75</td>
+<td>70</td>
+<td>Strong</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Overcast</td>
+<td>72</td>
+<td>90</td>
+<td>Strong</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Overcast</td>
+<td>81</td>
+<td>75</td>
+<td>Weak</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Rain</td>
+<td>71</td>
+<td>80</td>
+<td>Strong</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p>We will do what we have done in <a href="https://sefiks.com/2017/11/20/a-step-by-step-id3-decision-tree-example/" target="_blank" rel="noopener">ID3 example</a>. Firstly, we need to calculate global entropy. There are 14 examples; 9 instances refer to yes decision, and 5 instances refer to no decision.</p>
+<p>Entropy(Decision) = ∑ – p(I) . log<sub>2</sub>p(I) =&nbsp;– p(Yes) . log<sub>2</sub>p(Yes) – p(No) . log<sub>2</sub>p(No) =&nbsp;– (9/14) . log<sub>2</sub>(9/14) – (5/14) . log<sub>2</sub>(5/14) = 0.940</p>
+<p>In ID3 algorithm, we’ve calculated gains for each attribute. Here, we need to calculate gain ratios instead of gains.</p>
+<p>GainRatio(A) = Gain(A) / SplitInfo(A)</p>
+<p>SplitInfo(A) = -∑ |Dj|/|D| x&nbsp;log<sub>2</sub>|Dj|/|D|</p>
+<h2>Wind Attribute</h2>
+<p>Wind is a nominal attribute. Its possible values are weak and strong.</p>
+<p>Gain(Decision, Wind) =&nbsp;Entropy(Decision) –&nbsp;∑ ( p(Decision|Wind) . Entropy(Decision|Wind) )</p>
+<p>Gain(Decision, Wind) =&nbsp;&nbsp;Entropy(Decision) – [ p(Decision|Wind=Weak) . Entropy(Decision|Wind=Weak) ]&nbsp;+ [ p(Decision|Wind=Strong) . Entropy(Decision|Wind=Strong) ]							<!--
+							<br><br>
+							<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+							<ins class="adsbygoogle"
+								 style="display:block; text-align:center;"
+								 data-ad-layout="in-article"
+								 data-ad-format="fluid"
+								 data-ad-client="ca-pub-8160896551633284"
+								 data-ad-slot="7645849096"></ins>
+							<script>
+								 (adsbygoogle = window.adsbygoogle || []).push({});
+							</script>
+							<br>
+							-->
+						</p>
+<p>There are 8 weak wind instances. 2 of them are concluded as no, 6 of them are concluded as yes.</p>
+<p>Entropy(Decision|Wind=Weak) =&nbsp;– p(No) . log<sub>2</sub>p(No) –&nbsp;p(Yes) . log<sub>2</sub>p(Yes) =&nbsp;– (2/8) . log<sub>2</sub>(2/8) –&nbsp;(6/8) . log<sub>2</sub>(6/8) = 0.811</p>
+<p>Entropy(Decision|Wind=Strong) =&nbsp;– (3/6) . log<sub>2</sub>(3/6) –&nbsp;(3/6) . log<sub>2</sub>(3/6) = 1</p>
+<p>Gain(Decision, Wind) =&nbsp;0.940 – (8/14).(0.811) – (6/14).(1) = 0.940 – 0.463 – 0.428 = 0.049</p>
+<p>There are 8 decisions for weak wind, and 6 decisions for strong wind.</p>
+<p>SplitInfo(Decision, Wind) = -(8/14).log<sub>2</sub>(8/14) –&nbsp;(6/14).log<sub>2</sub>(6/14) = 0.461 + 0.524 = 0.985</p>
+<p>GainRatio(Decision, Wind) =&nbsp;Gain(Decision, Wind) /&nbsp;SplitInfo(Decision, Wind) =&nbsp;0.049 /&nbsp;0.985 = 0.049</p>
+<h2>Outlook Attribute</h2>
+<p>Outlook is a nominal attribute, too. Its possible values are sunny, overcast and rain.</p>
+<p>Gain(Decision, Outlook) =&nbsp;Entropy(Decision) –&nbsp;∑ ( p(Decision|Outlook) . Entropy(Decision|Outlook) ) =</p>
+<p>Gain(Decision, Outlook) =&nbsp;Entropy(Decision) –&nbsp;p(Decision|Outlook=Sunny) . Entropy(Decision|Outlook=Sunny) –&nbsp;p(Decision|Outlook=Overcast) . Entropy(Decision|Outlook=Overcast) –&nbsp;p(Decision|Outlook=Rain) . Entropy(Decision|Outlook=Rain)</p>
+<p>There are 5 sunny instances. 3 of them are concluded as no, 2 of them are concluded as yes.</p>
+<p>Entropy(Decision|Outlook=Sunny) =&nbsp;– p(No) . log<sub>2</sub>p(No) –&nbsp;p(Yes) . log<sub>2</sub>p(Yes) = -(3/5).log<sub>2</sub>(3/5) – (2/5).log<sub>2</sub>(2/5) = 0.441 + 0.528 = 0.970</p>
+<p>Entropy(Decision|Outlook=Overcast) =&nbsp;– p(No) . log<sub>2</sub>p(No) –&nbsp;p(Yes) . log<sub>2</sub>p(Yes) = -(0/4).log<sub>2</sub>(0/4) – (4/4).log<sub>2</sub>(4/4) = 0</p>
+<blockquote><p>Notice that&nbsp;log<sub>2</sub>(0) is actually equal to -∞ but assume that it is equal to 0. Actually, lim (x-&gt;0) x.log<sub>2</sub>(x) = 0. If you wonder the proof, please look at <a href="https://sefiks.com/2018/08/25/indeterminate-forms-and-lhospitals-rule-in-decision-trees/" target="_blank" rel="noopener">this post</a>.</p></blockquote>
+<p>Entropy(Decision|Outlook=Rain) =&nbsp;– p(No) . log<sub>2</sub>p(No) –&nbsp;p(Yes) . log<sub>2</sub>p(Yes) =&nbsp;-(2/5).log<sub>2</sub>(2/5) – (3/5).log<sub>2</sub>(3/5) = 0.528 + 0.441 = 0.970</p>
+<p>Gain(Decision, Outlook) =&nbsp;0.940 – (5/14).(0.970) – (4/14).(0) – (5/14).(0.970) – (5/14).(0.970) = 0.246</p>
+<p>There are 5 instances for sunny, 4 instances for overcast and 5 instances for rain</p>
+<p>SplitInfo(Decision, Outlook) =&nbsp;-(5/14).log<sub>2</sub>(5/14)&nbsp;-(4/14).log<sub>2</sub>(4/14)&nbsp;-(5/14).log<sub>2</sub>(5/14) = 1.577</p>
+<p>GainRatio(Decision, Outlook) =&nbsp;Gain(Decision, Outlook)/SplitInfo(Decision, Outlook) = 0.246/1.577 = 0.155</p>
+<h2>Humidity Attribute</h2>
+<p>As an exception, humidity is a continuous attribute.&nbsp;We need to convert continuous values to nominal ones. C4.5 proposes to perform binary split based on a threshold value. Threshold should be a value which offers maximum gain for that attribute. Let’s focus on humidity attribute. Firstly, we need to sort humidity values smallest to largest.</p>
+<table width="674">
+<tbody>
+<tr>
+<th>Day</th>
+<th>Humidity</th>
+<th>Decision</th>
+</tr>
+<tr>
+<td>7</td>
+<td>65</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>6</td>
+<td>70</td>
+<td>No</td>
+</tr>
+<tr>
+<td>9</td>
+<td>70</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>11</td>
+<td>70</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>13</td>
+<td>75</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>3</td>
+<td>78</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>5</td>
+<td>80</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>10</td>
+<td>80</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>14</td>
+<td>80</td>
+<td>No</td>
+</tr>
+<tr>
+<td>1</td>
+<td>85</td>
+<td>No</td>
+</tr>
+<tr>
+<td>2</td>
+<td>90</td>
+<td>No</td>
+</tr>
+<tr>
+<td>12</td>
+<td>90</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>8</td>
+<td>95</td>
+<td>No</td>
+</tr>
+<tr>
+<td>4</td>
+<td>96</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p>Now, we need to iterate on all humidity values and seperate dataset into two parts as instances less than or equal to current value, and instances greater than the current value. We would calculate the gain or gain ratio for every step. The value which maximizes the gain would be the threshold.</p>
+<p>Check 65 as a threshold for humidity</p>
+<p>Entropy(Decision|Humidity&lt;=65) =&nbsp;– p(No) . log<sub>2</sub>p(No) –&nbsp;p(Yes) . log<sub>2</sub>p(Yes) = -(0/1).log<sub>2</sub>(0/1) –&nbsp;(1/1).log<sub>2</sub>(1/1) = 0</p>
+<p>Entropy(Decision|Humidity&gt;65) = -(5/13).log<sub>2</sub>(5/13) –&nbsp;(8/13).log<sub>2</sub>(8/13) =0.530 + 0.431 = 0.961</p>
+<p>Gain(Decision, Humidity&lt;&gt; 65) = 0.940 – (1/14).0 – (13/14).(0.961) = 0.048</p>
+<p><em>* The statement above refers to that what would branch of decision tree be for less than or equal to 65, and greater than 65. It <strong>does not</strong> refer to that humidity is not equal to 65!</em></p>
+<p>SplitInfo(Decision, Humidity&lt;&gt; 65) =&nbsp;-(1/14).log<sub>2</sub>(1/14)&nbsp;-(13/14).log<sub>2</sub>(13/14) = 0.371</p>
+<p>GainRatio(Decision, Humidity&lt;&gt; 65) = 0.126</p>
+<p>Check 70 as a threshold for humidity</p>
+<p>Entropy(Decision|Humidity&lt;=70) = – (1/4).log<sub>2</sub>(1/4) –&nbsp;(3/4).log<sub>2</sub>(3/4) = 0.811</p>
+<p>Entropy(Decision|Humidity&gt;70) =&nbsp; – (4/10).log<sub>2</sub>(4/10) –&nbsp;(6/10).log<sub>2</sub>(6/10) = 0.970</p>
+<p>Gain(Decision, Humidity&lt;&gt; 70) = 0.940 – (4/14).(0.811) – (10/14).(0.970) = 0.940 – 0.231 – 0.692 = 0.014</p>
+<p>SplitInfo(Decision, Humidity&lt;&gt; 70) =&nbsp;-(4/14).log<sub>2</sub>(4/14)&nbsp;-(10/14).log<sub>2</sub>(10/14) = 0.863</p>
+<p>GainRatio(Decision, Humidity&lt;&gt; 70) = 0.016</p>
+<p>Check 75 as a threshold for humidity</p>
+<p>Entropy(Decision|Humidity&lt;=75) =&nbsp;– (1/5).log<sub>2</sub>(1/5) –&nbsp;(4/5).log<sub>2</sub>(4/5) = 0.721</p>
+<p>Entropy(Decision|Humidity&gt;75) =&nbsp;– (4/9).log<sub>2</sub>(4/9) –&nbsp;(5/9).log<sub>2</sub>(5/9) = 0.991</p>
+<p>Gain(Decision, Humidity&lt;&gt; 75) = 0.940 – (5/14).(0.721) – (9/14).(0.991) = 0.940 – 0.2575 – 0.637 = 0.045</p>
+<p>SplitInfo(Decision, Humidity&lt;&gt; 75) =&nbsp;-(5/14).log<sub>2</sub>(4/14)&nbsp;-(9/14).log<sub>2</sub>(10/14) = 0.940</p>
+<p>GainRatio(Decision, Humidity&lt;&gt; 75) = 0.047</p>
+<p>I think calculation demonstrations are enough. Now, I skip the calculations and write only results.</p>
+<p>Gain(Decision, Outlook &lt;&gt; 78) =0.090,&nbsp;GainRatio(Decision, Humidity&lt;&gt; 78) =0.090</p>
+<p>Gain(Decision, Outlook &lt;&gt; 80) = 0.101,&nbsp;GainRatio(Decision, Humidity&lt;&gt; 80) = 0.107</p>
+<p>Gain(Decision, Outlook &lt;&gt; 85) = 0.024,&nbsp;GainRatio(Decision, Humidity&lt;&gt; 85) = 0.027</p>
+<p>Gain(Decision, Outlook &lt;&gt; 90) = 0.010,&nbsp;GainRatio(Decision, Humidity&lt;&gt; 90) = 0.016</p>
+<p>As seen, gain maximizes when threshold is equal to 80 for humidity. This means that we need to compare other nominal attributes and comparison of humidity to 80 to create a branch in our tree.</p>
+<p>Let’s summarize calculated gain and gain ratios. Outlook attribute comes with both maximized gain and gain ratio. This means that we need to put outlook decision in root of decision tree.</p>
+<table>
+<tbody>
+<tr>
+<td>Attribute</td>
+<td>Gain</td>
+<td>GainRatio</td>
+</tr>
+<tr>
+<td>Wind</td>
+<td>&nbsp;0.049</td>
+<td>&nbsp;0.049</td>
+</tr>
+<tr>
+<td>Outlook</td>
+<td>&nbsp;0.246</td>
+<td>&nbsp;0.155</td>
+</tr>
+<tr>
+<td>Humidity &lt;&gt; 80</td>
+<td>&nbsp;0.101</td>
+<td>&nbsp;0.107</td>
+</tr>
+</tbody>
+</table>
+<p>After then, we would apply similar steps just like as ID3 and create following decision tree. Outlook is put into root node. Now, we should look decisions for different outlook types.</p>
+<h3>Outlook = Sunny</h3>
+<p>We’ve split humidity for greater than 80, and less than or equal to 80. Surprisingly, decisions would be no if humidity is greater than 80 when outlook is sunny. Similarly, decision would be yes if humidity is less than or equal to 80 for sunny outlook.</p>
+<table width="674">
+<tbody>
+<tr>
+<th>Day</th>
+<th>Outlook</th>
+<th>Temp.</th>
+<th>Hum. &gt; 80</th>
+<th>Wind</th>
+<th>Decision</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Sunny</td>
+<td>85</td>
+<td>Yes</td>
+<td>Weak</td>
+<td>No</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sunny</td>
+<td>80</td>
+<td>Yes</td>
+<td>Strong</td>
+<td>No</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Sunny</td>
+<td>72</td>
+<td>Yes</td>
+<td>Weak</td>
+<td>No</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Sunny</td>
+<td>69</td>
+<td>No</td>
+<td>Weak</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Sunny</td>
+<td>75</td>
+<td>No</td>
+<td>Strong</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h3>Outlook = Overcast</h3>
+<p>If outlook is overcast, then no matter temperature, humidity or wind are, decision will always be yes.</p>
+<table width="674">
+<tbody>
+<tr>
+<th>Day</th>
+<th>Outlook</th>
+<th>Temp.</th>
+<th>Hum. &gt; 80</th>
+<th>Wind</th>
+<th>Decision</th>
+</tr>
+<tr>
+<td>3</td>
+<td>Overcast</td>
+<td>83</td>
+<td>No</td>
+<td>Weak</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Overcast</td>
+<td>64</td>
+<td>No</td>
+<td>Strong</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Overcast</td>
+<td>72</td>
+<td>Yes</td>
+<td>Strong</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Overcast</td>
+<td>81</td>
+<td>No</td>
+<td>Weak</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h3>Outlook = Rain</h3>
+<p>We’ve just filtered rain outlook instances. As seen, decision would be yes when wind is weak, and it would be no if wind is strong.</p>
+<table width="674">
+<tbody>
+<tr>
+<th>Day</th>
+<th>Outlook</th>
+<th>Temp.</th>
+<th>Hum. &gt; 80</th>
+<th>Wind</th>
+<th>Decision</th>
+</tr>
+<tr>
+<td>4</td>
+<td>Rain</td>
+<td>70</td>
+<td>Yes</td>
+<td>Weak</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Rain</td>
+<td>68</td>
+<td>No</td>
+<td>Weak</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Rain</td>
+<td>65</td>
+<td>No</td>
+<td>Strong</td>
+<td>No</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Rain</td>
+<td>75</td>
+<td>No</td>
+<td>Weak</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Rain</td>
+<td>71</td>
+<td>No</td>
+<td>Strong</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p>Final form of decision table is demonstrated below.</p>
+<figure id="attachment_12260" style="width: 1330px" class="wp-caption aligncenter"><img data-attachment-id="12260" data-permalink="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/c45-result/" data-orig-file="https://i0.wp.com/sefiks.com/wp-content/uploads/2018/05/c45-result.png?fit=1330%2C642&amp;ssl=1" data-orig-size="1330,642" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="c45-result" data-image-description="" data-medium-file="https://i0.wp.com/sefiks.com/wp-content/uploads/2018/05/c45-result.png?fit=300%2C145&amp;ssl=1" data-large-file="https://i0.wp.com/sefiks.com/wp-content/uploads/2018/05/c45-result.png?fit=1024%2C494&amp;ssl=1" class=" size-full wp-image-12260 aligncenter" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/c45-result.png" alt="c45-result" width="760" height="367" srcset="https://i0.wp.com/sefiks.com/wp-content/uploads/2018/05/c45-result.png?w=1330&amp;ssl=1 1330w, https://i0.wp.com/sefiks.com/wp-content/uploads/2018/05/c45-result.png?resize=300%2C145&amp;ssl=1 300w, https://i0.wp.com/sefiks.com/wp-content/uploads/2018/05/c45-result.png?resize=768%2C371&amp;ssl=1 768w, https://i0.wp.com/sefiks.com/wp-content/uploads/2018/05/c45-result.png?resize=1024%2C494&amp;ssl=1 1024w, https://i0.wp.com/sefiks.com/wp-content/uploads/2018/05/c45-result.png?resize=720%2C348&amp;ssl=1 720w, https://i0.wp.com/sefiks.com/wp-content/uploads/2018/05/c45-result.png?resize=560%2C270&amp;ssl=1 560w" sizes="(max-width: 1140px) 100vw, 1140px"><figcaption class="wp-caption-text">Decision tree generated by C4.5</figcaption></figure>
+<p>So, C4.5 algorithm solves most of problems in ID3. The algorithm uses gain ratios instead of gains. In this way, it creates more generalized trees and not to fall into overfitting. Moreover, the algorithm transforms continuous attributes to nominal ones based on gain maximization and in this way it can handle continuous data. Additionally, it can ignore instances including missing data and handle missing dataset. On the other hand, both ID3 and C4.5 requires high CPU and memory demand. Besides,&nbsp;most of authorities think decision tree algorithms in data mining field instead of machine learning.</p>
+<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-12091" class="share-twitter sd-button share-icon no-text" href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/?share=twitter&amp;nb=1" target="_blank" title="Click to share on Twitter"><span></span><span class="sharing-screen-reader-text">Click to share on Twitter (Opens in new window)</span></a></li><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-12091" class="share-facebook sd-button share-icon no-text" href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/?share=facebook&amp;nb=1" target="_blank" title="Click to share on Facebook"><span><span class="share-count">2</span></span><span class="sharing-screen-reader-text">Click to share on Facebook (Opens in new window)<span class="share-count">2</span></span></a></li><li class="share-google-plus-1"><a rel="nofollow noopener noreferrer" data-shared="sharing-google-12091" class="share-google-plus-1 sd-button share-icon no-text" href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/?share=google-plus-1&amp;nb=1" target="_blank" title="Click to share on Google+"><span></span><span class="sharing-screen-reader-text">Click to share on Google+ (Opens in new window)</span></a></li><li class="share-end"></li></ul></div></div></div><div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-loaded" id="like-post-wrapper-143904331-12091-5bcff918911a0" data-src="https://widgets.wp.com/likes/#blog_id=143904331&amp;post_id=12091&amp;origin=sefiks.com&amp;obj_id=143904331-12091-5bcff918911a0" data-name="like-post-frame-143904331-12091-5bcff918911a0"><h3 class="sd-title">Like this:</h3><div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px; display: none;"><span class="button"><span>Like</span></span> <span class="loading">Loading...</span></div><iframe name="like-post-frame-143904331-12091-5bcff918911a0" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/saved_resource(4).html" height="55px" width="100%" frameborder="0" scrolling="no"></iframe><span class="sd-text-color"></span><a class="sd-link-color"></a></div>
+<div id="jp-relatedposts" class="jp-relatedposts" style="display: block;">
+	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
+<div class="jp-relatedposts-items jp-relatedposts-items-visual jp-relatedposts-grid "><div class="jp-relatedposts-post jp-relatedposts-post0 jp-relatedposts-post-thumbs" data-post-id="12611" data-post-format="false"><a class="jp-relatedposts-post-a" href="https://sefiks.com/2018/08/27/a-step-by-step-cart-decision-tree-example/" title="A Step by Step CART Decision Tree Example
+
+An algorithm can be transparent only if its decisions can be read and understood by people clearly. Even though deep learning is superstar of machine learning nowadays, it is an opaque algorithm and we do not know the reason of decision. Herein, Decision tree algorithms still keep their popularity because…" rel="nofollow" data-origin="12091" data-position="0"><img class="jp-relatedposts-post-img" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/cart-step-6.png" width="350" alt="A Step by Step CART Decision Tree Example"></a><h4 class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://sefiks.com/2018/08/27/a-step-by-step-cart-decision-tree-example/" title="A Step by Step CART Decision Tree Example
+
+An algorithm can be transparent only if its decisions can be read and understood by people clearly. Even though deep learning is superstar of machine learning nowadays, it is an opaque algorithm and we do not know the reason of decision. Herein, Decision tree algorithms still keep their popularity because…" rel="nofollow" data-origin="12091" data-position="0">A Step by Step CART Decision Tree Example</a></h4><p class="jp-relatedposts-post-excerpt">An algorithm can be transparent only if its decisions can be read and understood by people clearly. Even though deep learning is superstar of machine learning nowadays, it is an opaque algorithm and we do not know the reason of decision. Herein, Decision tree algorithms still keep their popularity because…</p></div><div class="jp-relatedposts-post jp-relatedposts-post1 jp-relatedposts-post-thumbs" data-post-id="11352" data-post-format="false"><a class="jp-relatedposts-post-a" href="https://sefiks.com/2017/11/20/a-step-by-step-id3-decision-tree-example/" title="A Step by Step ID3 Decision Tree Example
+
+Decision tree algorithms transfom raw data to rule based decision making trees. Herein, ID3 is one of the most common decision tree algorithm. Firstly, It was introduced in 1986 and it is acronym of Iterative Dichotomiser. First of all, dichotomisation means dividing into two completely opposite things. That&#39;s why, the algorithm…" rel="nofollow" data-origin="12091" data-position="1"><img class="jp-relatedposts-post-img" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/premonition_cover.jpg" width="350" alt="A Step by Step ID3 Decision Tree Example"></a><h4 class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://sefiks.com/2017/11/20/a-step-by-step-id3-decision-tree-example/" title="A Step by Step ID3 Decision Tree Example
+
+Decision tree algorithms transfom raw data to rule based decision making trees. Herein, ID3 is one of the most common decision tree algorithm. Firstly, It was introduced in 1986 and it is acronym of Iterative Dichotomiser. First of all, dichotomisation means dividing into two completely opposite things. That&#39;s why, the algorithm…" rel="nofollow" data-origin="12091" data-position="1">A Step by Step ID3 Decision Tree Example</a></h4><p class="jp-relatedposts-post-excerpt">Decision tree algorithms transfom raw data to rule based decision making trees. Herein, ID3 is one of the most common decision tree algorithm. Firstly, It was introduced in 1986&nbsp;and it is acronym of Iterative Dichotomiser. First of all, dichotomisation means dividing into two completely opposite things. That's why, the algorithm…</p></div><div class="jp-relatedposts-post jp-relatedposts-post2 jp-relatedposts-post-thumbs" data-post-id="12685" data-post-format="false"><a class="jp-relatedposts-post-a" href="https://sefiks.com/2018/09/06/10-interview-questions-asked-in-machine-learning/" title="10 Interview Questions Asked in Machine Learning
+
+Machine learning still occupies the peak place in Gartner hype cycle in 2017. Beyond anything, Glassdoor reports that data scientist role is the best job based on job satisfaction, job openings and average salary. However, there is no dedicated bachelor degree for this field. It is just like a diversity…" rel="nofollow" data-origin="12091" data-position="2"><img class="jp-relatedposts-post-img" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/muhammad-ali.jpg" width="350" alt="10 Interview Questions Asked in Machine Learning"></a><h4 class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://sefiks.com/2018/09/06/10-interview-questions-asked-in-machine-learning/" title="10 Interview Questions Asked in Machine Learning
+
+Machine learning still occupies the peak place in Gartner hype cycle in 2017. Beyond anything, Glassdoor reports that data scientist role is the best job based on job satisfaction, job openings and average salary. However, there is no dedicated bachelor degree for this field. It is just like a diversity…" rel="nofollow" data-origin="12091" data-position="2">10 Interview Questions Asked in Machine Learning</a></h4><p class="jp-relatedposts-post-excerpt">Machine learning still occupies the peak place in Gartner hype cycle in 2017. Beyond anything, Glassdoor reports that data scientist role is the best job based on job satisfaction, job openings and average salary. However, there is no dedicated bachelor degree for this field. It is just like a diversity…</p></div></div></div><p></p>		
+		<!-- media.net footer -->
+		<!-- this is good for mobile -->
+		<!--
+		<script id="mNCC" language="javascript">
+			medianet_width = "468";
+			medianet_height = "60";
+			medianet_crid = "475792699";
+			medianet_versionId = "3111299"; 
+		  </script>
+		<script src="//contextual.media.net/nmedianet.js?cid=8CUS8605M"></script>
+		-->
+			</div><!-- .entry-content -->
+	
+	
+
+	<footer class="entry-footer">
+		<div class="entry-meta">
+			<span class="entry-tags"><a href="https://sefiks.com/tag/c4-5/" rel="tag">c4.5</a>, <a href="https://sefiks.com/tag/decision-tree/" rel="tag">decision tree</a>, <a href="https://sefiks.com/tag/gradient-boosted/" rel="tag">gradient boosted</a>, <a href="https://sefiks.com/tag/id3/" rel="tag">id3</a></span>		</div>
+	</footer><!-- .entry-footer -->
+
+</article><!-- #post-## -->
+
+
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://sefiks.com/2018/04/08/random-initialization-in-neural-networks/" rel="prev"><span class="meta-nav" aria-hidden="true">Previous</span> <span class="meta-nav-title">Random Initialization in Neural Networks</span></a></div><div class="nav-next"><a href="https://sefiks.com/2018/05/21/unofficial-guide-to-fermats-little-theorem/" rel="next"><span class="meta-nav" aria-hidden="true">Next</span> <span class="meta-nav-title">Unofficial Guide to Fermat’s Little Theorem</span> </a></div></div>
+	</nav>
+			
+<div id="comments" class="comments-area clear-fix">
+
+	
+			<h2 class="comments-title">
+			15 Comments		</h2>
+
+		
+		<ol class="comment-list">
+					<li id="comment-270" class="comment even thread-even depth-1 parent">
+			<article id="div-comment-270" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/5a1f985277de8588d96bb5aaa6e73773.png" srcset="https://secure.gravatar.com/avatar/5a1f985277de8588d96bb5aaa6e73773?s=222&amp;d=mm&amp;r=g 2x" class="avatar avatar-111 photo grav-hashed grav-hijack" height="111" width="111" id="grav-5a1f985277de8588d96bb5aaa6e73773-0">						<b class="fn">Dinca Andrei</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#comment-270">
+							<time datetime="2018-06-15T08:31:58+00:00">
+								June 15, 2018 at 8:31 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>GainRatio(Decision, Humidity 65) = 0.126<br>
+GainRatio(Decision, Humidity 80) = 0.107</p>
+<p>How comes you took into account a threshold of 80 when GainRatio for 65 is higher?</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#comment-270" onclick="return addComment.moveForm( &quot;div-comment-270&quot;, &quot;270&quot;, &quot;respond&quot;, &quot;12091&quot; )" aria-label="Reply to Dinca Andrei">Reply</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-271" class="comment byuser comment-author-sefik bypostauthor odd alt depth-2 parent">
+			<article id="div-comment-271" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/003f7711c95659ec4894d5f21fde8e0d.png" srcset="https://secure.gravatar.com/avatar/003f7711c95659ec4894d5f21fde8e0d?s=222&amp;d=mm&amp;r=g 2x" class="avatar avatar-111 photo grav-hashed grav-hijack" height="111" width="111" id="grav-003f7711c95659ec4894d5f21fde8e0d-0">						<b class="fn">Sefik Serengil</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#comment-271">
+							<time datetime="2018-06-15T09:00:29+00:00">
+								June 15, 2018 at 9:00 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>In case of Humidity&lt; =80, there are 2 no and 7 yes decisions. Total number of instances is 9
+<br>
+Entropy(Decision|Humidity&lt; =80) = – p(No) . log2p(No) – p(Yes) . log2p(Yes) = - (2/9) * log(2/9) - (7/9)*log(7/9) = 0.764 (BTW, log refers to the base 2)
+<br>
+In case of Humidity&gt;80, there are 3 no and 2 yes decisions. Total number of instances is 5<br>
+Entropy(Decision|Humidity&gt;80) = – p(No) . log2p(No) – p(Yes) . log2p(Yes) = -(3/5)*log(3/5)  – (2/5)*log(2/5) = 0.971<br>
+<br>
+Global entropy was calculated as 0.940 in previous steps<br>
+<br>
+Now, it is time to calculate Gain.<br>
+Gain(Decision, Humidity&lt;&gt; 80) = Entropy(Decision) – p(Humidity&lt; =80) * Entropy(Decision|Humidity&lt;=80) - p(Humidity&gt;80)*Entropy(Decision|Humidity&gt;80)<br>
+Gain(Decision, Humidity&lt;&gt; 80) = 0.940 – (9/14)*0.764 – (5/14)*0.971 = 0.101<br>
+<br>
+Now, we can calculate GainRatio but before we need to calculate SplitInfo first.<br>
+<br>
+SplitInfo(Decision, Humidity&lt;&gt; 80) = -p(No)*log(p(No)) – p(Yes)*log(P(Yes)) = -(9/14)*log(9/14) – (5/14)*log(5/14) = 0.940<br>
+<br>
+GainRatio = Gain / SplitInfo = 0.101 / 0.940 = 0.107<br>
+<br>
+I hope this explanation is understandable.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#comment-271" onclick="return addComment.moveForm( &quot;div-comment-271&quot;, &quot;271&quot;, &quot;respond&quot;, &quot;12091&quot; )" aria-label="Reply to Sefik Serengil">Reply</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-272" class="comment even depth-3">
+			<article id="div-comment-272" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/5a1f985277de8588d96bb5aaa6e73773.png" srcset="https://secure.gravatar.com/avatar/5a1f985277de8588d96bb5aaa6e73773?s=222&amp;d=mm&amp;r=g 2x" class="avatar avatar-111 photo grav-hashed grav-hijack" height="111" width="111" id="grav-5a1f985277de8588d96bb5aaa6e73773-1">						<b class="fn">Dinca Andrei</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#comment-272">
+							<time datetime="2018-06-15T09:13:12+00:00">
+								June 15, 2018 at 9:13 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Understood, thanks</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#comment-272" onclick="return addComment.moveForm( &quot;div-comment-272&quot;, &quot;272&quot;, &quot;respond&quot;, &quot;12091&quot; )" aria-label="Reply to Dinca Andrei">Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-286" class="comment odd alt thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-286" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/185ff99b8e9577884477eed9ab9700f2.png" srcset="https://secure.gravatar.com/avatar/185ff99b8e9577884477eed9ab9700f2?s=222&amp;d=mm&amp;r=g 2x" class="avatar avatar-111 photo grav-hashed grav-hijack" height="111" width="111" id="grav-185ff99b8e9577884477eed9ab9700f2-0">						<b class="fn"><a href="http://good2use.com/" rel="external nofollow" class="url">eddie reader</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#comment-286">
+							<time datetime="2018-07-19T10:55:35+00:00">
+								July 19, 2018 at 10:55 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>You have the following<br>
+Gain(Decision, Humidity 70) = 0.940 – (4/14).(0.811) – (10/14).(0.970) = 0.940 – 0.231 – 0.692 = 0.014</p>
+<p>there are 3 values of 70 so surely P(Humidity 70)  =  P( No) = 3/14 not 4/14</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#comment-286" onclick="return addComment.moveForm( &quot;div-comment-286&quot;, &quot;286&quot;, &quot;respond&quot;, &quot;12091&quot; )" aria-label="Reply to eddie reader">Reply</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-287" class="comment byuser comment-author-sefik bypostauthor even depth-2">
+			<article id="div-comment-287" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/003f7711c95659ec4894d5f21fde8e0d.png" srcset="https://secure.gravatar.com/avatar/003f7711c95659ec4894d5f21fde8e0d?s=222&amp;d=mm&amp;r=g 2x" class="avatar avatar-111 photo grav-hashed grav-hijack" height="111" width="111" id="grav-003f7711c95659ec4894d5f21fde8e0d-1">						<b class="fn">Sefik Serengil</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#comment-287">
+							<time datetime="2018-07-19T12:37:12+00:00">
+								July 19, 2018 at 12:37 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Here, 4 is the number of instances which are less than or equal to 70. Humidity of instances for day 6, 7, 9, 11 are less than or equal to 70.</p>
+<p>Similarly, 10 is the number of instances which are greater than 70. Number of instances greater than 70 is 10.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#comment-287" onclick="return addComment.moveForm( &quot;div-comment-287&quot;, &quot;287&quot;, &quot;respond&quot;, &quot;12091&quot; )" aria-label="Reply to Sefik Serengil">Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-288" class="comment odd alt thread-even depth-1 parent">
+			<article id="div-comment-288" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/185ff99b8e9577884477eed9ab9700f2.png" srcset="https://secure.gravatar.com/avatar/185ff99b8e9577884477eed9ab9700f2?s=222&amp;d=mm&amp;r=g 2x" class="avatar avatar-111 photo grav-hashed grav-hijack" height="111" width="111" id="grav-185ff99b8e9577884477eed9ab9700f2-1">						<b class="fn"><a href="http://good2use.com/" rel="external nofollow" class="url">eddie reader</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#comment-288">
+							<time datetime="2018-07-19T15:12:09+00:00">
+								July 19, 2018 at 3:12 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I’m sorry I posted the wrong reference. It should have been<br>
+Gain(Decision, Humidity 70) = 0.940 – (4/14).(0.811) – (10/14).(0.970) = 0.940 – 0.231 – 0.692 = 0.014</p>
+<p>so,<br>
+there are 3 values of 70 so surely P(Humidity 70) = P( No) = 3/14 not 4/14<br>
+thanks for your attention</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#comment-288" onclick="return addComment.moveForm( &quot;div-comment-288&quot;, &quot;288&quot;, &quot;respond&quot;, &quot;12091&quot; )" aria-label="Reply to eddie reader">Reply</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-289" class="comment byuser comment-author-sefik bypostauthor even depth-2 parent">
+			<article id="div-comment-289" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/003f7711c95659ec4894d5f21fde8e0d.png" srcset="https://secure.gravatar.com/avatar/003f7711c95659ec4894d5f21fde8e0d?s=222&amp;d=mm&amp;r=g 2x" class="avatar avatar-111 photo grav-hashed grav-hijack" height="111" width="111" id="grav-003f7711c95659ec4894d5f21fde8e0d-2">						<b class="fn">Sefik Serengil</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#comment-289">
+							<time datetime="2018-07-19T15:21:31+00:00">
+								July 19, 2018 at 3:21 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>You were right if we need Gain(Decision, Humidity = 70) but we need Gain(Decision, Humidity &lt;= 70). 
+
+Gain(Decision, Humidity ? 70) = 0.940 – (4/14).(0.811) – (10/14).(0.970) = 0.940 – 0.231 – 0.692 = 0.014
+
+In this equation 4/14 is probability of instances less than or equal to 70, and 10/14 is probability of instances greater than 70.
+</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#comment-289" onclick="return addComment.moveForm( &quot;div-comment-289&quot;, &quot;289&quot;, &quot;respond&quot;, &quot;12091&quot; )" aria-label="Reply to Sefik Serengil">Reply</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-291" class="comment odd alt depth-3 parent">
+			<article id="div-comment-291" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/185ff99b8e9577884477eed9ab9700f2.png" srcset="https://secure.gravatar.com/avatar/185ff99b8e9577884477eed9ab9700f2?s=222&amp;d=mm&amp;r=g 2x" class="avatar avatar-111 photo grav-hashed grav-hijack" height="111" width="111" id="grav-185ff99b8e9577884477eed9ab9700f2-2">						<b class="fn"><a href="http://good2use.com/" rel="external nofollow" class="url">eddie reader</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#comment-291">
+							<time datetime="2018-07-19T15:34:11+00:00">
+								July 19, 2018 at 3:34 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I do understand that but the statement is ‘not equal’ to 70, not less than or equal. If the objective is to have values less than or equal and values greater than then the calculation is that of the global entropy, i.e. all values surely.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#comment-291" onclick="return addComment.moveForm( &quot;div-comment-291&quot;, &quot;291&quot;, &quot;respond&quot;, &quot;12091&quot; )" aria-label="Reply to eddie reader">Reply</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-292" class="comment byuser comment-author-sefik bypostauthor even depth-4 parent">
+			<article id="div-comment-292" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/003f7711c95659ec4894d5f21fde8e0d.png" srcset="https://secure.gravatar.com/avatar/003f7711c95659ec4894d5f21fde8e0d?s=222&amp;d=mm&amp;r=g 2x" class="avatar avatar-111 photo grav-hashed grav-hijack" height="111" width="111" id="grav-003f7711c95659ec4894d5f21fde8e0d-3">						<b class="fn">Sefik Serengil</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#comment-292">
+							<time datetime="2018-07-19T15:50:54+00:00">
+								July 19, 2018 at 3:50 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Right, cause of poor communication. Actually, I would not intent as your understanding. I should mention that in the post.</p>
+<p>The statement Gain(Decision, Humidity ? 70) refers to that what would be if the branch of decision tree is for less than or equal to 70, and greater than 70. All calculations made with this approach.</p>
+<p>I hope everything is clear now. Thank you for your attention.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#comment-292" onclick="return addComment.moveForm( &quot;div-comment-292&quot;, &quot;292&quot;, &quot;respond&quot;, &quot;12091&quot; )" aria-label="Reply to Sefik Serengil">Reply</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-293" class="comment odd alt depth-5">
+			<article id="div-comment-293" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/185ff99b8e9577884477eed9ab9700f2.png" srcset="https://secure.gravatar.com/avatar/185ff99b8e9577884477eed9ab9700f2?s=222&amp;d=mm&amp;r=g 2x" class="avatar avatar-111 photo grav-hashed grav-hijack" height="111" width="111" id="grav-185ff99b8e9577884477eed9ab9700f2-3">						<b class="fn"><a href="http://good2use.com/" rel="external nofollow" class="url">eddie reader</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#comment-293">
+							<time datetime="2018-07-19T17:44:46+00:00">
+								July 19, 2018 at 5:44 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>OK, now I get it. Thanks a lot both for your blog, attention and patience.  It is much appreciated.</p>
+				</div><!-- .comment-content -->
+
+							</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-290" class="comment even thread-odd thread-alt depth-1">
+			<article id="div-comment-290" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/185ff99b8e9577884477eed9ab9700f2.png" srcset="https://secure.gravatar.com/avatar/185ff99b8e9577884477eed9ab9700f2?s=222&amp;d=mm&amp;r=g 2x" class="avatar avatar-111 photo grav-hashed grav-hijack" height="111" width="111" id="grav-185ff99b8e9577884477eed9ab9700f2-4">						<b class="fn"><a href="http://good2use.com/" rel="external nofollow" class="url">eddie reader</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#comment-290">
+							<time datetime="2018-07-19T15:28:41+00:00">
+								July 19, 2018 at 3:28 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Looks as if the editor loses the not-equal sign, hence the poor communication..<br>
+The expression in question is<br>
+Gain(Decision, Humidity¬= 70) = 0.940 – (4/14).(0.811) – (10/14).(0.970) = 0.940 – 0.231 – 0.692 = 0.014</p>
+<p>There being 3 instances of 70 so 3 instances where P(Humidity¬=70) is false, i.e. P(No) = 3/14</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#comment-290" onclick="return addComment.moveForm( &quot;div-comment-290&quot;, &quot;290&quot;, &quot;respond&quot;, &quot;12091&quot; )" aria-label="Reply to eddie reader">Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+		<li id="comment-294" class="comment odd alt thread-even depth-1 parent">
+			<article id="div-comment-294" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/185ff99b8e9577884477eed9ab9700f2.png" srcset="https://secure.gravatar.com/avatar/185ff99b8e9577884477eed9ab9700f2?s=222&amp;d=mm&amp;r=g 2x" class="avatar avatar-111 photo grav-hashed grav-hijack" height="111" width="111" id="grav-185ff99b8e9577884477eed9ab9700f2-5">						<b class="fn"><a href="http://good2use.com/" rel="external nofollow" class="url">eddie reader</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#comment-294">
+							<time datetime="2018-07-22T11:02:17+00:00">
+								July 22, 2018 at 11:02 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I’m sorry to have to return to the point made by Dinca Andrei but I think the confusion arises from a statement in your blog<br>
+The value which maximizes the gain would be the threshold.</p>
+<p>Is it not the case that the threshold is the value that minimises Entropy(Decision|Humidity threshold)<br>
+Here are some calculations, which if taken with the ones you perform, does show 80 as the splitting point – Entropy(Decision|Humidity 80) is the least value</p>
+<p>le 65	0<br>
+&gt; 65	0.961237<br>
+ 65	0.892577<br>
+g ratio	0.047423<br>
+split	0.371232<br>
+g ratio	0.127745</p>
+<p>le 78	0.650022<br>
+&gt;78	1<br>
+78	0.85001<br>
+g	0.08999<br>
+split	0.985228<br>
+g ratio	0.09134</p>
+<p>le 80	0.764205<br>
+&gt;80	0.970951<br>
+80	0.838042<br>
+g	0.101958<br>
+spli	0.940286<br>
+g ratio	0.108433</p>
+<p>le 85	0.881291<br>
+&gt;85	1<br>
+85	0.915208<br>
+g	0.024792<br>
+split	0.863121<br>
+g ratio	0.028724</p>
+<p>Thanks for your attention.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#comment-294" onclick="return addComment.moveForm( &quot;div-comment-294&quot;, &quot;294&quot;, &quot;respond&quot;, &quot;12091&quot; )" aria-label="Reply to eddie reader">Reply</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-295" class="comment byuser comment-author-sefik bypostauthor even depth-2">
+			<article id="div-comment-295" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/003f7711c95659ec4894d5f21fde8e0d.png" srcset="https://secure.gravatar.com/avatar/003f7711c95659ec4894d5f21fde8e0d?s=222&amp;d=mm&amp;r=g 2x" class="avatar avatar-111 photo grav-hashed grav-hijack" height="111" width="111" id="grav-003f7711c95659ec4894d5f21fde8e0d-4">						<b class="fn">Sefik Serengil</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#comment-295">
+							<time datetime="2018-07-22T13:36:21+00:00">
+								July 22, 2018 at 1:36 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Yes, you are absolutely right. I summarized gain and gain ratios for every possible threshold point. </p>
+<p>branch-&gt;	65	70	75	78	80	85	90<br>
+gain		0.048	0.014	0.045	0.09	0.101	0.024	0.01<br>
+gain ratio	0.126	0.016	0.047	0.09	0.107	0.027	0.016</p>
+<p>I stated that “We would calculate the gain OR gain ratio for every step. The value which maximizes the gain would be the threshold.”. Now, it is all up to you to decide threshold point based on gain or gain ratio. If prefer to use gain and my threshold would be 80. If you prefer to use gain ratio metric, your threshold would be 65. The both approaches are correct.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#comment-295" onclick="return addComment.moveForm( &quot;div-comment-295&quot;, &quot;295&quot;, &quot;respond&quot;, &quot;12091&quot; )" aria-label="Reply to Sefik Serengil">Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-302" class="comment odd alt thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-302" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/02e8f9b8e22e0fc2b80aa79922b67d69.png" srcset="https://secure.gravatar.com/avatar/02e8f9b8e22e0fc2b80aa79922b67d69?s=222&amp;d=mm&amp;r=g 2x" class="avatar avatar-111 photo grav-hashed grav-hijack" height="111" width="111" id="grav-02e8f9b8e22e0fc2b80aa79922b67d69-0">						<b class="fn">mzn</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#comment-302">
+							<time datetime="2018-08-11T14:45:37+00:00">
+								August 11, 2018 at 2:45 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>HI ,, are this algorithm good for a large database , like a dataset for large manufacture<br>
+Thank you</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#comment-302" onclick="return addComment.moveForm( &quot;div-comment-302&quot;, &quot;302&quot;, &quot;respond&quot;, &quot;12091&quot; )" aria-label="Reply to mzn">Reply</a></div>			</article><!-- .comment-body -->
+<ol class="children">
+		<li id="comment-303" class="comment byuser comment-author-sefik bypostauthor even depth-2">
+			<article id="div-comment-303" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/003f7711c95659ec4894d5f21fde8e0d.png" srcset="https://secure.gravatar.com/avatar/003f7711c95659ec4894d5f21fde8e0d?s=222&amp;d=mm&amp;r=g 2x" class="avatar avatar-111 photo grav-hashed grav-hijack" height="111" width="111" id="grav-003f7711c95659ec4894d5f21fde8e0d-5">						<b class="fn">Sefik Serengil</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#comment-303">
+							<time datetime="2018-08-11T14:48:10+00:00">
+								August 11, 2018 at 2:48 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Decision tree algorithms require high memory demand. You should look its extended version – random forests, this might be adapted better for your problem</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#comment-303" onclick="return addComment.moveForm( &quot;div-comment-303&quot;, &quot;303&quot;, &quot;respond&quot;, &quot;12091&quot; )" aria-label="Reply to Sefik Serengil">Reply</a></div>			</article><!-- .comment-body -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+		
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://sefiks.com/2018/05/13/a-step-by-step-c4-5-decision-tree-example/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="https://sefiks.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input placeholder="ex: jane doe" id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input type="email" placeholder="ex: janedoe@gmail.com" id="email" name="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input placeholder="ex: http://janedoe.wordpress.com" id="url" name="url" type="url" value="" size="30" maxlength="200"></p>
+<p class="comment-subscription-form"><input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"> <label class="subscribe-label" id="subscribe-label" for="subscribe_comments">Notify me of follow-up comments by email.</label></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog">Notify me of new posts by email.</label></p><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Submit"> <input type="hidden" name="comment_post_ID" value="12091" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="9f2591eacb"></p><p style="display: none;"></p>			<input type="hidden" name="js-spam-prevention" value="04a9dbbc9b81907dde80eb83e07c3a39"><input type="hidden" id="ak_js" name="ak_js" value="1540356548915"></form>
+			</div><!-- #respond -->
+	<p class="akismet_comment_form_privacy_notice">This site uses Akismet to reduce spam. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Learn how your comment data is processed</a>.</p>	<script type="text/javascript">
+		jQuery( document ).ready( function( $ ) {
+			$( '.comment-form, #registerform' ).append( '<input type="hidden" name="js-spam-prevention" value="04a9dbbc9b81907dde80eb83e07c3a39"/>' );
+		} );
+	</script>
+	
+</div><!-- #comments -->
+
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+<div id="secondary" class="widget-area" role="complementary">
+	<aside id="email-subscribers-3" class="widget widget_text elp-widget">        <div class="es_form_container">
+            <form class="es_widget_form" data-es_form_id="es_widget_form">
+				                    <div class="es_caption">You can follow this blog and receive notifications for new posts</div>
+								                <div class="es_lablebox">
+                    <label class="es_widget_form_email">Email *</label>
+                </div>
+                <div class="es_textbox">
+                    <input type="email" id="es_txt_email" class="es_textbox_class" name="es_txt_email" value="" maxlength="60" required="">
+                </div>
+				                <div class="es_button">
+                    <input type="submit" id="es_txt_button" class="es_textbox_button es_submit_button" name="es_txt_button" value="Subscribe">
+                </div>
+                <div class="es_msg" id="es_widget_msg">
+                    <span id="es_msg"></span>
+                </div>
+				                    <input type="hidden" id="es_txt_name" name="es_txt_name" value="">
+								<div style="position:absolute; left: -5000px"><input type="text" name="es_required_field" class="es_required_field" tabindex="-1" autocomplete="es_test"></div>
+                <input type="hidden" id="es_txt_group" name="es_txt_group" value="Public">
+				                <input type="hidden" name="es-subscribe" id="es-subscribe" value="506b274de6">
+            </form>
+			        </div>
+        </aside><aside id="text-3" class="widget widget_text">			<div class="textwidget"><p>You can use any content of this blog just to the extent that you cite or reference</p>
+</div>
+		</aside></div><!-- #secondary -->
+			
+			<footer id="colophon" class="site-footer" role="contentinfo">
+				
+			</footer>
+
+		</div><!-- .col-width -->
+	</div><!-- #content -->
+
+</div><!-- #page -->
+
+	<div style="display:none">
+	<div class="grofile-hash-map-5a1f985277de8588d96bb5aaa6e73773">
+	</div>
+	<div class="grofile-hash-map-003f7711c95659ec4894d5f21fde8e0d">
+	</div>
+	<div class="grofile-hash-map-185ff99b8e9577884477eed9ab9700f2">
+	</div>
+	<div class="grofile-hash-map-02e8f9b8e22e0fc2b80aa79922b67d69">
+	</div>
+	</div>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/sefiks.com\/2018\/05\/13\/a-step-by-step-c4-5-decision-tree-example\/":12091};
+	</script>
+				<!--[if lte IE 8]>
+<link rel='stylesheet' id='jetpack-carousel-ie8fix-css'  href='https://sefiks.com/wp-content/plugins/jetpack/modules/carousel/jetpack-carousel-ie8fix.css?ver=20121024' type='text/css' media='all' />
+<![endif]-->
+<script type="text/javascript" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/photon.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var es_widget_page_notices = {"es_email_notice":"Please enter email address","es_success_message":"Successfully Subscribed.","es_success_notice":"Your subscription was successful! Kindly check your mailbox and confirm your subscription. If you don't see the email within a few minutes, check the spam\/junk folder.","es_email_exists":"Email Address already exists!","es_error":"Oops.. Unexpected error occurred.","es_invalid_email":"Invalid email address","es_try_later":"Please try after some time","es_ajax_url":"https:\/\/sefiks.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/es-widget-page.js.download"></script>
+<script type="text/javascript" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/devicepx-jetpack.js.download"></script>
+<script type="text/javascript" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/gprofiles.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/wpgroho.js.download"></script>
+<script type="text/javascript" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/columnlist.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var rebalanceScreenReaderText = {"expand":"expand child menu","collapse":"collapse child menu"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/navigation.js.download"></script>
+<script type="text/javascript" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/imagesloaded.min.js.download"></script>
+<script type="text/javascript" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/masonry.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var Rebalance = {"is_rtl":"0"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/scripts.js.download"></script>
+<script type="text/javascript" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/skip-link-focus-fix.js.download"></script>
+<script type="text/javascript" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/comment-reply.min.js.download"></script>
+<script type="text/javascript" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/wp-embed.min.js.download"></script>
+<script type="text/javascript" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/spin.min.js.download"></script>
+<script type="text/javascript" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/jquery.spin.min.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https:\/\/sefiks.com\/wp-admin\/admin-ajax.php","nonce":"b0542b5c0c","display_exif":"1","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","copyright":"Copyright","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/sefiks.com\/wp-login.php?redirect_to=https%3A%2F%2Fsefiks.com%2F2018%2F05%2F13%2Fa-step-by-step-c4-5-decision-tree-example%2F","blog_id":"1","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"local_comments_commenting_as":"<fieldset><label for=\"email\">Email (Required)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name (Required)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/jetpack-carousel.min.js.download"></script>
+<script type="text/javascript" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/postmessage.min.js.download"></script>
+<script type="text/javascript" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/jquery.jetpack-resize.min.js.download"></script>
+<script type="text/javascript" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/queuehandler.min.js.download"></script>
+<script async="async" type="text/javascript" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/form.js.download"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/sharing.min.js.download"></script>
+<script type="text/javascript">
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-twitter', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-google-plus-1', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomgoogle-plus-1', 'menubar=1,resizable=1,width=480,height=550' );
+				return false;
+			});
+</script>
+	<iframe src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/master.html" scrolling="no" id="likes-master" name="likes-master" style="display:none;"></iframe>
+	<div id="likes-other-gravatars"><div class="likes-text"><span>%d</span> bloggers like this:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+	<script type="text/javascript" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/e-201843.js.download" async="async" defer="defer"></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:6.6.1',blog:'143904331',post:'12091',tz:'0',srv:'sefiks.com'} ]);
+	_stq.push([ 'clickTrackerInit', '143904331', '12091' ]);
+</script>
+<!--
+<div id="media-footer" style="width:728px; height:90px; margin:0 auto;">
+	<script id="mNCC" language="javascript">
+		medianet_width = "728";
+		medianet_height = "90";
+		medianet_crid = "128438573";
+		medianet_versionId = "3111299"; 
+	  </script>
+	<script src="//contextual.media.net/nmedianet.js?cid=8CUS8605M"></script>
+</div>
+<br>
+-->
+
+
+
+
+<iframe id="google_osd_static_frame_4055243480203" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/saved_resource(5).html"></iframe><img src="./A Step By Step C4.5 Decision Tree Example - Sefik Ilkin Serengil_files/g.gif" alt=":)" width="6" height="5" id="wpstats"></body></html>
