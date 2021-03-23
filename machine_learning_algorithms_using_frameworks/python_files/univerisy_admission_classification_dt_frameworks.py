@@ -16,6 +16,7 @@ array = df.values
 inputx = array[:,1:4]
 outputy = array[:,0]
 model = tree.DecisionTreeClassifier()
+print(tree.DecisionTreeClassifier())
 model.fit(inputx,outputy)
 filename = '../../datasets/university_admission_classification_small_test.csv'
 names = ['gre', 'gpa', 'prestige']
