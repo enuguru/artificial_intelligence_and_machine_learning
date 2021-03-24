@@ -1,0 +1,62 @@
+
+Bayes Theorem for Text Classification
+-------------------------------------
+
+prior probability or hypothesis
+-------------------------------
+
+ How to find probability of Chinese document = prior or hypothesis
+
+ Total number of chinese documents
+ ---------------------------------
+      Total number of documents
+
+
+ How to find probability of Japanese document = prior probability or hypothesis =
+
+ Total number of Japanese documents
+ ---------------------------------
+      Total number of documents
+
+
+posterior probability
+---------------------
+
+P(Chinese/document)  = posterior probability
+P(Japanese/document) = posterior probability
+
+
+                         P(Chinese) * P(document/Chinese)
+P(Chinese/document) = ------------------------------------------
+                       P(Chinese) * P(document/Chinese) +
+                       P(Japanese) * P(document/Japanese)
+
+
+                           P(Japanese) * P(document/Japanese)
+P(Japanese/document) = ------------------------------------------
+                           P(Chinese) * P(document/Chinese) +
+                           P(Japanese) * P(document/Japanese)
+
+
+likelihood 
+----------
+
+How to find probability of document given chinese  = likelihood probability =
+
+ (word1/chinese) * (word2/chinese) * (word3/chinese)
+
+
+ How to find probability of document given Japanese  = likelihood probability =
+
+ (word1/Japanese) * (word2/Japanese) * (word3/Japanese)
+
+
+evidence or priori probability
+------------------------------
+
+evidence or priori probability = denominator in bayes theorem
+
+  P(Chinese) (word1/chinese) * (word2/chinese) * (word3/chinese) +
+  P(Japanese) (word1/Japanese) * (word2/Japanese) * 
+  (word3/Japanese)
+

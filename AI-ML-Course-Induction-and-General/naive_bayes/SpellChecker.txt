@@ -1,0 +1,26 @@
+
+http://norvig.com/spell-correct.html
+This spell checker is the properitery work of and 
+created by peter norvig at the above webpage. 
+We are using this to understand naive bayes 
+classification algorithm
+
+argmaxc ? candidates P(c|w) 
+By Bayes' Theorem this is equivalent to:
+argmaxc ? candidates P(c) P(w|c) / P(w)
+
+P(c|w) = P(c) P(w|c) / P(w)
+
+Since P(w) is the same for every possible candidate c, we can factor it out, giving: argmaxc ? candidates P(c) P(w|c)
+
+The four parts of this expression are:
+Selection Mechanism: argmax 
+We choose the candidate with the highest combined probability.
+Candidate Model: c ? candidates
+This tells us which candidate corrections, c, to consider
+
+Language Model: P(c) 
+The probability that c appears as a word of English text. For example, occurrences of "the" make up about 7% of English text, so we should have P(the) = 0.07
+
+Error Model: P(w|c)
+The probability that w would be typed in a text when the author meant c. For example, P(teh|the) is relatively high, but P(theeexyz|the) would be very low.

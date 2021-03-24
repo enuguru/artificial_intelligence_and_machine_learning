@@ -1,0 +1,43 @@
+
+
+very good resource and probability, probability distributions
+and limits
+http://users.stat.ufl.edu/~winner/sta4321/
+
+
+discrete probability distributions
+----------------------------------
+
+The Bernoulli distribution, which takes value 1 with probability p and value 0 with probability q = 1 − p.
+The Rademacher distribution, which takes value 1 with probability 1/2 and value −1 with probability 1/2
+
+The binomial distribution, which describes the number of successes in a series of independent Yes/No experiments all with the same probability of success
+
+
+The discrete uniform distribution, where all elements of a finite set are equally likely. This is the theoretical distribution model for a balanced coin, an unbiased die, a casino roulette, or the first card of a well-shuffled deck
+
+
+The Poisson distribution, which describes a very large number of individually unlikely events that happen in a certain time interval. Related to this distribution are a number of other distributions: the displaced Poisson, the hyper-Poisson, the general Poisson binomial and the Poisson type distributions
+
+
+
+The geometric distribution, a discrete distribution which describes the number of attempts needed to get the first success in a series of independent Bernoulli trials, or alternatively only the number of losses before the first success (i.e. one less)
+
+
+
+continuous probability distributions
+------------------------------------
+
+The normal distribution, also called the Gaussian or the bell curve. It is ubiquitous in nature and statistics due to the central limit theorem: every variable that can be modelled as a sum of many small independent, identically distributed variables with finite mean and variance is approximately normal
+
+Student's t-distribution, useful for estimating unknown means of Gaussian populations
+
+The Cauchy distribution, an example of a distribution which does not have an expected value or a variance. In physics it is usually called a Lorentzian profile, and is associated with many processes, including resonance energy distribution, impact and natural spectral line broadening and quadratic stark line broadening
+
+The exponential distribution, which describes the time between consecutive rare random events in a process with no memory
+
+The continuous uniform distribution or rectangular distribution on [a,b], where all points in a finite interval are equally likely
+
+The log-normal distribution, describing variables which can be modelled as the product of many small independent positive variables
+
+The Pareto distribution, or "power law" distribution, used in the analysis of financial data and critical behavior

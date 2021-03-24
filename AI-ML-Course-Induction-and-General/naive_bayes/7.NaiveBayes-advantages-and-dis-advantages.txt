@@ -1,0 +1,42 @@
+
+naive bayes advantages
+
+naive bayes can be used both multi-class classification problems and binary classification problems
+
+Naive Bayes algorithm is very simple (if you understand conditional probability and bayes theorem), it works fast and easy to implement
+
+naive bayes is a favorite of ML practitioners because it handles both continuous and discrete data
+
+it can even make probabilistic predictions
+
+naive bayes does not require a large training data
+
+Since naive bayes is a generative model, it is easy to deal with missing values 
+
+naive bayes is not sensitive to features or predictors that
+are irrelevant
+
+interestingly naive bayes scales very well (it is a surprise) with the scaling of data points and features
+
+the naive bayes algorithm can converge faster than the discriminative learning models such as logistic regression if the conditional independence assumption stays
+
+even if the conditional independence assumption does not
+stay, it works very well in reality
+
+
+
+what are the drawbacks of naive bayes algorithm?
+
+the naive bayes conditional independence assumption is 
+too strong and sometimes does not hold
+
+data is very scarce can pose problems in naive bayes, you can 
+smoothen the curve which may result in making the naive bayes not so naive
+
+when the classes are imbalanced it may result in skewed probabilities
+
+it is true that naive bayes can be used for continuous features, but sometimes the binning method used by naive bayes it too general in nature and does not result is true probabilities
+
+becuase of these drawbacks naive bayes is sometimes called
+"the favourite punching bag" of classifiers
+

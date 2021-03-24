@@ -1,0 +1,31 @@
+
+Different types of Naive Bayes Algorithms
+-----------------------------------------
+
+General Naive Bayes: Bayes with independent variables assumption
+
+Bernoulli Naive Bayes : It assumes that all our features are binary such that they take only two values. Means 0s can represent “word does not occur in the document” and 1s as "word occurs in the document" .
+
+Multinomial Naive Bayes : Its is used when we have discrete data (e.g. movie ratings ranging 1 and 5 as each rating will have certain frequency to represent). In text learning we have the count of each word to predict the class or label.
+
+Gaussian Naive Bayes : Because of the assumption of the normal distribution, Gaussian Naive Bayes is used in cases when all our features are continuous. For example in Iris dataset features are sepal width, petal width, sepal length, petal length. So its features can have different values in data set as width and length can vary. We can’t represent features in terms of their occurrences. This means data is continuous. Hence we use Gaussian Naive Bayes here
+
+Binary Classificaiton in Naive Bayes:
+
+Multi Class classification in Naive Bayes:
+
+
+
+Types of Naive Bayes Classifier:
+
+Multinomial Naive Bayes:
+This is mostly used for document classification problem, i.e whether a document belongs to the category of sports, politics, technology etc. The features/predictors used by the classifier are the frequency of the words present in the document
+
+Bernoulli Naive Bayes:
+This is similar to the multinomial naive bayes but the predictors are boolean variables. The parameters that we use to predict the class variable take up only values yes or no, for example if a word occurs in the text or not
+
+
+Gaussian Naive Bayes:
+When the predictors take up a continuous value and are not discrete, we assume that these values are sampled from a gaussian distribution
+
+

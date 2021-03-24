@@ -1,0 +1,82 @@
+
+
+
+Evidence
+
+P(female) P(height/female) * P(weight/female) P(footsize/female) +
+
+P(male) * P(height/male) * P(weight/male) * P(footsize/male)
+
+
+P(female/height,weight,footsize) = 
+
+
+P(female) P(height/female) * P(weight/female) P(footsize/female) 
+
+---------------------------------------------------------------- 
+
+P(male) P(height/male) * P(weight/male) P(footsize/male) +
+
+P(female) * P(height/female) * P(weight/female) * P(footsize/female)
+
+
+P(male/height,weight,footsize) = 
+
+
+P(male) P(height/male) * P(weight/male) * P(footsize/male) 
+
+---------------------------------------------------------------- 
+
+P(male) P(height/male) * P(weight/male) P(footsize/male) +
+
+P(female) * P(height/female) * P(weight/female) * P(footsize/female)
+
+
+
+                              P(e1) * P(A/e1)
+P(e1/A) =    ----------------------------------------------------
+              P(e1) * P(A/e1) + P(e2) * P(A/e2) + P(e3) * P(A/e3)
+
+
+
+
+                             P(B1) * P(A/B1)
+P(B1/A) =  ----------------------------------------------------
+            P(B1) * P(A/B1) + P(B2) * P(A/B2) + P(B3) * P(A/B3)
+            + P(B4) * P(A/B4) + P(B5) * P(A/B5)
+
+
+
+
+                             P(B2) * P(A/B2)
+P(B2/A) =  ----------------------------------------------------
+            P(B1) * P(A/B1) + P(B2) * P(A/B2) + P(B3) * P(A/B3)
+            + P(B4) * P(A/B4) + P(B5) * P(A/B5)
+
+
+
+
+
+                             P(B3) * P(A/B3)
+P(B3/A) =  ----------------------------------------------------
+            P(B1) * P(A/B1) + P(B2) * P(A/B2) + P(B3) * P(A/B3)
+            + P(B4) * P(A/B4) + P(B5) * P(A/B5)
+
+
+
+
+                             P(B4) * P(A/B4)
+P(B4/A) =  ----------------------------------------------------
+            P(B1) * P(A/B1) + P(B2) * P(A/B2) + P(B3) * P(A/B3)
+            + P(B4) * P(A/B4) + P(B5) * P(A/B5)
+
+
+
+
+                             P(B5) * P(A/B5)
+P(B5/A) =  ----------------------------------------------------
+            P(B1) * P(A/B1) + P(B2) * P(A/B2) + P(B3) * P(A/B3)
+            + P(B4) * P(A/B4) + P(B5) * P(A/B5)
+
+
+

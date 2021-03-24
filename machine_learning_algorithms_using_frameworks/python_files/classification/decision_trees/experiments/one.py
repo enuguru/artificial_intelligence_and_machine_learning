@@ -10,7 +10,7 @@ import pandas as pd
 import numpy as np 
 
 names = [
-df = pd.read_csv('playTennis.csv') 
+df = pd.read_csv('PlayTennis.csv') 
 
 lb = LabelEncoder() 
 df['outlook'] = lb.fit_transform(df['outlook']) 

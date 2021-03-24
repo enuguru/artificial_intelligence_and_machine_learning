@@ -1,0 +1,38 @@
+
+
+
+jupiter notebook on windows, linux or mac
+
+pycharm on windows, linux or mac
+
+just a vim or emacs editor on linux or mac
+
+most of the development guys for python 
+using linux or mac
+
+author of the book outliers - what is importnat
+in that
+
+204336
+
+iris setosa
+iris versicolour
+iris virginica
+
+
+features or input variables 
+
+response variable or output variables
+
+
+decision trees are used by top management
+
+1. whether to go for this acquisition buy or no buy
+2. whether to sell or keep
+3. whether to split the stock or keep it whole
+4. do you get the insurance claim or your claim is rejected
+
+
+
+
+

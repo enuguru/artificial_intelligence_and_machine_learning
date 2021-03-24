@@ -1,0 +1,58 @@
+
+what is conditional probability ?
+
+let us say that we throw 3 coins at a time
+
+sample space?
+
+THH HTH HHT TTH THT HTT TTT HHH = sample space = 8
+
+let us say event A is getting atleast 2 heads
+it is THH, HTH, HHT, HHH - 4/8 = 1/2
+
+let us say event B is getting the 1st coin as tail
+it THH TTH TTT THT = 4/8 = 1/2
+
+A interesection B is THH 1/4
+
+
+
+           P(A and B)
+P(A|B) = --------------
+              P(B)
+
+
+
+           n(A and B)            
+P(A|B) = --------------  =   1/4
+              n(B)              
+
+              
+ 
+           P(A and B)              1/8
+P(A|B) = --------------     =   -----------   =  1/4
+              P(B)                 4/8
+
+
+P(A and B)   =  P(A|B) . P(B)
+               
+
+example 2: 
+
+let us say say we throw two dice at a time
+sample space = 36
+
+let event A be getting the sum as an even number
+    =  18/36 = 1/2
+
+let event B be the first dice getting a 3
+    =  6 / 36 = 1/6
+
+
+            n(A and B)
+P(A|B) =  -----------------  =    3/6 = 1/2
+               n(B)
+
+               3/36
+           ----------------   =  3/6 = 1/2
+               6/36

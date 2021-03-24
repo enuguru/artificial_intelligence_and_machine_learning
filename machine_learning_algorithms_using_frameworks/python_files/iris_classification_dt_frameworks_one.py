@@ -3,6 +3,8 @@ from matplotlib import pyplot as plt
 from sklearn import datasets
 from sklearn.tree import DecisionTreeClassifier
 from sklearn import tree
+from sklearn.model_selection import KFold
+from sklearn.model_selection import cross_val_score
 # Prepare the data data
 iris = datasets.load_iris()
 X = iris.data
@@ -25,4 +27,3 @@ _ = tree.plot_tree(clf,
                    filled=True)
 
 fig.savefig("decistion_tree.png")
-

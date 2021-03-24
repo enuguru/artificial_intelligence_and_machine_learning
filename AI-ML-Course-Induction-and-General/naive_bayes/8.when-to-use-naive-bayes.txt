@@ -1,0 +1,12 @@
+
+when should an ML practitioner use naive bayes algorithm?
+
+the naive bayes algorithm can converge faster than the discriminative learning models such as logistic regression if the conditional independence assumption stays
+
+if you know the domain well enough you should find out if the features are related to each other and then analyse if they are impacting each other's likelihood
+
+even if the conditional independence assumption does not
+stay, it works very well in reality, the training time is
+reduced very much
+
+naive bayes is good if you have a small trainig data set with small number of features

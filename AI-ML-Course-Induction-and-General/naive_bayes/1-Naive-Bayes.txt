@@ -1,0 +1,18 @@
+
+Naive bayes
+-----------
+very good course on probability in 
+university of florida
+http://users.stat.ufl.edu/~winner/sta4321/
+
+explanation for bayes in manchester university
+http://syllabus.cs.manchester.ac.uk/ugt/2018/COMP24111/lectures.php
+
+stanford univerisity - Naive Bayes for text classification
+https://web.stanford.edu/class/cs124/lec/
+
+bayes example from Worcester Polytechnic Institute (WPI)
+http://web.cs.wpi.edu/~cs525/s13-MYE/lectures/6/
+
+bayes example explanation in university college london
+https://www.fil.ion.ucl.ac.uk/mfd_archive/2009/

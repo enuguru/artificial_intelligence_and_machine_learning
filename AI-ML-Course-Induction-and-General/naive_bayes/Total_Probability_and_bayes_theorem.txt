@@ -1,0 +1,71 @@
+
+
+                              P(e1) * P(A/e1)
+P(e1/A) =    ----------------------------------------------------
+              P(e1) * P(A/e1) + P(e2) * P(A/e2) + P(e3) * P(A/e3)
+
+
+
+Total Probability = 
+
+            P(B1) * P(A/B1) + P(B2) * P(A/B2) + P(B3) * P(A/B3)
+            + P(B4) * P(A/B4) + P(B5) * P(A/B5)
+
+
+Now the Bayes Theorem below
+---------------------------
+
+
+
+                             P(B1) * P(A/B1)
+P(B1/A) =  ----------------------------------------------------
+            P(B1) * P(A/B1) + P(B2) * P(A/B2) + P(B3) * P(A/B3)
+            + P(B4) * P(A/B4) + P(B5) * P(A/B5)
+
+
+
+
+                             P(B2) * P(A/B2)
+P(B2/A) =  ----------------------------------------------------
+            P(B1) * P(A/B1) + P(B2) * P(A/B2) + P(B3) * P(A/B3)
+            + P(B4) * P(A/B4) + P(B5) * P(A/B5)
+
+
+
+
+
+                             P(B3) * P(A/B3)
+P(B3/A) =  ----------------------------------------------------
+            P(B1) * P(A/B1) + P(B2) * P(A/B2) + P(B3) * P(A/B3)
+            + P(B4) * P(A/B4) + P(B5) * P(A/B5)
+
+
+
+
+                             P(B4) * P(A/B4)
+P(B4/A) =  ----------------------------------------------------
+            P(B1) * P(A/B1) + P(B2) * P(A/B2) + P(B3) * P(A/B3)
+            + P(B4) * P(A/B4) + P(B5) * P(A/B5)
+
+
+
+
+                             P(B5) * P(A/B5)
+P(B5/A) =  ----------------------------------------------------
+            P(B1) * P(A/B1) + P(B2) * P(A/B2) + P(B3) * P(A/B3)
+            + P(B4) * P(A/B4) + P(B5) * P(A/B5)
+
+
+
+
+This is called Probability of causes or reverse probability
+
+
+
+A is called evidence or priori probability
+
+P(B1) is called prior probability or hypothesis
+
+P(A/B1) is called likelihood or the likelihood of the evidence A given B1(hypothesis) is true 
+
+P(B1/A) is called posterior probability

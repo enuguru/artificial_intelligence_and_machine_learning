@@ -1,0 +1,17 @@
+
+
+
+application of naive bayes in text classification
+
+
+authorship attribution
+detecting spam in email or letter
+sentiment analysis - a very important commercial
+topic modelling
+document categorization - ML, Garbage Collection, NLP, Planning  
+                          and GUI - what kind of computer document
+webpage classification
+resume categorization - architect resume, java developer, build 
+                        engineer
+deciding the topic of the medical document
+
