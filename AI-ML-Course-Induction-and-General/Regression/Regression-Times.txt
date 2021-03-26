@@ -1,0 +1,21 @@
+
+linear regression with one variable - model representation - 2.1
+time 1.49, 4.38, 6.06, 8.04
+
+
+2.2 - linear regression with one variable - cost function
+time 2.12, 3.16, 7.55
+
+
+
+2.3 - linear regression with one variable - cost function with intuition one
+time 0.37, 1.35, 10.57
+
+
+2.5 - linear regression with one variable - gradient       descent
+time - 2.11, 3.02, 4.00, 4.08, 4.35 - run video for
+       10 seconds, 10.43
+
+2.6 
+
+time

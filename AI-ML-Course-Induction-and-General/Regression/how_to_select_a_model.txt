@@ -1,0 +1,18 @@
+
+
+are you concered about performance metrics
+
+are you looking for just classification or data exploration
+
+do you have a large dataset
+
+what kind of data you have ?
+
+some features are more important than the other
+
+do want to understand the model ? simple model ?
+
+you need less computing resources ?
+
+you want speed ?
+

@@ -1,0 +1,33 @@
+
+types of regression we have seen so far
+---------------------------------------
+
+Simple linear regression or uni-variate linear regression
+
+multiple linear regression or multi-variate linear regression
+
+logistic regression - regression posed as a 
+classification problem -  used in classification 
+
+polynomial linear regression
+
+nonlinear regression
+
+least squares regression
+
+gradient descent algorithm
+
+types of gradient descent algorithms for solving regression problems
+
+batch gradient descent
+stochastic gradient descent
+
+normal equation for solving regression problems
+
+regularization technique used in regression, like regularized linear regression
+
+types regularization techniques used in regression
+
+1. lasso regression
+2. ridge regression
+3. elastic net

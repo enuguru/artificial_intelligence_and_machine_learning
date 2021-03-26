@@ -1,0 +1,11 @@
+
+
+What is the meaning of J in J() equation?
+
+'J' stands for Jacobian matrix where we are trying to find a scalar valued function in several variables which generalises in all dimensions of the vector. In general terms we are trying to find the best function that could fit our features data
+
+In continuous dynamic programming, the optimal solution is obtained by using the Hamilton-Jacobi-Bellman (HJB) equations.
+
+The 'J' then stands for the _cost-to-go_ in that setting,
+probably named after 'J'acobi
+

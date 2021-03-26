@@ -1,0 +1,15 @@
+
+
+Polynomial regression is different from multiple regression. 
+
+A simplified explanation here - see below
+
+Polynomial regression is about improving our model’s closeness to the data by increasing the order of the relationships between the factors and the response variables. In linear regression, the equation that describes the factor-response relationships is  𝑌=𝑚𝑋+𝐶  where Y and X are vectors that describe the response variable and the factor variable respectively. m and C are known as the slope and the intercept of this linear equation. For polynomial cases, we might use higher powers of X to describe Y, as described in  𝑌=𝑚1𝑋1+𝑚2𝑋2+𝐶  where  𝑚1  and  𝑚2  are coefficients of the first and second powers of the factor.
+
+
+Therefore in the polynomial regression case, we try and find if there are higher-order relationships between X and Y, beyond the linear relationships. As a good thumb rule of model development, we explore higher order relationships to improve model fit if we have difficulty building linear models to describe the case.
+
+Note that so far, we have only talked about one factor (X) and its relationship with the response Y.
+
+In a multiple regression case, we’re interested in the impact of not only one, but many different factors, on the response variable. This is usually representative of real world problems more than the stock single-factor-vs-response model described above. The equation that describes multiple linear regression could be written as  𝑌=𝑚1𝑋1+𝑚2𝑋2+𝐶  where  𝑚1  and  𝑚2  are the coefficients of factors  𝑋1  and  𝑋2  respectively.
+

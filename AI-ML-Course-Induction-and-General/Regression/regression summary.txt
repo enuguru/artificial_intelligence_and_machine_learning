@@ -1,0 +1,158 @@
+
+What is regression?
+finding real values of response variable - regression
+
+simple linear regression
+(linear regression with one variable,
+univariate linear regression)    y = b0 + b1x
+                                 y = c  +  mx
+
+covariance and variance
+
+We can start off by estimating the value for B1 as:
+
+B1 = 
+  sum((xi-mean(x)) * (yi-mean(y))) / sum((xi – mean(x))^2)
+
+Where mean() is the average value for the variable in our dataset. The xi and yi refer to the fact that we need to repeat these calculations across all values in our dataset and i refers to the i’th value of x or y.
+
+We can calculate B0 using B1 as follows
+
+B0 = mean(y) – B1 * mean(x)
+
+
+how to calculate variables in ax^2 + bx + c
+by using variables in quadratic equation
+
+how to calculate auto regression variables?
+
+
+
+multiple linear regresssion or multivariate linear regression
+(linear regression or linear equation with multiple variables)
+y = b0 + b1x + b2x2 + b3x3 + ..... + bnxn
+the idea find the values of b1 b2 ..... or theta1, theta2 ....
+so that the error function J(theta) is minimum
+
+Logistic regression - regression posed as a classification problem
+
+Linear regression with theta values found from 
+batch gradient descent 
+
+Linear regression with theta values found from
+stochastic gradient descent
+
+Linear regression with theta values found from
+normal equation
+
+linear regresssion with multiple variables
+(for solution we can use batch gradient descent,
+ stochastic gradient descent or normal equation)
+
+polynomial linear regression (still can be linear)
+
+linear -  y = b0 + b1x1 + b2x2 + ...
+linear -  y = b0 + b1x1 + b2 sqr(x2) + b3 cube(x3) + ....
+
+nonlinear regression 
+
+regularized linear regression
+
+regularized logistic regression
+
+regularization techniques
+
+1. lasso regression
+2. ridge regression
+3. elastic net
+
+regression is never complete without regularization
+
+if you are doing regression without regularization you 
+must be very special
+
+it provides a simple hypothesis and it smoothens the curve and
+avoids overfitting
+
+what do we mean by convergence
+the different in values between two iterations
+for theta0 and theta1 is less than 0.001
+
+then we can declare convergence
+
+
+using normal equation
+
+[
+x0 x1 x2 x3 x4     
+x0 x1 x2 x3 x4           [th0, th1, th2, th3]    =     yo, y1 , y2
+x0 x1 x2 x3 x4
+]   -   feature matrix
+
+
+unknown values are th0, th1, th2 ....
+solve for the unknowns using linear algebra
+
+m X n     n * 1
+
+thea mat  a single row in feature matrix
+1 X n     n * 1
+    =   thT * x
+
+then you get the values for th0, th1 etc...
+
+hth(x) = th0x0 + th1x1 + th2x2 + .......  + thnxn
+= th(T) x
+
+
+regularization - how to make hypothesis simple and avoid overfitting
+                 variance 
+
+underfitting - you have not done any analysis but simply put a line
+               for regression -   bias 
+
+you are penalizing the equation for overfitting
+
+
+
+b0 b1 variance and covariance
+using gradient descent we found th0 and th1 for solving 
+linear regression
+batch gradient descent
+stochastic
+normal equation using matrix algebra
+
+logistic regression
+batch gradient descent
+stochastic
+normal equation using matrix algebra
+
+polynomial regression
+linear - sq terms and cube terms - regularization
+non linear - not seen so far pending
+
+
+regularization
+
+regularized linear regression
+if you are doing using simple linear regression only
+then you must be very special
+
+lasso,
+ridge and 
+elastic net
+
+
+2d 3d geometry - draw a line connecting all 
+                 points
+y = mx + c
+
+statistics - using variance and covariance
+
+B0 + B1x
+
+by solving the equation for a minimization or linear programming problem - gradient descent
+
+through matrix solutions
+
+

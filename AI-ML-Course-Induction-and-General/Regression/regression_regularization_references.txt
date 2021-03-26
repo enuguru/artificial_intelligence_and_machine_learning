@@ -1,0 +1,12 @@
+
+
+
+regularization great references 
+
+https://towardsdatascience.com/regularization-in-machine-learning-76441ddcf99a
+
+https://towardsdatascience.com/l1-and-l2-regularization-methods-ce25e7fc831c
+
+
+power point presentation
+https://www.is.uni-freiburg.de/resources/business-analytics/XX_Regularization.pdf

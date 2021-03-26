@@ -13,7 +13,7 @@ y = iris.target
 clf = DecisionTreeClassifier(random_state=1234)
 print(clf)
 model = clf.fit(X, y)
-
+print(model)
 text_representation = tree.export_text(clf)
 print(text_representation)
 

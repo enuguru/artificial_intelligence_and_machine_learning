@@ -1,0 +1,20 @@
+
+
+
+univarite linear regression or linear regression with
+one variable
+
+hθ(x) = θ0 + θ1x1
+
+
+multi-variate linear regression or linear regression through multiple variables
+
+hθ(x) = θ0 + θ1x1 + θ2x2 + θ3x3 + θ4x4
+
+for example
+hθ(x) = 80 + 0.1x1 + 0.01x2 + 3x3 - 2x4
+
+
+
+
+

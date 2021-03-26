@@ -1,0 +1,11 @@
+
+
+
+
+plugin manager for vim
+
+put in all the plugins required there
+
+then start the plugin manager
+
+then you start the plugin manager

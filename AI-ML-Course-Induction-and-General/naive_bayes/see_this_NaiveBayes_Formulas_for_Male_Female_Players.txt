@@ -1,6 +1,5 @@
 
 
-
 Evidence
 
 P(female) P(height/female) * P(weight/female) P(footsize/female) +
