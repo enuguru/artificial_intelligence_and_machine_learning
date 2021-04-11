@@ -1,0 +1,5 @@
+
+
+The SKLearn unified scoring API always maximizes the score, so scores which need to be minimized are negated in order for the unified scoring API to work correctly. 
+
+The score that is returned is therefore negated when it is a score that should be minimized and left positive if it is a score that should be maximized.

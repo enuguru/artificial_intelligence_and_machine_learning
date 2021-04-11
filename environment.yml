@@ -22,3 +22,4 @@ dependencies:         # everything under this, installed by conda
 - scikit-image
 - plotly==3.10.0
 - six==1.15.0
+- decision-tree-id3==0.1.2
