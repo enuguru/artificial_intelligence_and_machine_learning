@@ -10,6 +10,7 @@ from sklearn.linear_model import LinearRegression
 
 dataset = pd.read_csv('../../datasets/salary_regression_train.csv')
 inputx = dataset.iloc[:, :-1].values
+print(inputx)
 outputy = dataset.iloc[:, 1].values
 
 input_train, input_test, output_train, output_test = train_test_split(inputx, outputy, test_size = 1/3, random_state = 0)
