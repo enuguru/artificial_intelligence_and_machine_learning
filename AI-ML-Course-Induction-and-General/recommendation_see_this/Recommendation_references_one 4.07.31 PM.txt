@@ -1,0 +1,16 @@
+
+
+recommendation
+
+collaborative filtering - user based
+3. https://www.math.uci.edu/icamp/courses/math77b/lecture_12w/pdfs/Chapter%2002%20-%20Collaborative%20recommendation.pdf
+
+
+content based recommendation
+2.
+https://www.ics.uci.edu/~welling/teaching/CS77Bwinter12/presentations/Slides_Recommender_Systems_Introduction_Version_Oct_2011/ppt/Chapter%2003%20-%20Content-based%20recommendation.ppt
+
+
+Item based collaborative filtering
+https://ashokharnal.wordpress.com/2014/12/18/worked-out-example-item-based-collaborative-filtering-for-recommenmder-engine/
+
