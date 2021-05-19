@@ -1,0 +1,120 @@
+
+
+Agenda - table of contents
+Duration - 10 days
+Timing - 10.00 am to 12.00 noon
+
+Introduction to statistics
+Introduction and concepts in natural language processing
+Overview of Artificial Intelligence and Machine Learning
+Terminologies in AI and ML
+Different types of learning in AI and ML
+Supervised, Un-supervised, Semi-supervised and Reinforcment learning
+Different models / approaches in AI and ML
+Different algorithms in AI and ML
+How do you get datasets
+building our first model in machine learning
+One example in classification - KNN
+One model in regression - Simple Linear Regression
+One model in Clustering - K-Means
+
+
+
+Level 2A - 10 days 
+
+different types of regression
+non-linear regression, polynomial regression, multi-variate regression
+problems involving different types of regression
+introduction to decision trees
+types of decision trees
+decision trees classification and regression 
+decision tree metric
+building models using decision trees
+overview of Support Vector Machine (SVM)
+introduction to density estimation
+different types of density functions
+continuous probability distributions and discrete probability distributions
+
+
+
+Level 2B
+
+Association Rule Mining - ARM 
+benefits of ARM, applications
+Recommendation Systems - overview and applications
+Collaborative filtering
+User to User and Item to Item Collaborative filtering
+Overview of Ensemble Learning
+bagging and boosting
+benefits of ensemble learning
+random forests
+overview of outlier detection or anomaly detection 
+applications of outlier detection
+introduction to dimensionality reduction
+need for dimensionality reduction - curse of dimensionality
+
+
+
+
+
+
+
+
+
+
+
+Level 3A
+Introduction to Neural Networks and Deep Learning
+What is Deep Learning
+How the brain works and simulating the brain working using ANN
+types of neurons, input, output and transfer function
+different types of transfer functions used
+Feed forward neural networks
+what is a single layer perceptron
+multi layer perceptron
+building a SLL and MLL using basic building blocks
+
+Introduction to Artificial Neural Networks - ANNs
+Introduction to Convolutional Neural Networks - CNNs
+Recurrent Neural Networks (RNN) - Overview and Applications
+Introduction to Computer Vision
+Introduction to Object Recognition using CNN
+
+
+
+
+
+Level 3B
+Introduction to boltzmann machines
+Overview of auto encoder and its applications
+ 
+Performance of Machine Learning Algorithms
+Bias Variance tradeoff
+Hyper parameter tuning in conventional ML and Deep Learning
+confusion matrix
+Introduction to accuracy, precision, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

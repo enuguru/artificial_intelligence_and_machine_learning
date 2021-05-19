@@ -1,0 +1,81 @@
+
+projects demonstration
+----------------------
+
+speed sign detection in cars - one
+https://www.youtube.com/watch?v=kkha3sPoU70
+
+speed sign detection in cars - two
+https://www.youtube.com/watch?v=UrWAeukkLdk
+
+rapid, convenient and automatic parking - volkswagen
+https://www.youtube.com/watch?v=X9wyxeLPgTA
+
+tesla car park assist
+https://www.youtube.com/watch?v=KeQm0L5UicM
+
+tesla - come to me feature
+https://www.youtube.com/watch?v=enkRALcdPb0
+
+drone automatically finds obstacles
+https://www.youtube.com/watch?v=_qah8oIzCwk
+
+AI based robots in retail - walmart
+https://edition.cnn.com/2019/04/09/business/walmart-robots-retail-jobs/index.html
+
+AI based floor cleaners
+NSS floor cleaning in walmart
+https://www.youtube.com/watch?v=PZZlfjQfxU0
+
+https://www.youtube.com/watch?v=OYpqKBUuC6E
+
+https://www.youtube.com/watch?v=MaJlVytKGWQ
+
+very good one
+https://www.youtube.com/watch?v=Yf8MuJUGLlI
+
+very good one
+roomba robot floor cleaning
+https://www.youtube.com/watch?v=VPNQxulK4mE
+
+
+
+projects implemented
+--------------------
+
+vehicle detection - computer vision
+~/code/Learning_and_Development/computer_vision/computervisionone/computer-vision_workshop/VehicleDetection
+python vehicle_detection.py
+
+
+face detection - computer vision
+~/code/Learning_and_Development/computer_vision/computervisionone/computer-vision_workshop/FaceDetect
+python face_detect_cv3.py abba.png
+
+
+smile detection - computer vision
+~/code/Learning_and_Development/computer_vision/smile-detection-Python
+python smile.py (change the .jpg file inside the code)
+
+
+summarization - NLP
+~/code/Learning_and_Development/Assignments_and_Assessments/Assignments/Level-1/Summarization
+python generalmaindriver.py
+
+
+sentiment analysis of movie reviews - NLP
+~/code/Learning_and_Development/Assignments_and_Assessments/Assignments/Level-1/Simple-Sentiment-Analysis-Using-NB
+python main.py
+
+
+
+
+
+
+
+
+
+
+
+
+
