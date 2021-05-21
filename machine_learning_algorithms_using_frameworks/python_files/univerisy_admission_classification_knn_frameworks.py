@@ -16,6 +16,7 @@ inputx = array[:,1:4]
 outputy = array[:,0]
 model = KNeighborsClassifier()
 model.fit(inputx,outputy)
+print(model)
 filename = '../../datasets/university_admission_classification_small_test.csv'
 names = ['gre', 'gpa', 'prestige']
 newdf = read_csv(filename, names=names)

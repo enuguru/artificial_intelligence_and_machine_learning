@@ -9,6 +9,8 @@ array = df.values
 inputx = array[:,0:2]
 outputy = array[:,2]
 thismodel = KNeighborsClassifier(n_neighbors=3)#n_neighbors=3)
+print(thismodel.get_params())
+#print(thismodel.set_params())
 print(thismodel.fit(inputx,outputy))
 filename = '../../datasets/bankloan_classification_test.csv'
 names = ['age', 'loanamount']
