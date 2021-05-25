@@ -3,8 +3,8 @@
 from pandas import read_csv
 from sklearn.neighbors import KNeighborsClassifier
 filename = '../../datasets/bankloan_classification_train.csv'
-names = ['age', 'loanamount', 'status']
-df = read_csv(filename, names=names)
+headernames = ['age', 'loanamount', 'status']
+df = read_csv(filename, names=headernames)
 array = df.values
 inputx = array[:,0:2]
 outputy = array[:,2]
@@ -26,5 +26,5 @@ for val in res:
     else:
         reslist.append("WillPay")
 print(reslist)
-res=thismodel.predict(testinputz)
-print(thismodel.predict(testinputz))
+#res=thismodel.predict(testinputz)
+#print(thismodel.predict(testinputz))
