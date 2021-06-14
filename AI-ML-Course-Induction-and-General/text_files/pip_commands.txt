@@ -1,0 +1,10 @@
+
+
+
+     python get-pip.py
+   
+     pip --version
+
+     pip help
+
+     pip -V

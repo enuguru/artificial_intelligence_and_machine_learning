@@ -1,0 +1,13 @@
+
+
+
+    1. go to this webpage 
+       https://dev.mysql.com/downloads/
+
+    2. click on "MySQL Installer for Windows" link in the page below
+
+    3. click on "Windows (x86, 32-bit), MSI Installer"  8.0.25  and 435.7 Mb 
+
+    4. then click on "No thanks, just start my download."  appearing below
+
+    5. this will start download
