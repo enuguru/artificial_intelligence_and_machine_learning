@@ -1,22 +1,37 @@
 # KNN Classification
+
+# step 1: import the required modules
 from pandas import read_csv
 from sklearn.model_selection import KFold
 from sklearn.model_selection import cross_val_score
 from sklearn.linear_model import LogisticRegression
 from sklearn import preprocessing
 from sklearn.neighbors import KNeighborsClassifier
+
+# step 2: read the data from the csv file
 filename = '../../datasets/iris_classification_train.csv'
 names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width','flower_name']
 df = read_csv(filename, names=names)
+
+# step 3: do preprocessing - in this case do label encoding for the last column
 # label_encoder object knows how to understand word labels.
 label_encoder = preprocessing.LabelEncoder()
 df['flower_name']= label_encoder.fit_transform(df['flower_name'])
+
+# step 4: split to input and output
 df['flower_name'].unique()
 array = df.values
 inputx = array[:,0:4]
 outputy = array[:,4]
+
+# step 5: select the model
 model = KNeighborsClassifier()
-print(model.fit(inputx,outputy))
+print("\nThe model selected is",model)
+
+# step 6: train or build the model
+model.fit(inputx,outputy)
+
+# step 7: do testing or model prediction
 filename = '../../datasets/iris_classification_test.csv'
 names = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width']
 newdataframe = read_csv(filename, names=names)
@@ -25,7 +40,9 @@ z = array[:,0:4]
 print("\n",newdataframe,"\n")
 res=model.predict(z)
 reslist=[]
-res=model.predict(z)
+
+
+# step 8: visualize the test results
 print(model.predict(z),"\n")
 for val in res:
     if val==0:
