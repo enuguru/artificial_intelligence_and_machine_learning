@@ -1,0 +1,8 @@
+
+
+
+anaconda -V
+anaconda --version
+conda list
+anaconda -h
+anaconda --help

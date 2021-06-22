@@ -35,12 +35,8 @@ print("\nThe selected model is",model)
 # step 7: train or build the model
 model.fit(inputx,outputy)
 
-
 # step 8: perform cross validation with accuracy as the performance metric
 scoring = 'accuracy'
 results = cross_val_score(model,inputx,outputy,cv = kfold, scoring = scoring)
 print("\nThe Accuracy of the model is: %.3f (%.3f)" % (results.mean(), results.std()))
-
-
-
 

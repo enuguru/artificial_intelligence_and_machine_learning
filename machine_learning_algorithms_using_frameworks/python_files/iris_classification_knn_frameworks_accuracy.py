@@ -40,3 +40,5 @@ print("\nThe model selected is",model.fit(inputx,outputy))
 scoring = 'accuracy'
 results = cross_val_score(model,inputx, outputy, cv=kfold, scoring=scoring)
 print("\nThe model Accuracy: %.3f (%.3f)" % (results.mean(), results.std()))
+
+
