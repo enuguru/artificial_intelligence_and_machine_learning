@@ -14,7 +14,7 @@ from sklearn.metrics import classification_report,confusion_matrix
 
 # I just like to lowercase and remove spaces from my cols to minimize errors
 knn_df = pd.read_csv("Admission_Predict.csv", names=["id", "gre", "toefl", "u_rating", "sop", "lor", "cgpa", "research", "pred"], header=0, index_col = 0)
-knn_df.head()
+print(knn_df.head())
 
 
 # Scale the data.  I used different scalers for criteria and classes
@@ -24,6 +24,7 @@ knn_df.head()
 mm_scaler = MinMaxScaler()
 knn_df['pred'] = mm_scaler.fit_transform(knn_df[['pred']])
 knn_df['pred'] = knn_df['pred'].apply(lambda x: 0 if x <= 0.65 else 1)
+print(knn_df.head())
 # knn_df['pred'].value_counts() # 0=220 1=180
 
 
