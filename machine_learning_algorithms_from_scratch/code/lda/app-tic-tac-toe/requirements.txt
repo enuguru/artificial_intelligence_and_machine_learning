@@ -9,7 +9,7 @@ Flask-WTF==0.10.2
 Flask-WhooshAlchemy==0.56
 Jinja2==2.7.3
 MarkupSafe==0.23
-Werkzeug==0.9.6
+Werkzeug==0.15.5
 coverage==3.7.1
 decorator==3.4.0
 flipflop==1.0
